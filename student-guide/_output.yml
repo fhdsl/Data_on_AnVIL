@@ -1,2 +1,0 @@
-bookdown::word_document2:
-  toc: true
