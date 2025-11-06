@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Quick Start
+# Temporary Stub
 
 Data Tables provide a way to organize data and metadata, including URI links to storage buckets.  These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
 
