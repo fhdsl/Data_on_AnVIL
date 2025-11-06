@@ -1,0 +1,14 @@
+# (PART\*) Controlled Access Data {-}
+
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# Additional Resources
+
+An AnVIL Demo giving an overview of DUOS is available on [ the AnVIL YouTube channel](https://www.youtube.com/watch?v=BVmOtH04qhI)
+
+Additional information on linking your NIH account to Terra to access dbGaP data can be found [here](https://support.terra.bio/hc/en-us/articles/19124069598235-Access-controlled-data-files-by-linking-your-NIH-account-in-Terra)
+
+You can also read more about accessing data from GTEx [here](https://support.terra.bio/hc/en-us/articles/30873545719451-How-to-access-GTEx-data-in-Terra)
