@@ -1,5 +1,5 @@
 
-# (PART\*) SRA ON AnVIL {-}
+# (PART\*) Importing Data from SRA {-}
 
 
 ```{r, include = FALSE}
