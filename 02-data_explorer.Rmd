@@ -33,7 +33,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 
 # AnVIL Data Explorer
 
-The [AnVIL Data Explorer](https://explore.anvilproject.org/datasets) enables faceted searches of open and managed access datasets hosted in AnVIL, making it easier for researchers to find and custom-build cohorts. 
+The AnVIL Data Explorer enables faceted searches of open and managed access datasets hosted in AnVIL, making it easier for researchers to find and custom-build cohorts. 
 
 ```{r, echo=FALSE, fig.alt='Image shows a screenshot of the AnVIL Data Explorer website landing page.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.g30d935bde8e_0_0")
