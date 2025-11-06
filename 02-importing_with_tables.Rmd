@@ -19,6 +19,8 @@ TODO: add information about buckets
 
 ## Check file status
 
+## Bring file into a workspace
+
 ## Summary
 
 # Upload multiple files at once
@@ -30,6 +32,8 @@ TODO: add information about buckets
 ## Copy files
 
 ## Check file status
+
+## Bring file into a workspace
 
 ## Summary
 
