@@ -7,6 +7,7 @@ rmd_files: ["index.Rmd",
             "03-data_explorer.Rmd",
             "04-importing_with_SRA.Rmd",
             "05-controlled_access_data.Rmd",
+            "Feedback.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes

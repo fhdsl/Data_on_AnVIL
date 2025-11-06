@@ -1,11 +1,11 @@
-# (PART\*) Uploading Your Own Data {-}
+# (PART\*) Bringing Your Own Data {-}
 
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
 
-# Temporary Stub
+# Quick Start Guide: Data Tables
 
 Data Tables provide a way to organize data and metadata, including URI links to storage buckets.  These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
 
