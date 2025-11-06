@@ -7,7 +7,40 @@ ottrpal::set_knitr_image_path()
 
 # Quick Start Guide: Data Tables
 
-Data Tables provide a way to organize data and metadata, including URI links to storage buckets.  These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
+::: {.dictionary}
+TODO: add information about buckets
+:::
+
+## Clone Workspace
+
+## Identify bucket path
+
+## Upload a single file
+
+## Check file status
+
+## Summary
+
+# Upload multiple files at once
+
+# Upload files using `gsutil`
+
+## Install `gsutil` on your local server
+
+## Copy files
+
+## Check file status
+
+## Summary
+
+# Additional Resources
+
+You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
+
+More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
+
+# Information from Getting Started guide
+Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
 
 ```{r, echo=FALSE, fig.alt="Image shows a schematic of the data storage locations in an AnVIL Workspace. The Data Table is highlighted with a number 'three'."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf982a3c0cd_0_0")
@@ -100,8 +133,3 @@ gsutil cp users/name/data/test.bam gs://ab5-27x
 Remember that you can easily copy the Workspace Bucket ID using the clipboard button on the [Workspace Dashboard]({#bring-data-overview}). Please see the [`gsutil cp` documentation](https://cloud.google.com/storage/docs/gsutil/commands/cp) for more details, such as how to do parallel multi-threaded/multi-processing copying or copying an entire directory tree. The `gsutil cp` command can also be used to copy files from one Workspace Bucket to another (cloud-to-cloud copying).
 
 
-# Additional Resources
-
-You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
-
-More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
