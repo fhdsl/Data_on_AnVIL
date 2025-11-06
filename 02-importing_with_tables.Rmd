@@ -45,6 +45,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 
 # Upload multiple files at once
 
+Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
+
+```{r, echo=FALSE, fig.alt="Image shows a schematic of the data storage locations in an AnVIL Workspace. The Data Table is highlighted with a number 'three'."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf982a3c0cd_0_0")
+```
+
+
 ## Access Data Uploader
 
 ## Create a data collection
@@ -76,24 +83,6 @@ You can read documentation about bringing your own data to AnVIL on the [Portal]
 More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
 
 ## Information from Getting Started guide
-Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
-
-```{r, echo=FALSE, fig.alt="Image shows a schematic of the data storage locations in an AnVIL Workspace. The Data Table is highlighted with a number 'three'."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf982a3c0cd_0_0")
-```
-
-
-The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
-
-```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Dashboard. Google Bucket information, including the Google Bucket name, location, and 'Open in browser' link, at the bottom right of the screen is highlighted."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5172664d7_0_142")
-```
-
-You can also see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
-
-```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_3")
-```
 
 ## Browser: Upload Single Files
 
