@@ -5,17 +5,36 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Quick Start Guide: Data Tables
+# Quick Start: Uploading a single file {#quick-start-owndata}
+
+In this example, we'll upload some genomic data into AnVIL.
+
+TODO: Add information about what the data is
+
+The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
+
+```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Dashboard. Google Bucket information, including the Google Bucket name, location, and 'Open in browser' link, at the bottom right of the screen is highlighted."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5172664d7_0_142")
+```
 
 ::: {.dictionary}
-TODO: add information about buckets
+*Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
+
+You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)
 :::
+
+You can also see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_3")
+```
+
 
 ## Clone Workspace
 
 ## Identify bucket path
 
-## Upload a single file
+## Upload file 
 
 ## Check file status
 
@@ -23,7 +42,19 @@ TODO: add information about buckets
 
 ## Summary
 
+
 # Upload multiple files at once
+
+## Access Data Uploader
+
+## Create a data collection
+
+## Upload data collection
+
+## Upload data table with metadata
+
+## Summary
+
 
 # Upload files using `gsutil`
 
@@ -36,6 +67,7 @@ TODO: add information about buckets
 ## Bring file into a workspace
 
 ## Summary
+
 
 # Additional Resources
 
