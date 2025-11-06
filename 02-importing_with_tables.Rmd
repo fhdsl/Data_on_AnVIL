@@ -75,7 +75,7 @@ You can read documentation about bringing your own data to AnVIL on the [Portal]
 
 More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
 
-# Information from Getting Started guide
+## Information from Getting Started guide
 Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
 
 ```{r, echo=FALSE, fig.alt="Image shows a schematic of the data storage locations in an AnVIL Workspace. The Data Table is highlighted with a number 'three'."}
@@ -117,7 +117,7 @@ Here, you can upload files and manage your data and folders. You can also upload
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf57004a098_0_9")
 ```
 
-# `gsutil`: Local to Cloud
+## `gsutil`: Local to Cloud
 
 `gsutil` is a Python application that lets you access Cloud Storage from the command line in a terminal. The terminal you use can be run on your local machine (local instance) or built into the Workspace Cloud Environment.
 
