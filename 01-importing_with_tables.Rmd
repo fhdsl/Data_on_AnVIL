@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Uploading files from your personal desktop
+# Uploading from your desktop
 
 In this example, we'll upload some genomic data into AnVIL.
 
@@ -43,7 +43,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ## Summary
 
 
-# Uploading files from the cloud
+# Uploading from the cloud
 
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 
@@ -67,7 +67,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ## Summary
 
 
-# Uploading files from a high-performance computing cluster (HPC)
+# Uploading from a remote cluster (HPC)
 
 ## Install `gsutil` on your local server
 
