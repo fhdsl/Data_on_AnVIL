@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Quick Start: Uploading a single file {#quick-start-owndata}
+# Uploading files from your personal desktop
 
 In this example, we'll upload some genomic data into AnVIL.
 
@@ -43,7 +43,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ## Summary
 
 
-# Upload multiple files at once
+# Uploading files from the cloud
+
+In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
+
+TODO: Add information about what the data is
 
 Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
 
@@ -63,7 +67,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ## Summary
 
 
-# Upload files using `gsutil`
+# Uploading files from a high-performance computing cluster (HPC)
 
 ## Install `gsutil` on your local server
 
