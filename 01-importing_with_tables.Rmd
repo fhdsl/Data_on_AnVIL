@@ -53,11 +53,15 @@ In this example, we'll upload some genomic data into AnVIL that is currently sto
 You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)
 :::
 
-We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
+We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
 
 ```{r, echo=FALSE, fig.alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ad3a8a2073_0_0#slide=id.g3ad3a8a2073_0_0")
 ```
+
+## Step One: Create your workspace
+
+
 
 The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
 
