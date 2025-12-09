@@ -61,6 +61,22 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 
 ## Step One: Create your workspace
 
+```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner.."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_20#slide=id.g3ada1fc20cd_0_20")
+```
+
+```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_0#slide=id.g3ada1fc20cd_0_0")
+```
+
+```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you won’t be able to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_4#slide=id.g3ada1fc20cd_0_4")
+```
+
+```{r, echo=FALSE, fig.alt="The dashboard page of your new workspace shows information about the workspace on the right-hand side. You will want to copy the bucket name from here. This is the bucket where all information associated with this workspace is stored."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_8#slide=id.g3ada1fc20cd_0_8")
+```
+
 
 
 The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
