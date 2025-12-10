@@ -25,15 +25,15 @@ These vignettes are built around common tasks that an individual user might do, 
 
 These vignettes cover the following topics:
 
-**Bringing your own data to AnVIL**
-1. Uploading data from your local computer 
-1. Uploading data from the cloud
-1. Uploading data from a high performance computing cluster
+**Bringing your own data to AnVIL** 
+- Uploading data from your local computer 
+- Uploading data from the cloud
+- Uploading data from a high performance computing cluster
 
-**Importing data from external data repositories**
-1. Importing data from SRA
-1. Importing data from dbGaP
+**Importing data from external data repositories** 
+- Importing data from SRA
+- Importing data from dbGaP
 
-**Finding data stored on AnVIL**
-1. Accessing open access data stored on AnVIL
-1. Accessing controlled access data stored on AnVIL using DUOS
+**Finding data stored on AnVIL** 
+- Accessing open access data stored on AnVIL
+- Accessing controlled access data stored on AnVIL using DUOS
