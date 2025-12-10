@@ -5,13 +5,17 @@ ottrpal::set_knitr_image_path()
 
 # Introduction
 
+This book contains a collection of vignettes that guide users through different ways to access data on the AnVIL platform. 
 
 ## Motivation
 
+One of the most common questions people have when they switch to using the AnVIL platform is "how do I get data onto it?" 
 
 ## Target Audience  
 
-The course is intended for ...
+The course is intended for new and experienced users of the AnVIL platform. In order to follow the vignettes, you must have an AnVIL account that is connected to a billing project. Each vignette will incur only minimal costs.
+
+These vignettes are built around
 
 ## Curriculum  
 
