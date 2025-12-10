@@ -30,7 +30,7 @@ These vignettes cover the following topics:
 - Uploading data from the cloud
 - Uploading data from a high performance computing cluster
 
-**Importing data from external data repositories** 
+**Getting data from external data repositories** 
 - Importing data from SRA
 - Importing data from dbGaP
 
