@@ -36,4 +36,4 @@ These vignettes cover the following topics:
 
 **Finding data stored on AnVIL** 
 * Accessing open access data stored on AnVIL
-* Accessing controlled access data stored on AnVIL using DUOS
+* Accessing controlled access data stored on AnVIL using DUOS 
