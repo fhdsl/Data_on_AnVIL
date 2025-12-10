@@ -9,14 +9,18 @@ This book contains a collection of vignettes that guide users through different 
 
 ## Motivation
 
-One of the most common questions people have when they switch to using the AnVIL platform is "how do I get data onto it?" 
+One of the most common questions people have when they switch to using the AnVIL platform is "how do I get data onto it?" We created this book to provide small, step-by-step examples for users to try so that they can feel confident when moving data for their own research onto AnVIL. Each vignette is quick and designed to take ~15 minutes.
 
 ## Target Audience  
 
-The course is intended for new and experienced users of the AnVIL platform. In order to follow the vignettes, you must have an AnVIL account that is connected to a billing project. Each vignette will incur only minimal costs.
+The course is intended for new and experienced users of the AnVIL platform. In order to follow the vignettes, **you must have an AnVIL account that is connected to a billing project.** Each vignette will incur only minimal costs.
 
-These vignettes are built around
+These vignettes are built around common tasks that an individual user might do, as opposed to a user who is part of a consortium. Consortium members should consult their consortium for instructions on how to access that data.
 
 ## Curriculum  
 
-The course covers...
+We cover the following topics:
+
+1. Bringing your own data onto AnVIL (including data stored locally, in the cloud, or on an HPC)
+1. Importing data from common NIH data repositories like SRA
+1. Finding data stored on AnVIL (including both open access and controlled access data)
