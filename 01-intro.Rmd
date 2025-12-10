@@ -28,6 +28,7 @@ These vignettes are built around common tasks that an individual user might do. 
 These vignettes cover the following topics:
 
 **Bringing your own data to AnVIL** 
+
 * Uploading data from your local computer 
 * Uploading data from the cloud
 * Uploading data from a high performance computing cluster
