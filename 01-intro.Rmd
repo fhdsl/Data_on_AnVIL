@@ -19,8 +19,17 @@ These vignettes are built around common tasks that an individual user might do, 
 
 ## Curriculum  
 
-We cover the following topics:
+These vignettes cover the following topics:
 
-1. Bringing your own data onto AnVIL (including data stored locally, in the cloud, or on an HPC)
-1. Importing data from common NIH data repositories like SRA
-1. Finding data stored on AnVIL (including both open access and controlled access data)
+**Bringing your own data to AnVIL**
+1. Uploading data from your local computer 
+1. Uploading data from the cloud
+1. Uploading data from a high performance computing cluster
+
+**Importing data from external data repositories**
+1. Importing data from SRA
+1. Importing data from dbGaP
+
+**Finding data stored on AnVIL**
+1. Importing open access data stored on AnVIL
+1. Importing controlled access data stored on AnVIL
