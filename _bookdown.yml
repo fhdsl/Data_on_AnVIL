@@ -2,10 +2,11 @@ book_filename: "Data on AnVIL"
 chapter_name: "Chapter"
 repo: https://github.com/jhudsl/AnVIL_Template/
 rmd_files: ["index.Rmd",
-            "01-importing_with_tables.Rmd",
-            "02-data_explorer.Rmd",
-            "03-importing_with_SRA.Rmd",
-            "04-controlled_access_data.Rmd",
+	    "01-intro.Rmd",
+            "02-importing_with_tables.Rmd",
+            "03-data_explorer.Rmd",
+            "04-importing_with_SRA.Rmd",
+            "05-controlled_access_data.Rmd",
             "Feedback.Rmd",
             "About.Rmd",
             "References.Rmd"]

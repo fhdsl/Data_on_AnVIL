@@ -13,29 +13,21 @@ favicon: assets/AnVIL_style/anvil_favicon.ico
 
 # About this Book {-}
 
-The chapters within this book contain hands-on activities to demonstrate how users can access and use data within an AnVIL workspace. Topics includes bringing your own data from an HPC, finding data already hosted on AnVIL with tools like the Data Explorer, importing data from online data repositories like SRA, and getting access to protected data stored in places like dbGaP.
+The chapters within this book contain hands-on activities to demonstrate how users can access and use data within an AnVIL workspace. Topics include bringing your own data from an HPC, finding data already hosted on AnVIL with tools like the Data Explorer, importing data from online data repositories like SRA, and getting access to protected data stored in places like dbGaP.
 
-It can be very exciting to learn how much data is at your fingertips! Once you have settled on some data to use, you'll want to bring it into AnVIL if it's not already there.
-
-Navigate to the menu on the left to get started!
+This book is part of a series of books for the Genomic Data Science Analysis, Visualization, and Informatics Lab-space (AnVIL) of the National Human Genome Research Institute (NHGRI). Learn more about AnVIL by visiting https://anvilproject.org or reading the [article in Cell Genomics](https://www.sciencedirect.com/science/article/pii/S2666979X21001063).
 
 ## Skills Level {-} 
 
 ::: {.notice}
 _Genetics_
-
-**Novice**: no genetics knowledge needed
+**Novice**: no genetics skills needed
 
 _Programming skills_
-
-**Novice**: no programming experience needed
+**Novice**: no programming skills needed
 :::
 
 ## AnVIL Collection {-}
 
-This module is part of a series of books for the Genomic Data Science Analysis, Visualization, and Informatics Lab-space (AnVIL) of the National Human Genome Research Institute (NHGRI). 
-
 Please check out our full collection of AnVIL and related resources: https://hutchdatascience.org/AnVIL_Collection/
-
-Learn more about AnVIL by visiting https://anvilproject.org or reading the [article in Cell Genomics](https://www.sciencedirect.com/science/article/pii/S2666979X21001063).
 
