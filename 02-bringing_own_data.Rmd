@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Uploading from your desktop
+# Uploading from your local computer
 
 In this example, we'll upload some genomic data into AnVIL.
 
@@ -23,12 +23,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)
 :::
 
-You can also see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
-
-```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_3")
-```
-
 
 ## Clone Workspace
 
@@ -39,6 +33,16 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ## Check file status
 
 ## Bring file into a workspace
+
+## Access Data Uploader
+
+## Create a data collection
+
+## Upload data collection
+
+## Upload data table with metadata
+
+## Summary
 
 ## Summary
 
@@ -56,30 +60,84 @@ You can read more about Google Cloud buckets [here](https://docs.cloud.google.co
 We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
 
 ```{r, echo=FALSE, fig.alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ad3a8a2073_0_0#slide=id.g3ad3a8a2073_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
 ```
 
 ## Step One: Create your workspace
 
-```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner.."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_20#slide=id.g3ada1fc20cd_0_20")
+The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking the three line icon in the upper lefthand corner.
+
+```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_182#slide=id.g3afa908e330_0_182")
 ```
+
+Once you have opened the Workspace page, create a new workspace by clicking on the plus sign at the top.
 
 ```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_0#slide=id.g3ada1fc20cd_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_190#slide=id.g3afa908e330_0_190")
 ```
+
+You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
 ```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you won’t be able to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_4#slide=id.g3ada1fc20cd_0_4")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_197#slide=id.g3afa908e330_0_197")
 ```
+
+You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) at the AnVIL Portal.
+
+Once you have created a workspace, AnVIL will take you to the Workspace Dashboard. 
+
+## Step Two: Provision a Jupyter Notebook environment
+
+
+## Step Three: Install gcloud storage
+
+1.2. Run the following command using bash shells in your Terminal.
+
+`curl https://sdk.cloud.google.com | bash`
+
+1.3. Open a new bash shell in your terminal, or restart your shell using this command:
+
+`exec -l $SHELL`
+
+1.4.Authenticate by running the following:
+
+`gcloud init`
+
+::: {.notice}
+Before downloading data using gcloud storage, verify your gcloud storage installation! Use the `ls` command to look at the buckets you can access.
+
+Run `gcloud storage ls` to see all of the Cloud Storage buckets under the workspace project ID.
+
+Run `gcloud storage ls -p [project name]` to list buckets for a specific project.
+:::
+
+Once gcloud storage is installed, you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
+
+## Step Four: Run gcloud storage to copy/move files 
+
+Now that you've installed gcloud storage, you can copy your data files into the Workspace. The command for this follows this pattern:
+
+`gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>  `
+You will need the names of both the bucket where the data is currently stored _and_ the bucket the data is being moved to.
+
+The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`.
+
+The data is being moved to the Workspace bucket. The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored.
+
+You can click the clipboard icon on the right to copy the name of your Workspace Bucket.
 
 ```{r, echo=FALSE, fig.alt="The dashboard page of your new workspace shows information about the workspace on the right-hand side. You will want to copy the bucket name from here. This is the bucket where all information associated with this workspace is stored."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit?slide=id.g3ada1fc20cd_0_8#slide=id.g3ada1fc20cd_0_8")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
 ```
 
+For this example, the command to move the files is
 
+`gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>  `
 
-The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
+## Step Five: Verify that files were moved to your workspace
+
+On the Workspace Dashboard, you will be able to see any uploaded files by clicking the "Open in browser" link.
 
 ```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Dashboard. Google Bucket information, including the Google Bucket name, location, and 'Open in browser' link, at the bottom right of the screen is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5172664d7_0_142")
@@ -98,16 +156,6 @@ Data Tables provide a way to organize data and metadata, including URI links to 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf982a3c0cd_0_0")
 ```
 
-
-## Access Data Uploader
-
-## Create a data collection
-
-## Upload data collection
-
-## Upload data table with metadata
-
-## Summary
 
 
 # Uploading from a remote cluster (HPC)
