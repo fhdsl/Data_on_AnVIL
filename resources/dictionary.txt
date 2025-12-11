@@ -18,6 +18,7 @@ dropdown
 eMERGE
 fasta
 fastq
+gcloud
 GDSCN
 github
 Glimma

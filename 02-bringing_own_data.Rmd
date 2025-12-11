@@ -65,7 +65,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step One: Create your workspace
 
-The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking the three line icon in the upper lefthand corner.
+The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
 
 ```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_182#slide=id.g3afa908e330_0_182")
@@ -137,7 +137,7 @@ For this example, the command to move the forward read file is
 
 If we want to move both files at once, the command instead becomes
 
-`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_*_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065
+`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_*_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
 
 ## Step Five: Verify that files were moved to your workspace
 
