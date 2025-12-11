@@ -16,6 +16,8 @@ dex
 dexamethasone
 dropdown
 eMERGE
+fasta
+fastq
 GDSCN
 github
 Glimma
@@ -50,6 +52,7 @@ Rmd
 RStudio
 SDK
 SRA
+Submitters
 tallgrass
 timeframe
 TSA
