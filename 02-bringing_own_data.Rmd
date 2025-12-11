@@ -123,7 +123,7 @@ You will need the names of both the bucket where the data is currently stored _a
 
 The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`.
 
-The data is being moved to the Workspace bucket. The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored.
+The data is being moved to the Workspace bucket. The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`.
 
 You can click the clipboard icon on the right to copy the name of your Workspace Bucket.
 
@@ -131,9 +131,13 @@ You can click the clipboard icon on the right to copy the name of your Workspace
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
 ```
 
-For this example, the command to move the files is
+For this example, the command to move the forward read file is
 
-`gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>  `
+`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065  `
+
+If we want to move both files at once, the command instead becomes
+
+`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_*_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065
 
 ## Step Five: Verify that files were moved to your workspace
 
@@ -150,106 +154,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ```
 
 
-Data Tables provide a way to organize data and metadata, including URI links to storage buckets. These tables are a convenient way to organize input for analyses as well as tracking workflow outputs.
-
-```{r, echo=FALSE, fig.alt="Image shows a schematic of the data storage locations in an AnVIL Workspace. The Data Table is highlighted with a number 'three'."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf982a3c0cd_0_0")
-```
-
-
-
-# Uploading from a remote cluster (HPC)
-
-## Install `gsutil` on your local server
-
-## Copy files
-
-## Check file status
-
-## Bring file into a workspace
-
-## Summary
-
-
 # Additional Resources
 
 You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
 
 More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
-
-## Information from Getting Started guide
-
-## Browser: Upload Single Files
-
-Click the "Files" directory at the bottom left of the Data Tab. Then click the "+" button in the bottom right corner of the screen. This will prompt a file browser on your local machine.
-
-```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The plus button on the bottom right corner of the screen is highlighted.'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_12")
-```
-
-## Browser: Upload Folders
-
-Click the ["Open in browser"](#bring-data-overview) link on the bottom right of the Workspace Dashboard Tab. This will open a new browser window or tab directed to your Workspace's Google Bucket on the Google Cloud Platform. 
-
-```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Dashboard. The 'Open in browser' link at the bottom right of the screen is highlighted."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf57004a098_0_1")
-```
-
-Here, you can upload files and manage your data and folders. You can also upload an entire folder by clicking on "UPLOAD FOLDER".
-
-```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Google Bucket on the Google Cloud Platform. The 'UPLOAD FOLDER' button is highlighted."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf57004a098_0_9")
-```
-
-## `gsutil`: Local to Cloud
-
-`gsutil` is a Python application that lets you access Cloud Storage from the command line in a terminal. The terminal you use can be run on your local machine (local instance) or built into the Workspace Cloud Environment.
-
-## Install `gsutil` on Your Local Computer or Local Server
-
-[Cloud SDK](https://cloud.google.com/sdk/docs) is a set of tools that you can use to manage resources and applications hosted on Google Cloud. These tools include the `gsutil` command-line tool. 
-
-1. Ensure you have a terminal available. 
-    - MacOS and Linux users have a terminal application available by default. Terminal applications are also available through third party software, such as RStudio. 
-    - Windows users should download a terminal application, such as [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
-
-1. Install Cloud SDK following the appropriate link below:
-    - [Windows](https://cloud.google.com/sdk/docs/install#windows)
-    - [MacOS](https://cloud.google.com/sdk/docs/install#mac)
-    - [Linux](https://cloud.google.com/sdk/docs/install#linux)
-
-1. Test that Cloud SDK has been successfully installed by typing `gsutil` in the terminal application prompt:
-
-```
-gsutil
-```
-
-If the installation was successful, you should see information about using `gsutil` that looks like the following:
-
-```
-Usage: gsutil [-D] [-DD] [-h header]... [-i service_account] [-m] [-o] [-q] [-u user_project] [command [opts...] args...]
-```
-
-If the installation was not successful, you should see a warning that `gsutil` was not found. Please return to the installation steps to ensure they have been completed correctly.
-
-```
-command not found: gsutil
-```
-
-## Copy Files From Your Local Computer to a Workspace Bucket
-
-The `gsutil cp` command allows you to copy data from one machine to another. On your local machine's terminal, you should use the command in the following format:
-
-```
-gsutil cp where_to_copy_data_from/filename where_to_copy_data_to
-```
-
-**Example:** To copy the file `test.bam` located on your local computer at `users/name/data/` into the Workspace Bucket `gs://ab5-27x` on the cloud:
-
-```
-gsutil cp users/name/data/test.bam gs://ab5-27x
-```
-
-Remember that you can easily copy the Workspace Bucket ID using the clipboard button on the [Workspace Dashboard]({#bring-data-overview}). Please see the [`gsutil cp` documentation](https://cloud.google.com/storage/docs/gsutil/commands/cp) for more details, such as how to do parallel multi-threaded/multi-processing copying or copying an entire directory tree. The `gsutil cp` command can also be used to copy files from one Workspace Bucket to another (cloud-to-cloud copying).
 
 
