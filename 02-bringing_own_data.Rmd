@@ -5,11 +5,13 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Uploading from your local computer
+# Uploading From Your Local Computer
 
-In this example, we'll upload some genomic data into AnVIL.
+In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example.
 
 TODO: Add information about what the data is
+
+## Step One: Create a Workspace
 
 The starting point for bringing your own data to AnVIL is the Workspace Dashboard. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. You can click the clipboard icon on the right to copy the name of your Workspace Bucket. You will be able to see any uploaded files by clicking the "Open in browser" link.
 
@@ -23,17 +25,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)
 :::
 
-
-## Clone Workspace
-
-## Identify bucket path
-
-## Upload file 
-
-## Check file status
-
-## Bring file into a workspace
-
 ## Access Data Uploader
 
 ## Create a data collection
@@ -44,17 +35,15 @@ You can read more about Google Cloud buckets [here](https://docs.cloud.google.co
 
 ## Summary
 
-## Summary
 
-
-# Uploading from the cloud
+# Uploading From The Cloud
 
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 
 ::: {.dictionary}
 *Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
 
-You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)
+You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)!
 :::
 
 We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
@@ -92,17 +81,31 @@ Once you have created a workspace, AnVIL will take you to the Workspace Dashboar
 
 ## Step Three: Install gcloud storage
 
-1.2. Run the following command using bash shells in your Terminal.
+::: {.notice}
+This step can be skipped if gcloud storage has previously been installed in your Workspace, and you can move directly to Step Four. However, if you created your Workspace from scratch like we have in our example, you'll need to do this step.
+:::
+
+First, open a terminal window in your environment.
+
+TODO: add slide image
+
+Next, run the following command in your Terminal.
 
 `curl https://sdk.cloud.google.com | bash`
 
-1.3. Open a new bash shell in your terminal, or restart your shell using this command:
+TODO: add slide image
+
+Open a new bash shell in your terminal, or restart your shell using this command:
 
 `exec -l $SHELL`
 
-1.4.Authenticate by running the following:
+TODO: add slide image
+
+Finally, authenticate your gcloud by running the following:
 
 `gcloud init`
+
+TODO: add slide image
 
 ::: {.notice}
 Before downloading data using gcloud storage, verify your gcloud storage installation! Use the `ls` command to look at the buckets you can access.
@@ -110,6 +113,8 @@ Before downloading data using gcloud storage, verify your gcloud storage install
 Run `gcloud storage ls` to see all of the Cloud Storage buckets under the workspace project ID.
 
 Run `gcloud storage ls -p [project name]` to list buckets for a specific project.
+
+You can still move data into this Workspace even if the bucket isn't listed under this project ID!
 :::
 
 Once gcloud storage is installed, you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
@@ -119,9 +124,14 @@ Once gcloud storage is installed, you can perform command-line gcloud storage ta
 Now that you've installed gcloud storage, you can copy your data files into the Workspace. The command for this follows this pattern:
 
 `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>  `
+
 You will need the names of both the bucket where the data is currently stored _and_ the bucket the data is being moved to.
 
-The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`.
+The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. Here's an image of the bucket contents as a reminder.
+
+```{r, echo=FALSE, fig.alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
+```
 
 The data is being moved to the Workspace bucket. The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`.
 
@@ -133,13 +143,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 For this example, the command to move the forward read file is
 
-`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065  `
+`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+
+TODO: add slide image
 
 If we want to move both files at once, the command instead becomes
 
 `gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_*_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
 
 ## Step Five: Verify that files were moved to your workspace
+
+TODO: update slide images
 
 On the Workspace Dashboard, you will be able to see any uploaded files by clicking the "Open in browser" link.
 
@@ -153,6 +167,8 @@ You can also see any uploaded files by clicking the "Files" directory at the bot
 ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_3")
 ```
 
+
+# Uploading Data From An HPC
 
 # Additional Resources
 
