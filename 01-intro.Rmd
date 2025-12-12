@@ -9,7 +9,7 @@ This book contains a collection of vignettes that guide users through different 
 
 ## Motivation
 
-One of the most common questions people have when using the AnVIL platform is "how do I get the data?" We created this book to provide step-by-step examples for users so that they can feel confident finding data on AnVIL or moving data onto AnVIL. Each vignette is quick and designed to take ~15 minutes.
+One of the most common questions people have when using the AnVIL platform is "how do I get the data?" We created this book to provide step-by-step examples for users follow so that they can feel confident finding or moving data onto AnVIL. Each vignette is quick (designed to take ~15 minutes) and will incur minimal costs.
 
 Navigate to the menu on the left to get started!
 
