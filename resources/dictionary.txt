@@ -22,6 +22,7 @@ Glimma
 glimmaMDS
 Gmail
 GTEx
+HPC
 impactful
 Inclusivity
 ingressing
@@ -49,6 +50,7 @@ Rmd
 RStudio
 SDK
 SRA
+Submitters
 tallgrass
 timeframe
 TSA
