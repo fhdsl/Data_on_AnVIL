@@ -5,46 +5,6 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Uploading From Your Local Computer
-
-In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example.
-
-TODO: Add information about what the data is
-
-## Step One: Create a Workspace
-
-The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
-
-TODO: Add image about creating workspace
-
-Once you have opened the Workspace page, create a new workspace by clicking on the plus sign at the top.
-
-TODO: Add image about creating workspace
-
-You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
-
-TODO: Add image about creating workspace
-
-You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) at the AnVIL Portal.
-
-Once you have created a workspace, AnVIL will take you to the Workspace Dashboard.
-
-## Open the Data Uploader
-
-When you switch to the Data tab in your Workspace, you'll see three headers on the left hand side: **TABLES**, **REFERENCE DATA**, and **WORKSPACE DATA**. At the moment all three of these sections are empty. We will use the Data Uploader tool to populate the **TABLES** and **WORKSPACE DATA** sections of the Workspace.
-
-Click on the box in the upper left hand corner that says "Import Data". From the dropdown menu, you'll want to choose "Open data uploader".
-
-TODO: Add image
-
-## Create a data collection
-
-## Upload data collection
-
-## Upload data table with metadata
-
-## Verify files were moved into your workspace
-
 
 # Uploading From The Cloud
 
@@ -88,6 +48,8 @@ Once you have created a workspace, AnVIL will take you to the Workspace Dashboar
 
 ## Step Two: Provision a Jupyter Notebook environment
 
+We will be using a terminal to transfer the files. This is 
+
 
 ## Step Three: Install gcloud storage
 
@@ -104,6 +66,10 @@ Next, run the following command in your Terminal.
 `curl https://sdk.cloud.google.com | bash`
 
 TODO: add slide image
+
+You will be asked where to create the directory. You can hit Enter to use the default.
+
+Next, 
 
 Open a new bash shell in your terminal, or restart your shell using this command:
 
@@ -151,17 +117,15 @@ You can click the clipboard icon on the right to copy the name of your Workspace
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
 ```
 
-For this example, the command to move the forward read file is
+In order for `gcloud` to recognize the bucket where your files are being moved from, you need to add `gs://` to the front of it. So, for this example, the command to move the forward read file is
 
-`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
 
-TODO: add slide image
+Without the `gs://`, you will get an error message that the file URL does not exist!
 
-If we want to move both files at once, the command instead becomes
+## Step Five: Move files from the bucket into the workspace
 
-`gcloud storage cp fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_*_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
-
-## Step Five: Verify that files were moved to your workspace
+upload to bucket? gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://my-bucket
 
 TODO: update slide images
 
@@ -178,7 +142,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fC
 ```
 
 
-# Uploading Data From An HPC
 
 # Additional Resources
 
