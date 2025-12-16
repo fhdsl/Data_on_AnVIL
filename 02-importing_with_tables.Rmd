@@ -104,4 +104,3 @@ Remember that you can easily copy the Workspace Bucket ID using the clipboard bu
 
 You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
 
-More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
