@@ -6,7 +6,7 @@ documentclass: book
 bibliography: book.bib
 biblio-style: apalike
 link-citations: yes
-description: This book contains vignettes on how to upload, find, and use data within an AnVIL workspace.
+description: This book contains vignettes on how to upload, import, or access data within an AnVIL workspace.
 favicon: assets/AnVIL_style/anvil_favicon.ico
 ---
 
