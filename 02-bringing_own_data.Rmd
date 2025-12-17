@@ -48,8 +48,31 @@ Once you have created a workspace, AnVIL will take you to the Workspace Dashboar
 
 ## Step Two: Provision a Jupyter Notebook environment
 
-We will be using a terminal to transfer the files. This is 
+We will be using a terminal to transfer the files. You will need to provision a Jupyter Notebook environment in order to access a terminal window.
 
+To access the menu for provisioning computing environments, double-click on the cloud-and-lightning-bolt icon in the right-hand menu.
+
+```{r, echo=FALSE, fig.alt="Choosing the cloud-and-lightning-bolt icon will allow you to start the process of provisioning a computing environment."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_214#slide=id.g3afa908e330_0_214")
+```
+
+A new menu will pop up. Choose the "Settings" button under the Jupyter logo.
+
+```{r, echo=FALSE, fig.alt="To provision a Jupyter environment, click on the settings button under the Jupyter logo."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_4#slide=id.g3b11697e7a3_0_4")
+```
+
+The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take some time to copy them into your Workspace bucket, make sure to deselect the "Enable Autopause" option. When you're ready, click the "Create" button.
+
+```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom.."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_8#slide=id.g3b11697e7a3_0_8")
+```
+
+AnVIL will now begin provisioning your environment. This will take a couple of minutes - when testing this vignette, it took between 2 and 3 minutes before the environment was ready. You'll know it's ready when the Jupyter icon on the menu has a green dot.
+
+```{r, echo=FALSE, fig.alt="The Jupyter icon on the right-hand menu will have a green dot when your environment is ready to be used."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_12#slide=id.g3b11697e7a3_0_12")
+```
 
 ## Step Three: Install gcloud storage
 
@@ -117,15 +140,13 @@ You can click the clipboard icon on the right to copy the name of your Workspace
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
 ```
 
-In order for `gcloud` to recognize the bucket where your files are being moved from, you need to add `gs://` to the front of it. So, for this example, the command to move the forward read file is
+**In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** So, for this example, the command to move the forward read file is
 
-`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
 
 Without the `gs://`, you will get an error message that the file URL does not exist!
 
-## Step Five: Move files from the bucket into the workspace
-
-upload to bucket? gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://my-bucket
+## Step Five: Verify that files have been transferred
 
 TODO: update slide images
 
