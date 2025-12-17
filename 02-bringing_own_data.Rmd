@@ -80,15 +80,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 This step can be skipped if gcloud storage has previously been installed in your Workspace, and you can move directly to Step Four. However, if you created your Workspace from scratch like we have in our example, you'll need to do this step.
 :::
 
-First, open a terminal window in your environment.
+First, open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu.
 
-TODO: add slide image
+```{r, echo=FALSE, fig.alt="."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b16c990b73_0_14#slide=id.g3b16c990b73_0_14")
+```
 
 This will open a new tab in your browser window, but you are still in the same workspace! Next, run the following command in your Terminal.
 
 `curl https://sdk.cloud.google.com | bash`
 
-TODO: add slide image
+```{r, echo=FALSE, fig.alt="."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_210#slide=id.g3afa908e330_0_210")
+```
 
 You will be asked where to create the directory. You can hit Enter to use the default.
 
