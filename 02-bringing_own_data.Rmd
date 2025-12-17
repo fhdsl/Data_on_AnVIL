@@ -46,9 +46,9 @@ You can read about Authorization Domains for workspace security in [this article
 
 Once you have created a workspace, AnVIL will take you to the Workspace Dashboard. 
 
-## Step Two: Provision a Jupyter Notebook environment
+## Step Two: Provision a Jupyter environment
 
-We will be using a terminal to transfer the files. You will need to provision a Jupyter Notebook environment in order to access a terminal window.
+We will be using a terminal to transfer the files. You will need to provision a Jupyter environment in order to access a terminal window.
 
 To access the menu for provisioning computing environments, double-click on the cloud-and-lightning-bolt icon in the right-hand menu.
 
@@ -84,7 +84,7 @@ First, open a terminal window in your environment.
 
 TODO: add slide image
 
-Next, run the following command in your Terminal.
+This will open a new tab in your browser window, but you are still in the same workspace! Next, run the following command in your Terminal.
 
 `curl https://sdk.cloud.google.com | bash`
 
@@ -92,19 +92,13 @@ TODO: add slide image
 
 You will be asked where to create the directory. You can hit Enter to use the default.
 
-Next, 
-
 Open a new bash shell in your terminal, or restart your shell using this command:
 
 `exec -l $SHELL`
 
-TODO: add slide image
-
 Finally, authenticate your gcloud by running the following:
 
 `gcloud init`
-
-TODO: add slide image
 
 ::: {.notice}
 Before downloading data using gcloud storage, verify your gcloud storage installation! Use the `ls` command to look at the buckets you can access.
@@ -148,20 +142,19 @@ Without the `gs://`, you will get an error message that the file URL does not ex
 
 ## Step Five: Verify that files have been transferred
 
-TODO: update slide images
+But how do you know if your files were successfully transferred?
 
-On the Workspace Dashboard, you will be able to see any uploaded files by clicking the "Open in browser" link.
-
-```{r, echo=FALSE, fig.alt="Image shows a screenshot of the Workspace Dashboard. Google Bucket information, including the Google Bucket name, location, and 'Open in browser' link, at the bottom right of the screen is highlighted."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5172664d7_0_142")
-```
-
-You can also see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
+You can see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
 
 ```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf55fadc51c_0_3")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_24#slide=id.g3b11697e7a3_0_24")
 ```
 
+If you click on the name of the file, you can also see the details of the file.
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the details of the files we successfully transferred.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_28#slide=id.g3b11697e7a3_0_28")
+```
 
 
 # Additional Resources
