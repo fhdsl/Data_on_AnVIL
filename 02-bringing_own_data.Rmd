@@ -64,7 +64,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take some time to copy them into your Workspace bucket, make sure to deselect the "Enable Autopause" option. When you're ready, click the "Create" button.
 
-```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom.."}
+```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_8#slide=id.g3b11697e7a3_0_8")
 ```
 
@@ -74,25 +74,23 @@ AnVIL will now begin provisioning your environment. This will take a couple of m
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_12#slide=id.g3b11697e7a3_0_12")
 ```
 
+Open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu.
+
+```{r, echo=FALSE, fig.alt="The terminal window can be opened by clicking on the icon underneath the Jupyter logo on the right-hand menu."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b16c990b73_0_14#slide=id.g3b16c990b73_0_14")
+```
+
+This will open a new tab in your browser window, but you are still in the same workspace! 
+
 ## Step Three: Install gcloud storage
 
 ::: {.notice}
 This step can be skipped if gcloud storage has previously been installed in your Workspace, and you can move directly to Step Four. However, if you created your Workspace from scratch like we have in our example, you'll need to do this step.
 :::
 
-First, open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu.
-
-```{r, echo=FALSE, fig.alt="The terminal window can be opened by clicking on the icon underneath the Jupyter logo on the right-hand menu."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b16c990b73_0_14#slide=id.g3b16c990b73_0_14")
-```
-
-This will open a new tab in your browser window, but you are still in the same workspace! Next, run the following command in your Terminal.
+Once you have opened a terminal, run the following command.
 
 `curl https://sdk.cloud.google.com | bash`
-
-```{r, echo=FALSE, fig.alt="The terminal will open in a new window, but you are still in the same workspace."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_210#slide=id.g3afa908e330_0_210")
-```
 
 You will be asked where to create the directory. You can hit Enter to use the default.
 
