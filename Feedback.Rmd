@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Give us Feedback
+# Give us Feedback {-}
 
 Thank you for your interest in this book! There are a few ways you can suggest improvements:
 
