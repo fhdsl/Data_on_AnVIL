@@ -13,7 +13,7 @@ In this example, we'll upload some genomic data into AnVIL that is currently sto
 ::: {.dictionary}
 **Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
 
-You can read more about Google Cloud buckets [here](https://docs.cloud.google.com/storage/docs/buckets)!
+You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
 :::
 
 We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
