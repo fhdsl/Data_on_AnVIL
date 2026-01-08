@@ -163,7 +163,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 - Create a workspace
 - Provision a Jupyter environment
 - Open terminal and install `gcloud` (if not done previously)
-- run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
+- Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
 - verify that files have been transferred
 
 # Additional Resources
