@@ -164,7 +164,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 - Provision a Jupyter environment
 - Open terminal and install `gcloud` (if not done previously)
 - Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
-- verify that files have been transferred
+- Verify that files have been transferred
 
 # Additional Resources
 
