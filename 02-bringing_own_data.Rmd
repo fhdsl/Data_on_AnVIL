@@ -6,7 +6,7 @@ ottrpal::set_knitr_image_path()
 ```
 
 
-# Uploading From The Cloud {#uploading-cloud}
+# Uploading from the Cloud {#uploading-cloud}
 
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 
