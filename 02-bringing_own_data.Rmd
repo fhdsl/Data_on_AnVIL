@@ -159,6 +159,6 @@ You can read documentation about bringing your own data to AnVIL on the [Portal]
 
 More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
 
-Sometimes you might be accessing data from a "Requestor Pays" bucket. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket usecase with AnVIL.
+Sometimes you might be accessing data from a "Requester Pays" bucket. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket use case with AnVIL.
 
 
