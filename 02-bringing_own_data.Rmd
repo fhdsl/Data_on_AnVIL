@@ -82,6 +82,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 This will open a new tab in your browser window, but you are still in the same workspace! 
 
+
 ## Step Three: Run gcloud storage to copy/move files 
 
 AnVIL Jupyter environments have the gcloud tools installed by default. This means you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
@@ -98,7 +99,24 @@ The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. Here'
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
 ```
 
-The data is being moved to the Workspace bucket. The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`.
+AnVIL workspaces automatically comes with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
+
+::: {.dictionary}
+Terra workspaces have two dedicated storage locations: the workspace bucket and the Cloud Environment virtual machine (VM) Persistent Disk (PD). Like a USB drive, the PD can be detached from the VM before deleting or recreating the Cloud Environment, then attached to a new one. The PD lets you keep your notebook's code packages, input files, and outputs - without having to move anything to workspace storage (i.e., Google bucket). 
+
+Read more about it [here](https://support.terra.bio/hc/en-us/articles/360047318551-Overview-Cloud-environment-storage-detachable-persistent-disks)!
+:::
+
+The persistent disk is created when you provision your computing environment. When you shut down your computing environment, you can the persistent disk, or maintain the persistent disk for monthly cost. 
+
+The persistent disk is mounted to the home directory in your Jupyter environment. If you want to move the data into your persistent disk, you can use the command
+
+`gcloud storage cp <where_to_copy_data_from>/<file_name> .`
+
+**However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. A safer option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
+
+
+The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`.
 
 You can click the clipboard icon on the right to copy the name of your Workspace Bucket.
 
@@ -140,5 +158,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
 
 More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
+
+Sometimes you might be accessing data from a "Requestor Pays" bucket. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket usecase with AnVIL.
 
 
