@@ -82,41 +82,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 This will open a new tab in your browser window, but you are still in the same workspace! 
 
-## Step Three: Install gcloud storage
+## Step Three: Run gcloud storage to copy/move files 
 
-::: {.notice}
-This step can be skipped if gcloud storage has previously been installed in your Workspace, and you can move directly to Step Four. However, if you created your Workspace from scratch like we have in our example, you'll need to do this step.
-:::
+AnVIL Jupyter environments have the gcloud tools installed by default. This means you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
 
-Once you have opened a terminal, run the following command.
-
-`curl https://sdk.cloud.google.com | bash`
-
-You will be asked where to create the directory. You can hit Enter to use the default.
-
-Open a new bash shell in your terminal, or restart your shell using this command:
-
-`exec -l $SHELL`
-
-Finally, authenticate your gcloud by running the following:
-
-`gcloud init`
-
-::: {.notice}
-Before downloading data using gcloud storage, verify your gcloud storage installation! Use the `ls` command to look at the buckets you can access.
-
-Run `gcloud storage ls` to see all of the Cloud Storage buckets under the workspace project ID.
-
-Run `gcloud storage ls -p [project name]` to list buckets for a specific project.
-
-You can still move data into this Workspace even if the bucket isn't listed under this project ID!
-:::
-
-Once gcloud storage is installed, you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
-
-## Step Four: Run gcloud storage to copy/move files 
-
-Now that you've installed gcloud storage, you can copy your data files into the Workspace. The command for this follows this pattern:
+The command for this follows this pattern:
 
 `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
 
@@ -161,8 +131,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 ## Summary
 
 - Create a workspace
-- Provision a Jupyter environment
-- Open terminal and install `gcloud` (if not done previously)
+- Provision a Jupyter environment and open Terminal
 - Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
 - Verify that files have been transferred
 
