@@ -130,7 +130,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Without the `gs://`, you will get an error message that the file URL does not exist!
 
-## Step Five: Verify that files have been transferred
+## Step Four: Verify that files have been transferred
 
 But how do you know if your files were successfully transferred?
 
