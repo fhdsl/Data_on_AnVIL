@@ -33,13 +33,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step One: Create your workspace
 
-The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
+The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
 
 ```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_182#slide=id.g3afa908e330_0_182")
 ```
 
-Once you have opened the Workspace page, create a new workspace by clicking on the plus sign at the top.
+Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
 
 ```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_190#slide=id.g3afa908e330_0_190")
@@ -53,7 +53,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
 
-Once you have created a workspace, AnVIL will take you to the Workspace Dashboard. 
+Once you have created a workspace, AnVIL will take you to the workspace dashboard. 
 
 ## Step Two: Provision a Jupyter environment
 
@@ -71,7 +71,7 @@ A new menu will pop up. Choose the "Settings" button under the Jupyter logo.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_4#slide=id.g3b11697e7a3_0_4")
 ```
 
-The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take some time to copy them into your Workspace bucket, make sure to deselect the "Enable Autopause" option. When you're ready, click the "Create" button.
+The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take some time to copy them into your workspace bucket, make sure to deselect the "Enable Autopause" option. When you're ready, click the "Create" button.
 
 ```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_8#slide=id.g3b11697e7a3_0_8")
@@ -125,9 +125,9 @@ The persistent disk is mounted to the home directory in your Jupyter environment
 **However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. A safer option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
 
 
-The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this example case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`. However, your workspace will have a different path or name.
+The dashboard page of your new workspace shows information about the workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your workspace. This is the bucket where all information associated with this workspace is stored. In this example case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`. However, your workspace will have a different path or name.
 
-You can click the clipboard icon on the right to copy the name of your Workspace Bucket.
+You can click the clipboard icon on the right to copy the name of your workspace Bucket.
 
 ```{r, echo=FALSE, fig.alt="The dashboard page of your new workspace shows information about the workspace on the right-hand side. You will want to copy the bucket name from here. This is the bucket where all information associated with this workspace is stored."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
@@ -145,7 +145,7 @@ How do you know if your files were successfully transferred?
 
 You can see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
 
-```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the workspace Data tab. The Files directory and link on the bottom left is highlighted.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_24#slide=id.g3b11697e7a3_0_24")
 ```
 
