@@ -1,4 +1,5 @@
 AnVIL
+Autopause
 BiocManager
 bioinformatics
 BioProject
@@ -16,6 +17,9 @@ dex
 dexamethasone
 dropdown
 eMERGE
+fasta
+fastq
+gcloud
 GDSCN
 github
 Glimma
@@ -56,7 +60,10 @@ timeframe
 TSA
 TSV
 underserved
+Uploader
 URI
+VM
+workspaces
 Workspaces
 Workspace's
 www
