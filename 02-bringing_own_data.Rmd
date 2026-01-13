@@ -13,6 +13,7 @@ Imagine your lab has some data stored in a Google bucket. Maybe you want to brin
 
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 <br><br>
+
 ::: {.dictionary}
 **Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
 
@@ -33,8 +34,8 @@ For this activity, you will retrieve the two uncompressed fastq files and upload
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
 ```
 
-::: {.callout-tip}
-## What will this cost?
+::: {.notice}
+**What will this cost?**
 
 Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.
 
