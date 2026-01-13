@@ -125,7 +125,7 @@ The persistent disk is mounted to the home directory in your Jupyter environment
 **However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. A safer option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
 
 
-The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`.
+The dashboard page of your new Workspace shows information about the Workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your Workspace. This is the bucket where all information associated with this Workspace is stored. In this example case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`. However, your workspace will have a different path or name.
 
 You can click the clipboard icon on the right to copy the name of your Workspace Bucket.
 
