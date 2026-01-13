@@ -12,7 +12,7 @@ knitr::opts_chunk$set(out.width = "100%")
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 <br><br>
 ::: {.dictionary}
-**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
+**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
 
 You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
 :::
@@ -110,7 +110,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
 
-::: {.dictionary}
+::: {.callout-note}
 Terra workspaces have two dedicated storage locations: the workspace bucket and the Cloud Environment virtual machine (VM) Persistent Disk (PD). Like a USB drive, the PD can be detached from the VM before deleting or recreating the Cloud Environment, then attached to a new one. The PD lets you keep your notebook's code packages, input files, and outputs - without having to move anything to workspace storage (i.e., Google Bucket). 
 
 Read more about it [here](https://support.terra.bio/hc/en-us/articles/360047318551-Overview-Cloud-environment-storage-detachable-persistent-disks)!
@@ -122,7 +122,13 @@ The persistent disk is mounted to the home directory in your Jupyter environment
 
 `gcloud storage cp <where_to_copy_data_from>/<file_name> .`
 
-**However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. A safer option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
+In this case, the command to move the forward read file to the persistent disk is:
+
+`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+
+**In order for `gcloud` to recognize the bucket, you need to add `gs://` to the front of their name.** Without the `gs://`, you will get an error message that the file URL does not exist!
+
+**However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. Another option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
 
 
 The dashboard page of your new workspace shows information about the workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your workspace. This is the bucket where all information associated with this workspace is stored. In this example case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`. However, your workspace will have a different path or name.
@@ -133,11 +139,9 @@ You can click the clipboard icon on the right to copy the name of your workspace
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_205#slide=id.g3afa908e330_0_205")
 ```
 
-**In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** So, for this example, the command to move the forward read file is
+Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** So, for this example, the command to move the forward read file is
 
 `gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
-
-Without the `gs://`, you will get an error message that the file URL does not exist!
 
 ## Step Four: Verify that files have been transferred
 
