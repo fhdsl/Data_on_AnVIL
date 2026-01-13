@@ -141,7 +141,7 @@ Without the `gs://`, you will get an error message that the file URL does not ex
 
 ## Step Four: Verify that files have been transferred
 
-But how do you know if your files were successfully transferred?
+How do you know if your files were successfully transferred?
 
 You can see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
 
