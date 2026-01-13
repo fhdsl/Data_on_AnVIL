@@ -116,7 +116,7 @@ Terra workspaces have two dedicated storage locations: the workspace bucket and 
 Read more about it [here](https://support.terra.bio/hc/en-us/articles/360047318551-Overview-Cloud-environment-storage-detachable-persistent-disks)!
 :::
 
-The persistent disk is created when you provision your computing environment. When you shut down your computing environment, you can the persistent disk, or maintain the persistent disk for monthly cost. 
+The persistent disk is created when you provision your computing environment. When you shut down your computing environment, you can delete the persistent disk, or maintain the persistent disk for a monthly cost. 
 
 The persistent disk is mounted to the home directory in your Jupyter environment. If you want to move the data into your persistent disk, you can use the command
 
