@@ -108,7 +108,7 @@ The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. Here'
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
 ```
 
-AnVIL workspaces automatically comes with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
+AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
 
 ::: {.dictionary}
 Terra workspaces have two dedicated storage locations: the workspace bucket and the Cloud Environment virtual machine (VM) Persistent Disk (PD). Like a USB drive, the PD can be detached from the VM before deleting or recreating the Cloud Environment, then attached to a new one. The PD lets you keep your notebook's code packages, input files, and outputs - without having to move anything to workspace storage (i.e., Google bucket). 
