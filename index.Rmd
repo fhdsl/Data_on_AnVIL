@@ -21,9 +21,11 @@ This book is part of a series of books for the Genomic Data Science Analysis, Vi
 
 ::: {.notice}
 _Genetics_
+
 **Novice**: no genetics skills needed
 
 _Programming skills_
+
 **Novice**: no programming skills needed
 :::
 
