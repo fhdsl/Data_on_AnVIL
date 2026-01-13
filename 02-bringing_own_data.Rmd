@@ -38,7 +38,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.
 
-Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You'll get an estimated cost per hour for the computing enviroment and the persistent disk before you actually start your environment.
+Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You'll get an estimated cost per hour for the computing environment and the persistent disk before you actually start your environment.
 :::
 
 ## Step One: Create your workspace
