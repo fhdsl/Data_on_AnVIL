@@ -1,6 +1,6 @@
 ---
 title: "Data on AnVIL"
-date: "December 16, 2025"
+date: "January 13, 2026"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib
@@ -21,13 +21,14 @@ This book is part of a series of books for the Genomic Data Science Analysis, Vi
 
 ::: {.notice}
 _Genetics_
+
 **Novice**: no genetics skills needed
 
 _Programming skills_
+
 **Novice**: no programming skills needed
 :::
 
 ## AnVIL Collection {-}
 
 Please check out our full collection of AnVIL and related resources: https://hutchdatascience.org/AnVIL_Collection/
-
