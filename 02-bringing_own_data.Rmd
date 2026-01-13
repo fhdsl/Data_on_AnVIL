@@ -36,8 +36,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 :::{.callout-tip}
 #What will this cost?
 
-Transferring data from an external Google bucket to a Google bucket associated with AnVIL
+Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.
 
+Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You'll get an estimated cost per hour for the computing enviroment and the persistent disk before you actually start your environment.
 :::
 
 ## Step One: Create your workspace
@@ -80,7 +81,7 @@ A new menu will pop up. Choose the "Settings" button under the Jupyter logo.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_4#slide=id.g3b11697e7a3_0_4")
 ```
 
-The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take some time to copy them into your workspace bucket, make sure to deselect the "Enable Autopause" option. When you're ready, click the "Create" button.
+The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take more than 30 minutes to copy them into your workspace bucket, you may want to deselect the "Enable Autopause" option. When enabled, this option automatically pauses a workspace you have not actively used for a specified amount of time as a cost-saving measure. When you're ready, click the "Create" button.
 
 ```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_8#slide=id.g3b11697e7a3_0_8")
