@@ -155,12 +155,20 @@ If you click on the name of the file, you can also see the details of the file.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_28#slide=id.g3b11697e7a3_0_28")
 ```
 
+## Step Five: Delete your environment when you are done with your session
+
+Remember that when you are done with your session, you should **delete your computing environment.** A Jupyter session will **continue to accrue costs** unless you specifically delete the environment, even if you close the browser window.
+
+When you are done with your session, click on the Jupyter icon in the right-side menu. At the bottom of the pop-up window, you will see a button labeled "Delete Environment". When you click on this, you have the option to delete everything or to delete just the computing environment (instead of both the environment and the persistent disk). If you delete the environment but keep the persistent disk, the billing account will continue to be charged for a small amount.
+
 ## Summary
 
 - Create a workspace
 - Provision a Jupyter environment and open Terminal
 - Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
 - Verify that files have been transferred
+- Delete the computing environment when you are finished with your session
+
 
 # Additional Resources
 
