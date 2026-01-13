@@ -2,4 +2,12 @@ introduction
 motivation
 target-audience
 curriculum
+uploading-cloud
+step-one-create-your-workspace
+step-two-provision-a-jupyter-environment
+step-three-run-gcloud-storage-to-copymove-files
+step-four-verify-that-files-have-been-transferred
+step-five-delete-your-environment-when-you-are-done-with-your-session
+summary
+additional-resources
 references
