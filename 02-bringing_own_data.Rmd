@@ -10,7 +10,7 @@ knitr::opts_chunk$set(out.width = "100%")
 # Uploading from the Cloud {#uploading-cloud}
 
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
-
+<br><br>
 ::: {.dictionary}
 **Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
 
