@@ -145,7 +145,7 @@ Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs:
 
 
 :::{.callout-note}
-Sometimes you might be accessing data from a "Requester Pays" bucket. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket use case with AnVIL.
+Sometimes you might be accessing data from a "Requester Pays" bucket. You will need to link your own billing project in order to copy this data in order to pay the egress fees. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket use case with AnVIL.
 :::
 
 
