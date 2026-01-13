@@ -3,6 +3,7 @@
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
+knitr::opts_chunk$set(out.width = "100%")
 ```
 
 
