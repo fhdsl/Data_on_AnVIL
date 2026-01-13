@@ -9,6 +9,8 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # Uploading from the Cloud {#uploading-cloud}
 
+Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
+
 In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 <br><br>
 ::: {.dictionary}
@@ -30,6 +32,13 @@ For this activity, you will retrieve the two uncompressed fastq files and upload
 ```{r, echo=FALSE, fig.alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
 ```
+
+:::{.callout-tip}
+#What will this cost?
+
+Transferring data from an external Google bucket to a Google bucket associated with AnVIL
+
+:::
 
 ## Step One: Create your workspace
 
@@ -164,6 +173,8 @@ If you click on the name of the file, you can also see the details of the file.
 ```{r, echo=FALSE, fig.alt='Image shows a screenshot of the details of the files we successfully transferred.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_28#slide=id.g3b11697e7a3_0_28")
 ```
+
+This is a good time to check that the sizes of the files you transferred match the sizes of the original files.
 
 ## Step Five: Delete your environment when you are done with your session
 
