@@ -17,7 +17,15 @@ In this example, we'll upload some genomic data into AnVIL that is currently sto
 You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
 :::
 
-We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: two compressed fastq files, a fasta file for a SARS-CoV-2 reference genome, and two uncompressed fastq files. The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
+We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: 
+
+* two compressed fastq files
+* a fasta file for a SARS-CoV-2 reference genome
+* two uncompressed fastq files. 
+
+The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. 
+
+For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
 
 ```{r, echo=FALSE, fig.alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_178#slide=id.g3afa908e330_0_178")
