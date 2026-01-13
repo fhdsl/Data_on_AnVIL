@@ -137,7 +137,7 @@ In this case, the command to move the forward read file to the persistent disk i
 
 `gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
 
-**In order for `gcloud` to recognize the bucket, you need to add `gs://` to the front of their name.** Without the `gs://`, you will get an error message that the file URL does not exist!
+**In order for `gcloud` to recognize the bucket, you need to add `gs://` to the front of its name.** Without the `gs://`, you will get an error message that the file URL does not exist!
 
 **However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. Another option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
 
