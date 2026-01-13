@@ -51,7 +51,7 @@ You should now see a pop-up window that lets you customize your new workspace. Y
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_197#slide=id.g3afa908e330_0_197")
 ```
 
-You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) at the AnVIL Portal.
+You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
 
 Once you have created a workspace, AnVIL will take you to the Workspace Dashboard. 
 
