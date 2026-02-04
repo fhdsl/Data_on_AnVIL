@@ -13,7 +13,7 @@ bibliography: [book.bib]
 delete_merged_file: true
 language:
   ui:
-    chapter_name: "Chapter"
+    chapter_name: "Chapter "
 output_dir: "docs"
 output:
     bookdown::html_book

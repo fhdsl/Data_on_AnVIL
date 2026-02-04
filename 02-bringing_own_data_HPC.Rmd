@@ -1,11 +1,8 @@
-# (PART\*) Bringing Your Own Data {-}
-
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 knitr::opts_chunk$set(out.width = "100%")
 ```
-
 
 # Uploading from Institutional High-Performance Computing {#uploading-hpc}
 
