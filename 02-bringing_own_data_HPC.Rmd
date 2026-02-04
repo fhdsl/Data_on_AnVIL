@@ -7,7 +7,7 @@ knitr::opts_chunk$set(out.width = "100%")
 ```
 
 
-# Uploading from Institutional High-Performance Computing {#uploading-cloud}
+# Uploading from Institutional High-Performance Computing {#uploading-hpc}
 
 If you're familiar with bioinformatics, you may already have experience with high-performance computing, or "HPC". Migrating data from your institutional HPC to AnVIL is a lot like moving data from other clouds. Check out the [previous section](#uploading-cloud) for more on that.
 
@@ -56,48 +56,38 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
 
-Once you have created a workspace, AnVIL will take you to the workspace dashboard. Under CLOUD INFORMATION you can see the Bucket name associated with your new workspace.
+Once you have created a workspace, AnVIL will take you to the workspace dashboard. Under CLOUD INFORMATION you can see the Bucket name associated with your new workspace. Take note of this ID for later.
 
 ```{r, echo=FALSE, fig.alt="The Google Bucket name can be found on the workspace dashboard under 'Cloud information'."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_47#slide=id.g3c41753cb44_0_47")
 ```
 
 
-## Step Two: Check for Google Cloud Tools
+## Step Two: Connect to your HPC
 
-<!-- We will be using a terminal to transfer the files. You will need to provision a Jupyter environment in order to access a terminal window. -->
+We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. In this example, we're using an `ssh` protocol.
 
-<!-- To access the menu for provisioning computing environments, double-click on the cloud-and-lightning-bolt icon in the right-hand menu. -->
+You might use a terminal command like:
 
-<!-- ```{r, echo=FALSE, fig.alt="Choosing the cloud-and-lightning-bolt icon will allow you to start the process of provisioning a computing environment."} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3afa908e330_0_214#slide=id.g3afa908e330_0_214") -->
-<!-- ``` -->
+```
+ssh <computer> -l <username>
+```
 
-<!-- A new menu will pop up. Choose the "Settings" button under the Jupyter logo. -->
+where `<computer>` is your HPC's address and `<username>` is your HPC login name. You'll have a password to enter as well.
 
-<!-- ```{r, echo=FALSE, fig.alt="To provision a Jupyter environment, click on the settings button under the Jupyter logo."} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_4#slide=id.g3b11697e7a3_0_4") -->
-<!-- ``` -->
+```{r, echo=FALSE, fig.alt="Log in to your institutional HPC."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_5#slide=id.g3c41753cb44_0_5")
+```
 
-<!-- The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take more than 30 minutes to copy them into your workspace bucket, you may want to deselect the "Enable Autopause" option. When enabled, this option automatically pauses a workspace you have not actively used for a specified amount of time as a cost-saving measure. When you're ready, click the "Create" button. -->
+It's important to be a good community member when sharing an HPC. Follow your institution's best practices for where to work. For example, on Rockfish, doing work on login nodes is discouraged. We will launch an interactive node instead.
 
-<!-- ```{r, echo=FALSE, fig.alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom."} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_8#slide=id.g3b11697e7a3_0_8") -->
-<!-- ``` -->
+```{r, echo=FALSE, fig.alt="Launch command for the interactive node on the JHU Rockfish cluster."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_87#slide=id.g3c41753cb44_0_87")
+```
 
-<!-- AnVIL will now begin provisioning your environment. This will take a couple of minutes - when testing this vignette, it took between 2 and 3 minutes before the environment was ready. You'll know it's ready when the Jupyter icon on the menu has a green dot. -->
 
-<!-- ```{r, echo=FALSE, fig.alt="The Jupyter icon on the right-hand menu will have a green dot when your environment is ready to be used."} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b11697e7a3_0_12#slide=id.g3b11697e7a3_0_12") -->
-<!-- ``` -->
+## Step Three: Check for Google Cloud Tools
 
-<!-- Open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu. -->
-
-<!-- ```{r, echo=FALSE, fig.alt="The terminal window can be opened by clicking on the icon underneath the Jupyter logo on the right-hand menu."} -->
-<!-- ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3b16c990b73_0_14#slide=id.g3b16c990b73_0_14") -->
-<!-- ``` -->
-
-<!-- This will open a new tab in your browser window, but you are still in the same workspace!  -->
 
 
 <!-- ## Step Three: Run gcloud storage to copy/move files  -->
