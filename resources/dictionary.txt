@@ -27,6 +27,7 @@ glimmaMDS
 Gmail
 GTEx
 HPC
+HPC's
 impactful
 Inclusivity
 ingressing
@@ -51,8 +52,10 @@ programmatically
 px
 reproducibility
 Rmd
+Rockfish
 RStudio
 SDK
+Slurm
 SRA
 Submitters
 tallgrass
@@ -63,6 +66,7 @@ underserved
 Uploader
 URI
 VM
+Voilà
 workspaces
 Workspaces
 Workspace's

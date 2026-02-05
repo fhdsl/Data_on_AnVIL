@@ -92,7 +92,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step Three: Check for Google Cloud SDK
 
-You will need Google Cloud SDK on your HPC to move files to AnVIL. This is software that enables file transfer. You can check to see if Google Cloud SDK tools are available by entering `gcloud` at the command line. If these tools are avaiable, you will see a list of command groups:
+You will need Google Cloud SDK on your HPC to move files to AnVIL. This is software that enables file transfer. You can check to see if Google Cloud SDK tools are available by entering `gcloud` at the command line. If these tools are available, you will see a list of command groups:
 
 ```{r, echo=FALSE, fig.alt="Listed out command groups for Google Cloud SDK."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_163#slide=id.g3c41753cb44_0_163")
