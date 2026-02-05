@@ -6,9 +6,19 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # Uploading from Institutional High-Performance Computing {#uploading-hpc}
 
-If you're familiar with bioinformatics, you may already have experience with high-performance computing, or "HPC". Migrating data from your institutional HPC to AnVIL is a lot like moving data from other clouds. Check out the [previous section](#uploading-cloud) for more on that.
+If you're familiar with bioinformatics, you may already have experience with high-performance computing (HPC). Migrating data from your institutional HPC to AnVIL is a lot like moving data between Google Cloud buckets. Check out the [previous section](#uploading-cloud) for more on that.
 
-In this example, we'll upload some genomic data into AnVIL that is currently stored in an institutional HPC. We'll use the Johns Hopkins HPC cluster known as Rockfish. Rockfish uses Slurm for job scheduling, like many other HPCs.
+In this example, we'll upload some genomic data into AnVIL that is currently stored in an institutional HPC. We'll use the Johns Hopkins HPC cluster known as Rockfish. Rockfish has interactive nodes and uses Slurm for job scheduling, like many other HPCs.
+
+AnVIL stores data in Google Buckets, so we'll also need to set up a workspace destination.
+
+::: {.dictionary}
+**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored.
+
+You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
+:::
+
+This activity will vary depending on your files and HPC configuration. It might take some trial and error! In this example, we'll copy the SARS-CoV-2 genome from our HPC to AnVIL.
 
 ::: {.notice}
 _Genetics_
@@ -19,19 +29,6 @@ _Programming skills_
 
 **Intermediate**: some command line programming skills needed
 :::
-
-AnVIL stores data in Google Buckets, so we'll also need to set up a workspace destination.
-<br><br>
-
-::: {.dictionary}
-**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored.
-
-You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
-:::
-
-Similar to the previous activity, we will copy some fastq files for a SARS-CoV-2 sample from HPC to AnVIL.
-
-This activity will vary depending on your files and HPC configuration. It might take some trial and error!
 
 <!-- ::: {.notice} -->
 <!-- **What will this cost?** -->
@@ -66,6 +63,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 ```
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
+
 
 ## Step Two: Connect to your HPC
 
@@ -106,7 +104,7 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 google-cloud-sdk/install.sh
 ```
 
-You might need to specify the path to the executable `gcloud`, e.g., `google-cloud-sdk/bin/gcloud init`. When in doubt, try testing the executable is available with `gcloud` at the command line.
+You might need to specify the path to the executable `gcloud`, e.g., `google-cloud-sdk/bin/gcloud init`. When in doubt, try testing the executable is available by entering `gcloud` at the command line.
 
 
 ## Step Four: Initialize `gcloud`
@@ -252,10 +250,6 @@ This is a good time to check that the sizes of the files you transferred match t
 - Verify that file(s) have been transferred
 
 
-# Additional Resources
-
-You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
-
-More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
+## Additional Resources
 
 You might wish to run a transfer as a scheduled job, using a shell script. You can find an example of a script that does this  [here](https://github.com/fhdsl/Data_on_AnVIL/blob/main/resources/transfer_to_AnVIL.sh).
