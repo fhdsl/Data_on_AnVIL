@@ -121,11 +121,6 @@ Type in the following at the command line:
 gcloud init
 ```
 
-::: {.warning}
-Try `gcloud init` first. However, if you have previously used Google Cloud on your HPC, you might need to use different commands, such as `gcloud auth login`. Check out the command line functions you can use with `gcloud` [here](https://docs.cloud.google.com/sdk/docs/cheatsheet).
-:::
-
-
 Follow the onscreen prompts next. You will be asked to copy and paste a long link in your browser. 
 
 ```
@@ -139,6 +134,10 @@ Enter authorization code:
 ```{r, echo=FALSE, fig.alt="Google Cloud SDK authentication will ask you to copy a long link into your browser to authenticate."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_188#slide=id.g3c41753cb44_0_188")
 ```
+
+::: {.warning}
+Try `gcloud init` first. However, if you have previously used Google Cloud on your HPC, you might need to use different commands, such as `gcloud auth login`. Check out the command line functions you can use with `gcloud` [here](https://docs.cloud.google.com/sdk/docs/cheatsheet).
+:::
 
 Make sure to select your AnVIL account. For you, this might be an institutional account. Grant it permission to work on the command line.
 
@@ -261,4 +260,6 @@ This is a good time to check that the sizes of the files you transferred match t
 
 ## Additional Resources
 
-You might wish to run a transfer as a scheduled job, using a shell script. You can find an example of a script that does this  [here](https://github.com/fhdsl/Data_on_AnVIL/blob/main/resources/transfer_to_AnVIL.sh).
+- You might wish to run a transfer as a scheduled job, using a shell script. You can find an example of a script that does this  [here](https://github.com/fhdsl/Data_on_AnVIL/blob/main/resources/transfer_to_AnVIL.sh).
+
+- Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
