@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2026-01-13" />
+<meta name="date" content="2026-02-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="introduction.html"/>
-<link rel="next" href="additional-resources.html"/>
+<link rel="next" href="give-us-feedback.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -106,12 +106,12 @@
 <li class="chapter" data-level="2.4" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-four-verify-that-files-have-been-transferred"><i class="fa fa-check"></i><b>2.4</b> Step Four: Verify that files have been transferred</a></li>
 <li class="chapter" data-level="2.5" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-five-delete-your-environment-when-you-are-done-with-your-session"><i class="fa fa-check"></i><b>2.5</b> Step Five: Delete your environment when you are done with your session</a></li>
 <li class="chapter" data-level="2.6" data-path="uploading-cloud.html"><a href="uploading-cloud.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+<li class="chapter" data-level="2.7" data-path="uploading-cloud.html"><a href="uploading-cloud.html#additional-resources"><i class="fa fa-check"></i><b>2.7</b> Additional Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>3</b> Additional Resources</a></li>
 <li class="part"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="give-us-feedback.html"><a href="give-us-feedback.html"><i class="fa fa-check"></i>Give us Feedback</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
+<li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
 <p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
@@ -149,14 +149,15 @@
 </div>
 <div id="uploading-cloud" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter2</span> Uploading from the Cloud<a href="uploading-cloud.html#uploading-cloud" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.</p>
-<p>In this example, we’ll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
+<p>Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
 <br><br></p>
 <div class="dictionary">
 <p><strong>Buckets</strong> are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud <em>must</em> be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)</p>
 <p>You can read more about how data is saved in the cloud <a href="https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud">here</a>!</p>
 </div>
-<p>We’re going to upload some fastq files for a SARS-CoV-2 sample. The bucket we’re accessing contains 5 samples:</p>
+<p>In this example, we’ll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).</p>
+<p>We’re going to upload some fastq files for a SARS-CoV-2 sample.
+The bucket we’re accessing contains 5 samples:</p>
 <ul>
 <li>two compressed fastq files</li>
 <li>a fasta file for a SARS-CoV-2 reference genome</li>
@@ -164,7 +165,12 @@
 </ul>
 <p>The bucket ID (URI) is <code>fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd</code>.</p>
 <p>For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.</p>
-<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_178.png" alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity." width="100%" /></p>
+<div class="notice">
+<p><em>Genetics</em></p>
+<p><strong>Novice</strong>: no genetics skills needed</p>
+<p><em>Programming skills</em></p>
+<p><strong>Intermediate</strong>: some command line programming skills needed</p>
+</div>
 <div class="notice">
 <p><strong>What will this cost?</strong></p>
 <p>Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.</p>
@@ -249,7 +255,17 @@
 <li>Delete the computing environment when you are finished with your session</li>
 </ul>
 </div>
+<div id="additional-resources" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Additional Resources<a href="uploading-cloud.html#additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can read documentation about bringing your own data to AnVIL on the <a href="https://anvilproject.org/learn/find-data/bringing-your-own-data">Portal</a></p>
+<p>More details can be found in the <a href="https://support.terra.bio/hc/en-us/sections/360004147951">Terra documentation</a></p>
+<p>Information about setting up a “Requester Pays” bucket is <a href="https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets">here</a>.</p>
+
 </div>
+</div>
+
+
+
 <hr>
 <center> 
   <div class="footer">
@@ -264,7 +280,7 @@
         </div>
       </div>
 <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="additional-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="give-us-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

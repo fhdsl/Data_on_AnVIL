@@ -7,8 +7,6 @@
 # Uploading from the Cloud {#uploading-cloud}
 
 Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
-
-In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
 <br><br>
 
 ::: {.dictionary}
@@ -17,7 +15,11 @@ In this example, we'll upload some genomic data into AnVIL that is currently sto
 You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
 :::
 
-We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: 
+In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
+
+
+We're going to upload some fastq files for a SARS-CoV-2 sample. 
+The bucket we're accessing contains 5 samples: 
 
 * two compressed fastq files
 * a fasta file for a SARS-CoV-2 reference genome
@@ -27,7 +29,15 @@ The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`.
 
 For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
 
-<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_178.png" alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity." width="100%" />
+::: {.notice}
+_Genetics_
+
+**Novice**: no genetics skills needed
+
+_Programming skills_
+
+**Intermediate**: some command line programming skills needed
+:::
 
 ::: {.notice}
 **What will this cost?**
@@ -164,7 +174,7 @@ When you are done with your session, click on the Jupyter icon in the right-side
 - Delete the computing environment when you are finished with your session
 
 
-# Additional Resources
+## Additional Resources
 
 You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
 
