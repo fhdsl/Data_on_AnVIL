@@ -20,7 +20,20 @@ In this example, we'll upload some genomic data into AnVIL that is currently sto
 You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
 :::
 
-We're going to upload some fastq files for a SARS-CoV-2 sample. The bucket we're accessing contains 5 samples: 
+We're going to upload some fastq files for a SARS-CoV-2 sample. 
+
+::: {.notice}
+_Genetics_
+
+**Novice**: no genetics skills needed
+
+_Programming skills_
+
+**Intermediate**: some command line programming skills needed
+:::
+
+
+The bucket we're accessing contains 5 samples: 
 
 * two compressed fastq files
 * a fasta file for a SARS-CoV-2 reference genome
@@ -193,7 +206,7 @@ When you are done with your session, click on the Jupyter icon in the right-side
 - Delete the computing environment when you are finished with your session
 
 
-# Additional Resources
+## Additional Resources
 
 You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
 
