@@ -1,16 +1,20 @@
 
-# (PART\*) SRA ON AnVIL {-}
+# (PART\*) Importing Data from SRA {-}
 
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
 
-# Quick Start {#quick-start}
+# Quick Start: Importing a single file {#quick-start-sra}
 
-In this module, we'll bring some metagenomic data into AnVIL.
+In this example, we'll bring some metagenomic data into AnVIL.
 
 This data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA904247), which collected soil samples to study bacterial communities in tallgrass prairie. Bacteria play an important role in this ecosystem, but can be changed by disturbance, management, and the presence of herbivores.
+
+We will bring this data into AnVIL from the **Sequence Read Archive**, or SRA. You can check out the [SRA website](https://www.ncbi.nlm.nih.gov/sra) to learn more:
+
+> Sequence Read Archive (SRA) data, available through multiple cloud providers and NCBI servers, is the largest publicly available repository of high throughput sequencing data. The archive accepts data from all branches of life as well as metagenomic and environmental surveys. SRA stores raw sequencing data and alignment information to enhance reproducibility and facilitate new discoveries through data analysis. 
 
 The SRA Data corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP409181&o=acc_s%3Aa).
 

@@ -1,0 +1,185 @@
+# (PART\*) Bringing Your Own Data {-}
+
+
+
+
+
+# Uploading from the Cloud {#uploading-cloud}
+
+Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
+<br><br>
+
+::: {.dictionary}
+**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)
+
+You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
+:::
+
+In this example, we'll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).
+
+
+We're going to upload some fastq files for a SARS-CoV-2 sample. 
+The bucket we're accessing contains 5 samples: 
+
+* two compressed fastq files
+* a fasta file for a SARS-CoV-2 reference genome
+* two uncompressed fastq files. 
+
+The bucket ID (URI) is `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. 
+
+For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.
+
+::: {.notice}
+_Genetics_
+
+**Novice**: no genetics skills needed
+
+_Programming skills_
+
+**Intermediate**: some command line programming skills needed
+:::
+
+::: {.notice}
+**What will this cost?**
+
+Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.
+
+Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You'll get an estimated cost per hour for the computing environment and the persistent disk before you actually start your environment.
+:::
+
+## Step One: Create your workspace
+
+The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_182.png" alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner." width="100%" />
+
+Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_190.png" alt="Create a new workspace by clicking on the plus sign at the top." width="100%" />
+
+You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_197.png" alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options." width="100%" />
+
+You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
+
+Once you have created a workspace, AnVIL will take you to the workspace dashboard. 
+
+## Step Two: Provision a Jupyter environment
+
+We will be using a terminal to transfer the files. You will need to provision a Jupyter environment in order to access a terminal window.
+
+To access the menu for provisioning computing environments, double-click on the cloud-and-lightning-bolt icon in the right-hand menu.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_214.png" alt="Choosing the cloud-and-lightning-bolt icon will allow you to start the process of provisioning a computing environment." width="100%" />
+
+A new menu will pop up. Choose the "Settings" button under the Jupyter logo.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_4.png" alt="To provision a Jupyter environment, click on the settings button under the Jupyter logo." width="100%" />
+
+The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take more than 30 minutes to copy them into your workspace bucket, you may want to deselect the "Enable Autopause" option. When enabled, this option automatically pauses a workspace you have not actively used for a specified amount of time as a cost-saving measure. When you're ready, click the "Create" button.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_8.png" alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom." width="100%" />
+
+AnVIL will now begin provisioning your environment. This will take a couple of minutes - when testing this vignette, it took between 2 and 3 minutes before the environment was ready. You'll know it's ready when the Jupyter icon on the menu has a green dot.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_12.png" alt="The Jupyter icon on the right-hand menu will have a green dot when your environment is ready to be used." width="100%" />
+
+Open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b16c990b73_0_14.png" alt="The terminal window can be opened by clicking on the icon underneath the Jupyter logo on the right-hand menu." width="100%" />
+
+This will open a new tab in your browser window, but you are still in the same workspace! 
+
+
+## Step Three: Run gcloud storage to copy/move files 
+
+AnVIL Jupyter environments have the gcloud tools installed by default. This means you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).
+
+The command for this follows this pattern:
+
+`gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
+
+You will need the names of both the bucket where the data is currently stored _and_ the bucket the data is being moved to.
+
+The data is currently stored at `fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd`. Here's an image of the bucket contents as a reminder.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_178.png" alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity." width="100%" />
+
+AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
+
+::: {.callout-note}
+Terra workspaces have two dedicated storage locations: the workspace bucket and the Cloud Environment virtual machine (VM) Persistent Disk (PD). Like a USB drive, the PD can be detached from the VM before deleting or recreating the Cloud Environment, then attached to a new one. The PD lets you keep your notebook's code packages, input files, and outputs - without having to move anything to workspace storage (i.e., Google Bucket). 
+
+Read more about it [here](https://support.terra.bio/hc/en-us/articles/360047318551-Overview-Cloud-environment-storage-detachable-persistent-disks)!
+:::
+
+The persistent disk is created when you provision your computing environment. When you shut down your computing environment, you can delete the persistent disk, or maintain the persistent disk for a monthly cost. 
+
+The persistent disk is mounted to the home directory in your Jupyter environment. If you want to move the data into your persistent disk, you can use the command
+
+`gcloud storage cp <where_to_copy_data_from>/<file_name> .`
+
+In this case, the command to move the forward read file to the persistent disk is:
+
+`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+
+**In order for `gcloud` to recognize the bucket, you need to add `gs://` to the front of its name.** Without the `gs://`, you will get an error message that the file URL does not exist!
+
+**However**, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. Another option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.
+
+
+The dashboard page of your new workspace shows information about the workspace on the right-hand side. At the bottom right, you'll find the full path to the Google Bucket information corresponding to your workspace. This is the bucket where all information associated with this workspace is stored. In this example case, it is `fc-970c8766-f42d-448e-9e4f-d86bbe13a065`. However, your workspace will have a different path or name.
+
+You can click the clipboard icon on the right to copy the name of your workspace Bucket.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_205.png" alt="The dashboard page of your new workspace shows information about the workspace on the right-hand side. You will want to copy the bucket name from here. This is the bucket where all information associated with this workspace is stored." width="100%" />
+
+Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** So, for this example, the command to move the forward read file is
+
+`gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065`
+
+
+:::{.callout-note}
+Sometimes you might be accessing data from a "Requester Pays" bucket. You will need to link your own billing project in order to copy this data in order to pay the egress fees. [Here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets) are details on how to copy data from this special bucket use case with AnVIL.
+:::
+
+
+## Step Four: Verify that files have been transferred
+
+How do you know if your files were successfully transferred?
+
+You can see any uploaded files by clicking the "Files" directory at the bottom left in the Data Tab.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_24.png" alt="Image shows a screenshot of the workspace Data tab. The Files directory and link on the bottom left is highlighted." width="100%" />
+
+If you click on the name of the file, you can also see the details of the file.
+
+<img src="02-bringing_own_data_files/figure-html//1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_28.png" alt="Image shows a screenshot of the details of the files we successfully transferred." width="100%" />
+
+This is a good time to check that the sizes of the files you transferred match the sizes of the original files.
+
+## Step Five: Delete your environment when you are done with your session
+
+Remember that when you are done with your session, you should **delete your computing environment.** A Jupyter session will **continue to accrue costs** unless you specifically delete the environment, even if you close the browser window.
+
+When you are done with your session, click on the Jupyter icon in the right-side menu. At the bottom of the pop-up window, you will see a button labeled "Delete Environment". When you click on this, you have the option to delete everything or to delete just the computing environment (instead of both the environment and the persistent disk). If you delete the environment but keep the persistent disk, the billing account will continue to be charged for a small amount.
+
+## Summary
+
+- Create a workspace
+- Provision a Jupyter environment and open Terminal
+- Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
+- Verify that files have been transferred
+- Delete the computing environment when you are finished with your session
+
+
+## Additional Resources
+
+You can read documentation about bringing your own data to AnVIL on the [Portal](https://anvilproject.org/learn/find-data/bringing-your-own-data)
+
+More details can be found in the [Terra documentation](https://support.terra.bio/hc/en-us/sections/360004147951)
+
+Information about setting up a "Requester Pays" bucket is [here](https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets).
+
+

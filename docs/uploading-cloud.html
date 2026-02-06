@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter2 Uploading from the Cloud | Data on AnVIL</title>
+  <meta name="description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter2 Uploading from the Cloud | Data on AnVIL" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter2 Uploading from the Cloud | Data on AnVIL" />
+  
+  <meta name="twitter:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  
+
+
+
+<meta name="date" content="2026-02-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="give-us-feedback.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4V9Q48MHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N4V9Q48MHQ');
+</script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+<link rel="stylesheet" href="assets/AnVIL_style/anvil.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://anvilproject.org/" target="_blank"><img src="assets/AnVIL_style/logo-anvil.png" style="width: 80%; padding-left: 15px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Book</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#skills-level"><i class="fa fa-check"></i>Skills Level</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#anvil-collection"><i class="fa fa-check"></i>AnVIL Collection</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
+</ul></li>
+<li class="part"><span><b>Bringing Your Own Data</b></span></li>
+<li class="chapter" data-level="2" data-path="uploading-cloud.html"><a href="uploading-cloud.html"><i class="fa fa-check"></i><b>2</b> Uploading from the Cloud</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-one-create-your-workspace"><i class="fa fa-check"></i><b>2.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="2.2" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-two-provision-a-jupyter-environment"><i class="fa fa-check"></i><b>2.2</b> Step Two: Provision a Jupyter environment</a></li>
+<li class="chapter" data-level="2.3" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-three-run-gcloud-storage-to-copymove-files"><i class="fa fa-check"></i><b>2.3</b> Step Three: Run gcloud storage to copy/move files</a></li>
+<li class="chapter" data-level="2.4" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-four-verify-that-files-have-been-transferred"><i class="fa fa-check"></i><b>2.4</b> Step Four: Verify that files have been transferred</a></li>
+<li class="chapter" data-level="2.5" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-five-delete-your-environment-when-you-are-done-with-your-session"><i class="fa fa-check"></i><b>2.5</b> Step Five: Delete your environment when you are done with your session</a></li>
+<li class="chapter" data-level="2.6" data-path="uploading-cloud.html"><a href="uploading-cloud.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+<li class="chapter" data-level="2.7" data-path="uploading-cloud.html"><a href="uploading-cloud.html#additional-resources"><i class="fa fa-check"></i><b>2.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="" data-path="give-us-feedback.html"><a href="give-us-feedback.html"><i class="fa fa-check"></i>Give us Feedback</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="3" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<a href="https://hutchdatascience.org/" target="_blank"><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/style-sets/fhdasl/copy_to_assets/big-dasl-stacked.png" style="width: 80%; padding-left: 34px; padding-top: 8px;"</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span><a href="https://docs.google.com/forms/d/e/1FAIpQLScrDVb_utm55pmb_SHx-RgELTEbCCWdLea0T3IzS0Oj00GE4w/viewform?usp=pp_url&entry.1565230805=Data+on+AnVIL"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data on AnVIL</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/AnVIL_style/dasl_thin_main_image.png">
+</div>
+<div id="uploading-cloud" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter2</span> Uploading from the Cloud<a href="uploading-cloud.html#uploading-cloud" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
+<br><br></p>
+<div class="dictionary">
+<p><strong>Buckets</strong> are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud <em>must</em> be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored. (We can also use a URI to tell AnVIL where to find the data we want to upload.)</p>
+<p>You can read more about how data is saved in the cloud <a href="https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud">here</a>!</p>
+</div>
+<p>In this example, we’ll upload some genomic data into AnVIL that is currently stored in the cloud (specifically, in a Google bucket).</p>
+<p>We’re going to upload some fastq files for a SARS-CoV-2 sample.
+The bucket we’re accessing contains 5 samples:</p>
+<ul>
+<li>two compressed fastq files</li>
+<li>a fasta file for a SARS-CoV-2 reference genome</li>
+<li>two uncompressed fastq files.</li>
+</ul>
+<p>The bucket ID (URI) is <code>fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd</code>.</p>
+<p>For this activity, you will retrieve the two uncompressed fastq files and upload them into your workspace.</p>
+<div class="notice">
+<p><em>Genetics</em></p>
+<p><strong>Novice</strong>: no genetics skills needed</p>
+<p><em>Programming skills</em></p>
+<p><strong>Intermediate</strong>: some command line programming skills needed</p>
+</div>
+<div class="notice">
+<p><strong>What will this cost?</strong></p>
+<p>Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible.</p>
+<p>Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You’ll get an estimated cost per hour for the computing environment and the persistent disk before you actually start your environment.</p>
+</div>
+<div id="step-one-create-your-workspace" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Step One: Create your workspace<a href="uploading-cloud.html#step-one-create-your-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on “Workspaces” in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_182.png" alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner." width="100%" /></p>
+<p>Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_190.png" alt="Create a new workspace by clicking on the plus sign at the top." width="100%" /></p>
+<p>You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you will not be able to assign it. You’ll have to use one of your own billing projects. After filling out these two fields, click the “Quick Create Workspace” button to create a workspace without enabling sharing or additional security options.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_197.png" alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options." width="100%" /></p>
+<p>You can read about Authorization Domains for workspace security in <a href="https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain">this article</a> in the Terra documentation.</p>
+<p>Once you have created a workspace, AnVIL will take you to the workspace dashboard.</p>
+</div>
+<div id="step-two-provision-a-jupyter-environment" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Step Two: Provision a Jupyter environment<a href="uploading-cloud.html#step-two-provision-a-jupyter-environment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will be using a terminal to transfer the files. You will need to provision a Jupyter environment in order to access a terminal window.</p>
+<p>To access the menu for provisioning computing environments, double-click on the cloud-and-lightning-bolt icon in the right-hand menu.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_214.png" alt="Choosing the cloud-and-lightning-bolt icon will allow you to start the process of provisioning a computing environment." width="100%" /></p>
+<p>A new menu will pop up. Choose the “Settings” button under the Jupyter logo.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_4.png" alt="To provision a Jupyter environment, click on the settings button under the Jupyter logo." width="100%" /></p>
+<p>The next menu will allow you to customize your Jupyter environment. For this exercise, the default settings are fine. If you know that your files are large and it will take more than 30 minutes to copy them into your workspace bucket, you may want to deselect the “Enable Autopause” option. When enabled, this option automatically pauses a workspace you have not actively used for a specified amount of time as a cost-saving measure. When you’re ready, click the “Create” button.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_8.png" alt="Make sure to deselect the Enable Autopause option if your file transfer will take a long time. When you're ready, create your environment by clicking the Create button at the bottom." width="100%" /></p>
+<p>AnVIL will now begin provisioning your environment. This will take a couple of minutes - when testing this vignette, it took between 2 and 3 minutes before the environment was ready. You’ll know it’s ready when the Jupyter icon on the menu has a green dot.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_12.png" alt="The Jupyter icon on the right-hand menu will have a green dot when your environment is ready to be used." width="100%" /></p>
+<p>Open a terminal window in your environment. You can access the terminal by clicking the icon below the Jupyter logo in the right-hand menu.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b16c990b73_0_14.png" alt="The terminal window can be opened by clicking on the icon underneath the Jupyter logo on the right-hand menu." width="100%" /></p>
+<p>This will open a new tab in your browser window, but you are still in the same workspace!</p>
+</div>
+<div id="step-three-run-gcloud-storage-to-copymove-files" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Step Three: Run gcloud storage to copy/move files<a href="uploading-cloud.html#step-three-run-gcloud-storage-to-copymove-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>AnVIL Jupyter environments have the gcloud tools installed by default. This means you can perform command-line gcloud storage tasks to move/copy files between local storage and your workspace bucket (or any external bucket).</p>
+<p>The command for this follows this pattern:</p>
+<p><code>gcloud storage cp &lt;where_to_copy_data_from&gt;/&lt;file_name&gt; &lt;where_to_copy_data_to&gt;</code></p>
+<p>You will need the names of both the bucket where the data is currently stored <em>and</em> the bucket the data is being moved to.</p>
+<p>The data is currently stored at <code>fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd</code>. Here’s an image of the bucket contents as a reminder.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_178.png" alt="Image shows the contents of a Google bucket used in the SARS-CoV-2 on Galaxy activity." width="100%" /></p>
+<p>AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.</p>
+<div class="callout-note">
+<p>Terra workspaces have two dedicated storage locations: the workspace bucket and the Cloud Environment virtual machine (VM) Persistent Disk (PD). Like a USB drive, the PD can be detached from the VM before deleting or recreating the Cloud Environment, then attached to a new one. The PD lets you keep your notebook’s code packages, input files, and outputs - without having to move anything to workspace storage (i.e., Google Bucket).</p>
+<p>Read more about it <a href="https://support.terra.bio/hc/en-us/articles/360047318551-Overview-Cloud-environment-storage-detachable-persistent-disks">here</a>!</p>
+</div>
+<p>The persistent disk is created when you provision your computing environment. When you shut down your computing environment, you can delete the persistent disk, or maintain the persistent disk for a monthly cost.</p>
+<p>The persistent disk is mounted to the home directory in your Jupyter environment. If you want to move the data into your persistent disk, you can use the command</p>
+<p><code>gcloud storage cp &lt;where_to_copy_data_from&gt;/&lt;file_name&gt; .</code></p>
+<p>In this case, the command to move the forward read file to the persistent disk is:</p>
+<p><code>gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065</code></p>
+<p><strong>In order for <code>gcloud</code> to recognize the bucket, you need to add <code>gs://</code> to the front of its name.</strong> Without the <code>gs://</code>, you will get an error message that the file URL does not exist!</p>
+<p><strong>However</strong>, if you choose to copy the data to the persistent disk, you risk deleting it when you close down your computing environment. Another option is to copy the data to the associated workspace bucket, which does not get deleted when the computing environment is closed.</p>
+<p>The dashboard page of your new workspace shows information about the workspace on the right-hand side. At the bottom right, you’ll find the full path to the Google Bucket information corresponding to your workspace. This is the bucket where all information associated with this workspace is stored. In this example case, it is <code>fc-970c8766-f42d-448e-9e4f-d86bbe13a065</code>. However, your workspace will have a different path or name.</p>
+<p>You can click the clipboard icon on the right to copy the name of your workspace Bucket.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3afa908e330_0_205.png" alt="The dashboard page of your new workspace shows information about the workspace on the right-hand side. You will want to copy the bucket name from here. This is the bucket where all information associated with this workspace is stored." width="100%" /></p>
+<p>Remember, <strong>In order for <code>gcloud</code> to recognize the buckets, you need to add <code>gs://</code> to the front of their names.</strong> So, for this example, the command to move the forward read file is</p>
+<p><code>gcloud storage cp gs://fc-80d0e1cd-61e9-472f-b1bd-c6a8223bd1cd/VA_sample_forward_reads.fastq gs://fc-970c8766-f42d-448e-9e4f-d86bbe13a065</code></p>
+<div class="callout-note">
+<p>Sometimes you might be accessing data from a “Requester Pays” bucket. You will need to link your own billing project in order to copy this data in order to pay the egress fees. <a href="https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets">Here</a> are details on how to copy data from this special bucket use case with AnVIL.</p>
+</div>
+</div>
+<div id="step-four-verify-that-files-have-been-transferred" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Step Four: Verify that files have been transferred<a href="uploading-cloud.html#step-four-verify-that-files-have-been-transferred" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How do you know if your files were successfully transferred?</p>
+<p>You can see any uploaded files by clicking the “Files” directory at the bottom left in the Data Tab.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_24.png" alt="Image shows a screenshot of the workspace Data tab. The Files directory and link on the bottom left is highlighted." width="100%" /></p>
+<p>If you click on the name of the file, you can also see the details of the file.</p>
+<p><img src="02-bringing_own_data_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3b11697e7a3_0_28.png" alt="Image shows a screenshot of the details of the files we successfully transferred." width="100%" /></p>
+<p>This is a good time to check that the sizes of the files you transferred match the sizes of the original files.</p>
+</div>
+<div id="step-five-delete-your-environment-when-you-are-done-with-your-session" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Step Five: Delete your environment when you are done with your session<a href="uploading-cloud.html#step-five-delete-your-environment-when-you-are-done-with-your-session" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Remember that when you are done with your session, you should <strong>delete your computing environment.</strong> A Jupyter session will <strong>continue to accrue costs</strong> unless you specifically delete the environment, even if you close the browser window.</p>
+<p>When you are done with your session, click on the Jupyter icon in the right-side menu. At the bottom of the pop-up window, you will see a button labeled “Delete Environment”. When you click on this, you have the option to delete everything or to delete just the computing environment (instead of both the environment and the persistent disk). If you delete the environment but keep the persistent disk, the billing account will continue to be charged for a small amount.</p>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Summary<a href="uploading-cloud.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Create a workspace</li>
+<li>Provision a Jupyter environment and open Terminal</li>
+<li>Run <code>gcloud storage cp &lt;where_to_copy_data_from&gt;/&lt;file_name&gt; &lt;where_to_copy_data_to&gt;</code></li>
+<li>Verify that files have been transferred</li>
+<li>Delete the computing environment when you are finished with your session</li>
+</ul>
+</div>
+<div id="additional-resources" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Additional Resources<a href="uploading-cloud.html#additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can read documentation about bringing your own data to AnVIL on the <a href="https://anvilproject.org/learn/find-data/bringing-your-own-data">Portal</a></p>
+<p>More details can be found in the <a href="https://support.terra.bio/hc/en-us/sections/360004147951">Terra documentation</a></p>
+<p>Information about setting up a “Requester Pays” bucket is <a href="https://support.terra.bio/hc/en-us/articles/360029801491-Using-Requester-Pays-workspaces-buckets">here</a>.</p>
+
+</div>
+</div>
+
+
+
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="give-us-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
