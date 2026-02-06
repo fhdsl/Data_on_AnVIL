@@ -67,15 +67,21 @@ You can read about Authorization Domains for workspace security in [this article
 
 ## Step Two: Connect to your HPC
 
-We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. In this example, we're using an `ssh` protocol.
+We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. 
 
-You might use a terminal command like:
+This step might vary depending on your setup, but a common way to access HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
 
 ```
 ssh <computer> -l <username>
 ```
 
-where `<computer>` is your HPC's address and `<username>` is your HPC login name. You'll have a password to enter as well.
+where `<computer>` is your HPC's address and `<username>` is your HPC login name. For example:
+
+```
+ssh login.rockfish.jhu.edu -l jsmith123
+```
+
+You'll have a password to enter as well. 
 
 ```{r, echo=FALSE, fig.alt="Log in to your institutional HPC."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_5#slide=id.g3c41753cb44_0_5")
@@ -115,7 +121,10 @@ Type in the following at the command line:
 gcloud init
 ```
 
-You might have to use the command `gcloud auth login` if you have done any of these steps before. 
+::: {.warning}
+Try `gcloud init` first. However, if you have previously used Google Cloud on your HPC, you might need to use different commands, such as `gcloud auth login`. Check out the command line functions you can use with `gcloud` [here](https://docs.cloud.google.com/sdk/docs/cheatsheet).
+:::
+
 
 Follow the onscreen prompts next. You will be asked to copy and paste a long link in your browser. 
 
