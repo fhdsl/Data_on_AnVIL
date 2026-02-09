@@ -69,7 +69,7 @@ You can read about Authorization Domains for workspace security in [this article
 
 We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. 
 
-This step might vary depending on your setup, but a common way to access HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
+This step might vary depending on your setup, but a common way to access an HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
 
 ```
 ssh <computer> -l <username>
