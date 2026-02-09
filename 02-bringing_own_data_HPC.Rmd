@@ -232,7 +232,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 A few tips to keep in mind: 
 
-- If you want to move multiple files, note that the `-r` flag is "recursive", which means all files in that directory will be moved over.
+- If you want to move multiple files, note that the `-r` flag is "recursive", which means all files in that directory and subdirectories will be moved over.
 - AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
 - Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** 
 
