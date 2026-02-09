@@ -232,9 +232,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 A few tips to keep in mind: 
 
+- AnVIL workspaces automatically come with a unique workspace bucket. The bucket will scale up in size (and cost) as you add data.
+- Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.**
 - If you want to move multiple files, note that the `-r` flag is "recursive", which means all files in that directory and subdirectories will be moved over.
-- AnVIL workspaces automatically come with 50GB of storage (the persistent disk), as well as a unique workspace bucket.
-- Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.** 
 
 
 ## Step Seven: Verify that files have been transferred
@@ -272,5 +272,7 @@ This is a good time to check that the sizes of the files you transferred match t
 ## Additional Resources
 
 - You might wish to run a transfer as a scheduled job, using a shell script. You can find an example of a script that does this  [here](https://github.com/fhdsl/Data_on_AnVIL/blob/main/resources/transfer_to_AnVIL.sh).
+
+- If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer).
 
 - Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
