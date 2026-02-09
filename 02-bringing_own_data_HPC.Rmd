@@ -159,8 +159,8 @@ Copy the verification code and enter the authorization code to confirm Google Cl
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_258#slide=id.g3c41753cb44_0_258")
 ```
 
-```{r, echo=FALSE, fig.alt="Select allow on the Google browser prompt to continue with establishing access."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_249#slide=id.g3c41753cb44_0_249")
+```{r, echo=FALSE, fig.alt="Once the code has been entered at command line, the interface will tell you that you are logged in under the email you provided."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_268#slide=id.g3c41753cb44_0_268")
 ```
 
 ## Step Five: Connect to your workspace
