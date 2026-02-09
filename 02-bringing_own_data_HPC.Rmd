@@ -199,6 +199,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Looks good so far!
 
+<div class = "dictionary">
+
+`ls`
+
+This command lists the files in the current directory (your HPC).
+
+`gcloud storage ls` 
+
+This command is a special version of `ls` that shows you what's in a particular Google Bucket
+</div>
+
 ## Step Six: Transfer file
 
 Now you're ready to copy data over! Let's use `ls` to check what files we have in the directory `my_data`.
