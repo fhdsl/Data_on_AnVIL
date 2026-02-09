@@ -4,7 +4,7 @@ ottrpal::set_knitr_image_path()
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
-# Uploading from Institutional High-Performance Computing {#uploading-hpc}
+# From Institutional Server {#uploading-hpc}
 
 If you're familiar with bioinformatics, you may already have experience with high-performance computing (HPC). Migrating data from your institutional HPC to AnVIL is a lot like moving data between Google Cloud buckets. Check out the [previous section](#uploading-cloud) for more on that.
 
