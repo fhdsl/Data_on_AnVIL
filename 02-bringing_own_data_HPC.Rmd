@@ -206,7 +206,7 @@ This command lists the files in the current directory (your HPC).
 
 `gcloud storage ls` 
 
-This command is a special version of `ls` that shows you what's in a particular Google Bucket
+This command is a special version of `ls` that shows you what's in a particular Google Bucket.
 </div>
 
 ## Step Six: Transfer file
