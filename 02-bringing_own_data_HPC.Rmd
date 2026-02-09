@@ -69,7 +69,7 @@ You can read about Authorization Domains for workspace security in [this article
 
 We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. 
 
-This step might vary depending on your setup, but a common way to access HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
+This step might vary depending on your setup, but a common way to access an HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
 
 ```
 ssh <computer> -l <username>
@@ -168,7 +168,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 You will see a message like this:
 
 ```
-This account has a lot of projects! Listing them all can take a while.
  [1] Enter a project ID
  [2] Create a new project
  [3] List projects
@@ -220,7 +219,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 We have one file called `GCA_009858895.3_ASM985889v3_genomic.fna`. This is the SARS-CoV-2 genome, located [here](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009858895.2/).
 
-Use the `gcloud storage cp` command to copy data. In the example below, you can try replacing the `GCA_009858895.3_ASM985889v3_genomic.fna` with the file on your server, and replacing `gs://fc-a1b2c3` with your Bucket name. You can find the Bucket name by entering `gcloud storage ls` or checking the Workspace and viewing the Dashboard tab.
+Use the `gcloud storage cp` command to copy data. In the example below, you can try replacing the `GCA_009858895.3_ASM985889v3_genomic.fna` with the file on your server, and replacing `gs://fc-a1b2c3` with your Bucket name (displayed when you typed `gcloud storage ls`). You can find the Bucket name by entering `gcloud storage ls` or checking the Workspace and viewing the Dashboard tab.
 
 ```
 gcloud storage cp GCA_009858895.3_ASM985889v3_genomic.fna gs://fc-a1b2c3
