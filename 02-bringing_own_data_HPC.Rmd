@@ -168,7 +168,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 You will see a message like this:
 
 ```
-This account has a lot of projects! Listing them all can take a while.
  [1] Enter a project ID
  [2] Create a new project
  [3] List projects
