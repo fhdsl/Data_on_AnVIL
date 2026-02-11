@@ -1,5 +1,3 @@
-# (PART\*) Bringing Your Own Data {-}
-
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
@@ -10,23 +8,45 @@ In this example, we'll upload some genomic data that is stored on your local com
 
 TODO: Add information about what the data is
 
-## Step One: Create a Workspace
+::: {.notice}
+_Genetics_
 
-The starting point for bringing your own data to AnVIL is the Workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
+**Novice**: no genetics skills needed
 
-TODO: Add image about creating workspace
+_Programming skills_
 
-Once you have opened the Workspace page, create a new workspace by clicking on the plus sign at the top.
+**Novice**: no programming skills needed
+:::
 
-TODO: Add image about creating workspace
+::: {.notice}
+**What will this cost?**
+
+
+:::
+
+## Step One: Create your workspace
+
+The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
+
+```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
+ottrpal::include_slide("")
+```
+
+Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
+
+```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
+ottrpal::include_slide("")
+```
 
 You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
-TODO: Add image about creating workspace
+```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
+ottrpal::include_slide("")
+```
 
-You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) at the AnVIL Portal.
+You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
 
-Once you have created a workspace, AnVIL will take you to the Workspace Dashboard.
+Once you have created a workspace, AnVIL will take you to the workspace dashboard. 
 
 ## Open the Data Uploader
 
@@ -36,10 +56,12 @@ Click on the box in the upper left hand corner that says "Import Data". From the
 
 TODO: Add image
 
-## Create a data collection
+When you first open the Data Uploader, you will be prompted to choose a workspace. Click on the workspace that you have just created.
 
-## Upload data collection
+TODO: Add image
 
-## Upload data table with metadata
+## Upload data
+
+After you have chosen your workspace, the Data Uploader then will then prompt you to upload your data files. 
 
 ## Verify files were moved into your workspace
