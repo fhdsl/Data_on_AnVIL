@@ -30,13 +30,13 @@ _Programming skills_
 **Intermediate**: some command line programming skills needed
 :::
 
-<!-- ::: {.notice} -->
-<!-- **What will this cost?** -->
+::: {.notice}
+**What will this cost?**
 
-<!-- Transferring data from an external Google bucket to a Google bucket associated with AnVIL may have costs associated with data egress (moving the data outside of the existing bucket). If the two buckets are in the same region and have the same setup, these fees are usually negligible. -->
+Most HPCs do not have egress (exporting) costs. If you follow along with this tutorial, the only additional costs will be those associated with storing the data transferred in a Google bucket (on AnVIL). The genome transferred in this activity will cost about 0.23 cents, or $0.0023 per day, according to our records in early February, 2026.
 
-<!-- Running a computing environment on AnVIL will also incur fees. The size of these fees depends on what type of computing environment you use, the configuration you choose (including the number of CPUs and amount of RAM), and the size of the associated persistent disk. You'll get an estimated cost per hour for the computing environment and the persistent disk before you actually start your environment. -->
-<!-- ::: -->
+Check out the [Google Cloud Console](https://console.cloud.google.com/) for accurate reporting of your own costs.
+:::
 
 ## Step One: Create your workspace
 
