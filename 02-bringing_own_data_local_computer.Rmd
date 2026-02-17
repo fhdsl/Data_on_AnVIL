@@ -4,6 +4,8 @@ ottrpal::set_knitr_image_path()
 ```
 # Uploading From Your Local Computer
 
+TODO: ADD A SCENARIO WHICH WOULD REQUIRE PEOPLE TO UPLOAD THEIR DATA INTO ANVIL
+
 In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example.
 
 TODO: Add information about what the data is
@@ -100,7 +102,7 @@ ADD A SECOND DATA COLLECTION INSTRUCTIONS
 
 How do you know if your files were successfully transferred?
 
-There are two ways to check! First, you should see information about the samples you loaded in the "Tables" section of the Data tab.
+There are two ways to check! First, you should see information about the samples you loaded in the **TABLES** section of the Data tab.
 
 ```{r, echo=FALSE, fig.alt='TO ADD'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_33#slide=id.g3c63398e684_33_33")
