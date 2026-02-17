@@ -1,0 +1,277 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+knitr::opts_chunk$set(out.width = "100%")
+```
+
+# From Institutional Server {#uploading-hpc}
+
+If you're familiar with bioinformatics, you may already have experience with high-performance computing (HPC). Migrating data from your institutional HPC to AnVIL is a lot like moving data between Google Cloud buckets. Check out the [previous section](#uploading-cloud) for more on that.
+
+In this example, we'll upload some genomic data into AnVIL that is currently stored in an institutional HPC. We'll use the Johns Hopkins HPC cluster known as Rockfish. Rockfish has interactive nodes and uses Slurm for job scheduling, like many other HPCs.
+
+AnVIL stores data in Google Buckets, so we'll also need to set up a workspace destination.
+
+::: {.dictionary}
+**Buckets** are the name of the containers used to store files and objects on Google Cloud. Everything you store on Google Cloud _must_ be in a bucket. Each bucket has its own unique name and location (uniform resource identifier, or URI). When we move data files into AnVIL workspaces, we use the URI to tell AnVIL where the data should be stored.
+
+You can read more about how data is saved in the cloud [here](https://support.terra.bio/hc/en-us/articles/360034335332-Understanding-data-in-the-Cloud)!
+:::
+
+This activity will vary depending on your files and HPC configuration. It might take some trial and error! In this example, we'll copy the SARS-CoV-2 genome from our HPC to AnVIL.
+
+::: {.notice}
+_Genetics_
+
+**Novice**: no genetics skills needed
+
+_Programming skills_
+
+**Intermediate**: some command line programming skills needed
+:::
+
+::: {.notice}
+**What will this cost?**
+
+Most HPCs do not have egress (exporting) costs. If you follow along with this tutorial, the only additional costs will be those associated with storing the data transferred in a Google bucket (on AnVIL). The genome transferred in this activity will cost about 0.23 cents, or $0.0023 per day, according to our records in early February, 2026.
+
+Check out the [Google Cloud Console](https://console.cloud.google.com/) for accurate reporting of your own costs.
+:::
+
+## Step One: Create your workspace
+
+The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
+
+```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_10#slide=id.g3c41753cb44_0_10")
+```
+
+Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
+
+```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_20#slide=id.g3c41753cb44_0_20")
+```
+
+You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
+
+```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_29#slide=id.g3c41753cb44_0_29")
+```
+
+```{r, echo=FALSE, fig.alt="The 'anvil-outreach' billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the 'Quick Create Workspace' to create your workspace without enabling sharing or additional security options."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_119#slide=id.g3c41753cb44_0_119")
+```
+
+You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
+
+
+## Step Two: Connect to your HPC
+
+We will initiate the transfer from the HPC side. You'll need to connect to your HPC first. 
+
+This step might vary depending on your setup, but a common way to access an HPC is through [`ssh`](https://en.wikipedia.org/wiki/Secure_Shell) protocol. Diving deep into `ssh` is beyond the scope of this tutorial, but you might use a command like:
+
+```
+ssh <computer> -l <username>
+```
+
+where `<computer>` is your HPC's address and `<username>` is your HPC login name. For example:
+
+```
+ssh login.rockfish.jhu.edu -l jsmith123
+```
+
+You'll have a password to enter as well. 
+
+```{r, echo=FALSE, fig.alt="Log in to your institutional HPC."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_5#slide=id.g3c41753cb44_0_5")
+```
+
+It's important to be a good community member when sharing an HPC. Follow your institution's best practices for where to work. For example, on Rockfish, doing work on login nodes is discouraged. We will launch an interactive node instead.
+
+```{r, echo=FALSE, fig.alt="Launch command for the interactive node on the JHU Rockfish cluster."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_87#slide=id.g3c41753cb44_0_87")
+```
+
+
+## Step Three: Check for Google Cloud SDK
+
+You will need Google Cloud SDK on your HPC to move files to AnVIL. This is software that enables file transfer. You can check to see if Google Cloud SDK tools are available by entering `gcloud` at the command line. If these tools are available, you will see a list of command groups:
+
+```{r, echo=FALSE, fig.alt="Listed out command groups for Google Cloud SDK."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_163#slide=id.g3c41753cb44_0_163")
+```
+
+If you see something like "command not found," you will need to install it. The code here is an example specifically for a Linux server. You might need to follow different instructions [depending on your server setup](https://cloud.google.com/sdk/docs/install).
+
+```
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-linux-x86_64.tar.gz
+google-cloud-sdk/install.sh
+```
+
+You might need to specify the path to the executable `gcloud`, e.g., `google-cloud-sdk/bin/gcloud init`. When in doubt, try testing the executable is available by entering `gcloud` at the command line.
+
+
+## Step Four: Initialize `gcloud`
+
+Type in the following at the command line:
+
+```
+gcloud init
+```
+
+Follow the onscreen prompts next. You will be asked to copy and paste a long link in your browser. 
+
+```
+Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?response....
+    
+Enter authorization code:
+```
+
+```{r, echo=FALSE, fig.alt="Google Cloud SDK authentication will ask you to copy a long link into your browser to authenticate."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_188#slide=id.g3c41753cb44_0_188")
+```
+
+::: {.warning}
+Try `gcloud init` first. However, if you have previously used Google Cloud on your HPC, you might need to use different commands, such as `gcloud auth login`. Check out the command line functions you can use with `gcloud` [here](https://docs.cloud.google.com/sdk/docs/cheatsheet).
+:::
+
+Make sure to select your AnVIL account. For you, this might be an institutional account. Grant it permission to work on the command line.
+
+```{r, echo=FALSE, fig.alt="Select the Google account you are using on AnVIL."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_219#slide=id.g3c41753cb44_0_219")
+```
+
+```{r, echo=FALSE, fig.alt="Select continue on the Google browser prompt."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_239#slide=id.g3c41753cb44_0_239")
+```
+
+```{r, echo=FALSE, fig.alt="Select allow on the Google browser prompt to continue with establishing access."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_249#slide=id.g3c41753cb44_0_249")
+```
+
+Copy the verification code and enter the authorization code to confirm Google Cloud SDK command line access.
+
+```{r, echo=FALSE, fig.alt="You will be provided a code to copy into your command line interface, or terminal."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_258#slide=id.g3c41753cb44_0_258")
+```
+
+```{r, echo=FALSE, fig.alt="Once the code has been entered at command line, the interface will tell you that you are logged in under the email you provided."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_268#slide=id.g3c41753cb44_0_268")
+```
+
+## Step Five: Connect to your workspace
+
+You will see a message like this:
+
+```
+ [1] Enter a project ID
+ [2] Create a new project
+ [3] List projects
+Please enter your numeric choice:
+```
+
+We'll need to retrieve the Google Project ID. Over on `anvil.terra.bio`, You can find this by opening your Workspace and viewing the Dashboard tab. It will look something like `terra-123abcefg`. 
+
+```{r, echo=FALSE, fig.alt="You can find the Google Project ID on the workspace dashboard."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_294#slide=id.g3c41753cb44_0_294")
+```
+
+Select `1` to enter your Workspace's Google Project ID, and paste it when prompted. When asked `Do you want to configure a default Compute Region and Zone? (Y/n)?`, you can type `n`.
+
+```{r, echo=FALSE, fig.alt="Enter the Google Project ID on command line."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_287#slide=id.g3c41753cb44_0_287")
+```
+
+Confirm you are in the right place by typing in the following. The command should return the Bucket name.
+
+```
+gcloud storage ls
+```
+
+```{r, echo=FALSE, fig.alt="When typing in the command above, the bucket name is listed in the output."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_308#slide=id.g3c41753cb44_0_308")
+```
+
+Looks good so far!
+
+<div class = "dictionary">
+
+`ls`
+
+This command lists the files in the current directory (your HPC).
+
+`gcloud storage ls` 
+
+This command is a special version of `ls` that shows you what's in a particular Google Bucket.
+</div>
+
+## Step Six: Transfer file
+
+Now you're ready to copy data over! Let's use `ls` to check what files we have in the directory `my_data`.
+
+```{r, echo=FALSE, fig.alt="Typing in the list files command shows there is one file in the working directory."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_321#slide=id.g3c41753cb44_0_321")
+```
+
+We have one file called `GCA_009858895.3_ASM985889v3_genomic.fna`. This is the SARS-CoV-2 genome, located [here](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009858895.2/).
+
+Use the `gcloud storage cp` command to copy data. In the example below, you can try replacing the `GCA_009858895.3_ASM985889v3_genomic.fna` with the file on your server, and replacing `gs://fc-a1b2c3` with your Bucket name (displayed when you typed `gcloud storage ls`). You can find the Bucket name by entering `gcloud storage ls` or checking the Workspace and viewing the Dashboard tab.
+
+```
+gcloud storage cp GCA_009858895.3_ASM985889v3_genomic.fna gs://fc-a1b2c3
+```
+
+```{r, echo=FALSE, fig.alt="File has been transferred successfully."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_332#slide=id.g3c41753cb44_0_332")
+```
+
+A few tips to keep in mind: 
+
+- AnVIL workspaces automatically come with a unique workspace bucket. The bucket will scale up in size (and cost) as you add data.
+- Remember, **In order for `gcloud` to recognize the buckets, you need to add `gs://` to the front of their names.**
+- If you want to move multiple files, note that the `-r` flag is "recursive", which means all files in that directory and subdirectories will be moved over.
+
+
+## Step Seven: Verify that files have been transferred
+
+How do you know if your files were successfully transferred?
+
+You can see any uploaded files by clicking the "Browse workspace files" button on the far right of the Dashboard page.
+
+```{r, echo=FALSE, fig.alt='The Browse workspace files button, a folder icon, is highlighted.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_340#slide=id.g3c41753cb44_0_340")
+```
+
+```{r, echo=FALSE, fig.alt='The file appears on AnVIL interface, so the transfer was a success.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_349#slide=id.g3c41753cb44_0_349")
+```
+
+If you click on the name of the file, you can also see the details of the file.
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the details of the files we successfully transferred.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c41753cb44_0_355#slide=id.g3c41753cb44_0_355")
+```
+
+This is a good time to check that the sizes of the files you transferred match the sizes of the original files.
+
+
+## Summary
+
+- Create a workspace
+- Connect to your HPC
+- Set up and initialize Google Cloud tools, if needed
+- Run `gcloud storage cp <where_to_copy_data_from>/<file_name> <where_to_copy_data_to>`
+- Verify that file(s) have been transferred
+
+
+## Additional Resources
+
+- You might wish to run a transfer as a scheduled job, using a shell script. You can find an example of a script that does this  [here](https://github.com/fhdsl/Data_on_AnVIL/blob/main/resources/transfer_to_AnVIL.sh).
+
+- If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer).
+
+- Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
