@@ -4,7 +4,7 @@
 
 
 
-# Uploading from the Cloud {#uploading-cloud}
+# From the Cloud {#uploading-cloud}
 
 Imagine your lab has some data stored in a Google bucket. Maybe you want to bring this data into AnVIL for analysis, and you want the data to be associated with a specific workspace. One option for doing this is to copy the data from the existing Google bucket to a bucket that is specifically associated with an AnVIL workspace.
 <br><br>

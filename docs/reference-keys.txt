@@ -10,4 +10,14 @@ step-four-verify-that-files-have-been-transferred
 step-five-delete-your-environment-when-you-are-done-with-your-session
 summary
 additional-resources
+uploading-hpc
+step-one-create-your-workspace-1
+step-two-connect-to-your-hpc
+step-three-check-for-google-cloud-sdk
+step-four-initialize-gcloud
+step-five-connect-to-your-workspace
+step-six-transfer-file
+step-seven-verify-that-files-have-been-transferred
+summary-1
+additional-resources-1
 references
