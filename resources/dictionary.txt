@@ -11,6 +11,7 @@ CCDG
 CMG
 colData
 CoV
+covid
 customizations
 dbGaP
 dex
@@ -27,6 +28,7 @@ glimmaMDS
 Gmail
 GTEx
 HPC
+HPC's
 impactful
 Inclusivity
 ingressing
@@ -51,15 +53,20 @@ programmatically
 px
 reproducibility
 Rmd
+Rockfish
 RStudio
+sars
 SDK
+Slurm
 SRA
 Submitters
 tallgrass
 timeframe
 TSA
+tsv
 TSV
 underserved
+uploader
 Uploader
 URI
 VM
