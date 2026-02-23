@@ -7,15 +7,15 @@ rmd_files: ["index.Rmd",
             "02-bringing_own_data_HPC.Rmd",
             "02-bringing_own_data_local_computer.Rmd",
             "Feedback.Rmd",
-            "About.Rmd",
-            "References.Rmd"]
-new_session: yes
-bibliography: [book.bib]
-delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Chapter"
-output_dir: "docs"
-output:
+	    "About.Rmd",
+	    "References.Rmd"]
+	    new_session: yes
+	    bibliography: [book.bib]
+	    delete_merged_file: true
+	    language:
+	      ui:
+	        chapter_name: "Chapter"
+	    output_dir: "docs"
+	    output:
     bookdown::html_book
     
