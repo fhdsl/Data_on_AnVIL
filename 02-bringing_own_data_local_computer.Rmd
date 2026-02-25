@@ -2,13 +2,13 @@
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
-# Uploading From Your Local Computer
+# From Your Local Computer {#uploading-local-computer}
 
-TODO: ADD A SCENARIO WHICH WOULD REQUIRE PEOPLE TO UPLOAD THEIR DATA INTO ANVIL
+When moving to cloud computing, you may have data that you've stored on a local server that you need to transfer into the cloud. AnVIL has developed a simple drag-and-drop tool called the Data Uploader to make this process quick and painless.
 
 In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example.
 
-TODO: Add information about what the data is
+The data files for this vignette are very small fasta files. Each file contains only a single gene from a single CoVID variant (initially downloaded onto a local server from GenBank). While we kept these files small for the vignette, the AnVIL Data Uploader can easily handle much larger files.
 
 ::: {.notice}
 _Genetics_
@@ -31,19 +31,19 @@ _Programming skills_
 The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
 
 ```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_56#slide=id.g3c63398e684_33_56")
 ```
 
 Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
 
 ```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_67#slide=id.g3c63398e684_33_67")
 ```
 
 You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
 ```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_0#slide=id.g3c63398e684_33_0")
 ```
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
@@ -56,47 +56,78 @@ When you switch to the Data tab in your Workspace, you'll see three headers on t
 
 Click on the box in the upper left hand corner that says "Import Data". From the dropdown menu, you'll want to choose "Open data uploader".
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_3#slide=id.g3c63398e684_33_3")
+```
 
 When you first open the Data Uploader, you will be prompted to choose a workspace. Click on the workspace that you have just created.
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_6#slide=id.g3c63398e684_33_6")
+```
 
 ## Upload data and metadata
 
 After you have chosen your workspace, the Data Uploader then will then prompt you to create a data collection. Click on "Create a New Collection".
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_9#slide=id.g3c63398e684_33_9")
+```
 
 You will need to choose a name for your data collection. In our example, we chose to name the collection "covid_sequences". Make sure to pick something descriptive enough so that you'll know what the samples are later!
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_12#slide=id.g3c63398e684_33_12")
+```
 
 Next, click on the "Upload" button. The Data Uploader will prompt you to choose the files from your computer that you want to upload into your workspace bucket. Remember that every file must have a unique name!
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_18#slide=id.g3c63398e684_33_18")
+```
 
 After you upload your data files, you can always remove files. In this example, we accidentally uploaded a fasta file called "sars_membrane_protein_omicron.fasta". To remove it, check the box next to the file name and click the "Delete" button.
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_21#slide=id.g3c63398e684_33_21")
+```
 
 Once you have verified all the files that you want in your workspace bucket have been uploaded, click the "Next" button so that you can load the sample metadata. 
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_15#slide=id.g3c63398e684_33_15")
+```
 
 Data Uploader requires you to drag and drop your metadata file onto a bar at the bottom of the page.
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_24#slide=id.g3c63398e684_33_24")
+```
 
-Your metadata file should be saved as a tsv. The first line needs to be column names for the metadata. Additionally, the first column should be called "entity:sample_id". Each sample ID should match the name of the files you uploaded earlier. Remember to use tabs between each column.
+Your metadata file should be saved as a tsv. The first line needs to be column names for the metadata. Additionally, the first column should be called "entity:sample_id". **Each sample ID should match the name of the files you uploaded earlier.** Remember to use tabs between each column.
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_27#slide=id.g3c63398e684_33_27")
+```
 
 The Data Uploader will display a table that displays your metadata. If it looks good, you can click "Create Table" to finish the file upload.
 
-TODO: Add image
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_30#slide=id.g3c63398e684_33_30")
+```
 
-ADD A SECOND DATA COLLECTION INSTRUCTIONS
+You can add multiple data collections to your workspace. If you go back to "Select A Collection", clicking on "Create New Collection" allows you to make an additional data collection. You will need to choose a unique name for your new collection. Our new data collection is called "covid_membrane".
+
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c7f7fdd14a_0_10#slide=id.g3c7f7fdd14a_0_10")
+```
+
+After you have created a new data collection, you can add your new files (and metadata). In this example, we loaded four additional fasta files that contain sequences of a CoVID membrane protein gene.
+
+```{r, echo=FALSE, fig.alt=""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c7f7fdd14a_0_15#slide=id.g3c7f7fdd14a_0_15")
+```
+
 
 ## Verify files were moved into your workspace
 
