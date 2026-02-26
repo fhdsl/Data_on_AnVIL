@@ -173,5 +173,7 @@ Check out these AnVIL Portal articles for more details!
 
 - AnVIL datasets are organized using tables. [This post](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables) explains the advantages of using tables with your data on AnVIL, as well as offers tips for customizing your data tables.
 
-- If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer).
+- If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer). 
+
+- See [Sharing data and tools with workspace access controls](https://support.terra.bio/hc/en-us/articles/360025851892-Sharing-data-and-tools-with-workspace-access-controls) to understand how to protect access to your data once it's been uploaded from your local computer.
 
