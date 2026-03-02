@@ -7,7 +7,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 When moving to cloud computing, you may have data that you've stored on a local computer (such as a work laptop) that you need to transfer into the cloud. AnVIL has developed a simple drag-and-drop tool called the Data Uploader to make this process quick and painless.
 
-In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example.
+In this example, we'll upload some genomic data that is stored on your local computer. You can use a file of your own, or download the files we are using in this example from our [GitHub repo](https://github.com/fhdsl/Data_on_AnVIL/data).
 
 The data files for this vignette are very small fasta files. Each file contains only a single gene from a single CoVID variant (initially downloaded onto a local server from GenBank). While we kept these files small for the vignette, the AnVIL Data Uploader can easily handle much larger files.
 
