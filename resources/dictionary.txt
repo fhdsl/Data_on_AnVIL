@@ -12,6 +12,7 @@ CMG
 colData
 CoV
 covid
+CoVID
 customizations
 dbGaP
 dex
@@ -22,6 +23,7 @@ fasta
 fastq
 gcloud
 GDSCN
+GenBank
 github
 Glimma
 glimmaMDS
@@ -51,6 +53,7 @@ premade
 preprint
 programmatically
 px
+repo
 reproducibility
 Rmd
 Rockfish
