@@ -1,0 +1,13 @@
+entity:sample_id	GenBank_id	region
+omicron2	OX315675.1	spike_protein
+omicron4	OP093374.1	spike_protein
+omicron5	OP093373.1	spike_protein
+delta	OK091006.1	spike_protein
+Wuhan_reference	NC_045512.2	spike_protein
+beta	OX003129.1	spike_protein
+omicron1	OX315743.1	spike_protein
+alpha	OW998592.1	spike_protein
+gamma	MW911054.1	spike_protein
+
+
+

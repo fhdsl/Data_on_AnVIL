@@ -24,7 +24,11 @@ _Programming skills_
 ::: {.notice}
 **What will this cost?**
 
+In general, it is free to upload data to the cloud, but the workflows used to process data may incur costs. Additionally, storing data in the buckets after uploading can incur costs, too. For this vignette, we were able to upload the data for essentially nothing, while maintaining the workspace with the data costs $0.358 a day, according to our records in late February, 2026.
 
+Check out the [Google Cloud Console](https://console.cloud.google.com/) for accurate reporting of your own costs.
+
+You can also read more about [cloud costs](https://anvilproject.org/learn/control-cloud-costs/understanding-cloud-costs) on the AnVIL Portal.
 :::
 
 ## Step One: Create your workspace
