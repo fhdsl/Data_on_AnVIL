@@ -66,6 +66,51 @@ Once you have created a workspace, AnVIL will take you to the workspace dashboar
 
 ## Step Three: Import sample TSV file
 
+Click on IMPORT DATA and select "Upload TSV".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The IMPORT DATA button and 'Upload TSV' option", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+This opens a popup that looks like this:
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The popup is titled Import Data Table and has the option to click to select a .tsv file", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+However, let's take a moment to get acquainted with the new file we'll be uploading.
+
+### The `samples.tsv` File
+
+First, download the samples file here. You might have to right-click and "Save as".
+
+TODO: Add link to downloadable file
+
+Next, open the file on your local machine. This is what it might look like in Microsoft Excel:
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The samples we want to import from SRA are listed in rows in `samples.tsv`", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+::: {.notice}
+The column header `entity:sample_id` is important. `entity:` is required. `samples` becomes the name of the data table. So for example, if our header was `entity:reference_id`, a data table called "reference" would be created in AnVIL. If you didn't want to overwrite anything in the original "samples" table, you could change the column header. As long as none of the IDs are the same, no data will be overwritten. 
+:::
+
+### Upload the TSV
+
+Back on AnVIL, Click to select a TSV file. This file should be the one you just downloaded above called `samples.tsv`. You will see a warning about potentially overwriting the existing entries. We know that none of the IDs in the new samples file overlap, so click START IMPORT JOB.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The warning is now visible on the popup and the START IMPORT JOB button is highlighted", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+New samples have been added!
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
+ottrpal::include_slide("")
+```
+
+
 ## Step Four: Set up and launch workflow
 
 ## Step Five: Check workflow progress
