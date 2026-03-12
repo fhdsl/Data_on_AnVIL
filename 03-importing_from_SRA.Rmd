@@ -17,10 +17,6 @@ The SRA Data corresponding to this project is located [here](https://www.ncbi.nl
 ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
 ```
 
-::: {.dictionary}
-You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. There is no fee for ingressing data to AnVIL from SRA.
-:::
-
 
 ::: {.notice}
 _Genetics_
@@ -35,7 +31,9 @@ _Programming skills_
 ::: {.notice}
 **What will this cost?**
 
+You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. There is no fee for ingressing data to AnVIL from SRA.
 
+There is a small cost for storing the data in an AnVIL bucket.
 :::
 
 ## Step One: Create your workspace
@@ -43,26 +41,68 @@ _Programming skills_
 The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
 
 ```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_36#slide=id.g3ce9c5d5921_0_36")
 ```
 
 Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
 
 ```{r, echo=FALSE, fig.alt="Create a new workspace by clicking on the plus sign at the top."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_46#slide=id.g3ce9c5d5921_0_46")
 ```
 
 You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
 ```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_0#slide=id.g3ce9c5d5921_0_0")
 ```
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
 
-Once you have created a workspace, AnVIL will take you to the workspace dashboard. 
+Once you have created a workspace, AnVIL will take you to the workspace dashboard.
 
 ## Step Two: Import WDL workflow
+
+In your new workspace, navigate to the Workflows tab. Any workflows that have been imported to the workspace will be displayed here. Since this is a new workspace, there are no workflows displayed. Click on "Find a Workflow" to get started.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "After you navigate to the Workflows tab, click on the Find a Workflow box to get started.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_3#slide=id.g3ce9c5d5921_0_3")
+```
+
+A pop-up window will appear, asking if you'd like to import a workflow from either Dockstore.org or the Terra Workflow Repository. Click on the Dockstore.org box.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the Dockstore.org option when asked from where you want to import a workflow.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_6#slide=id.g3ce9c5d5921_0_6")
+```
+
+A new browser window will open, showing a search page on Dockstore. Type "sra fetch" into the search bar and hit enter. By default the "WDL" option will be chosen as the workflow language. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "In the new browser window, use the search term 'sra fetch' to find a WDL.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_9#slide=id.g3ce9c5d5921_0_9")
+```
+
+In early March 2026, there were more than 400 WDLs deposited in Dockstore that helped with automating SRA workflows. For this vignette, we're looking for one called "pull_FASTQs_from_SRA_by_run" by user aofarrel. We have verified that this workflow still works as expected as of March 2026. Click on the WDL title.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You are looking for a WDL written by user aofarrel called 'pull_FASTQs_from_SRA_by_run' in Dockstore.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_12#slide=id.g3ce9c5d5921_0_12")
+```
+
+You should now see the page for the WDL you have chosen. WDLs from Dockstore can be imported into AnVIL with the click of a button. Choose the "AnVIL" box on the righthand side of the page.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the AnVIL box on the righthand side of the page.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_15#slide=id.g3ce9c5d5921_0_15")
+```
+
+A new browser window for AnVIL will open and prompt you to choose the workspace you'd like to import the WDL to. Choose the name of the workspace that you created earlier. Notice that the workspace name starts with the billing project. In our example, the workspace is "anvil-outreach/import_data_sra". Your workspace will be differ and be named based on your billing project and the workspace name you chose. Once you have chosen the appropriate workspace, click Import.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the name of the workspace that you created earlier. Notice that the workspace name starts with the billing project. In our example, the workspace is 'anvil-outreach/import_data_sra'.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_18#slide=id.g3ce9c5d5921_0_18")
+```
+
+After you have imported the workflow, you will see it as an option on the Workflow tab.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "After you have imported the workflow, you will see it as an option on the Workflow tab.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_94#slide=id.g3ce9c5d5921_0_94")
+```
 
 ## Step Three: Import sample TSV file
 
@@ -104,7 +144,7 @@ Back on AnVIL, Click to select a TSV file. This file should be the one you just 
 ottrpal::include_slide("")
 ```
 
-New samples have been added!
+Now when we look at the TABLE, we can see that our samples have been added!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
 ottrpal::include_slide("")
@@ -112,6 +152,15 @@ ottrpal::include_slide("")
 
 
 ## Step Four: Set up and launch workflow
+
+Go to the "WORKFLOWS" tab. We'll use a WDL workflow to make sure the SRA data is in GCP and accessible in AnVIL.
+
+Click "Find a Workflow". Click on "Dockstore.org". 
+
+Once on Dockstore, browse for "SRA fetch". Scroll down a bit to find "aofarrel/SRANWRP/pull_FASTQs_from_SRA_by_run". Click on this workflow, or go directly to it [here](https://dockstore.org/workflows/github.com/aofarrel/SRANWRP/pull_FASTQs_from_SRA_by_run:v1.1.18?tab=info). 
+
+On the righthand side, find "Launch with" and select "AnVIL". On the dropdown for "Destination Workspace" select the workspace you made earlier.
+
 
 ## Step Five: Check workflow progress
 
