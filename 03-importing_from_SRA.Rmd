@@ -33,7 +33,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. There is no fee for ingressing data to AnVIL from SRA.
 
-There is a small cost for storing the data in an AnVIL bucket.
+There is also no cost for importing a workflow into your workspace, but there is a small cost for storing the data in an AnVIL bucket.
 :::
 
 ## Step One: Create your workspace
@@ -106,21 +106,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step Three: Import sample TSV file
 
-Click on IMPORT DATA and select "Upload TSV".
+The WDL you have chosen requires a list of the SRA samples you want to import into your workspace. You can do this sample by sample, but a more efficient way is to save the sample IDs to a TSV file and let AnVIL run parallel workflows for each sample. 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "The IMPORT DATA button and 'Upload TSV' option", out.width = '100%'}
-ottrpal::include_slide("")
-```
-
-This opens a popup that looks like this:
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "The popup is titled Import Data Table and has the option to click to select a .tsv file", out.width = '100%'}
-ottrpal::include_slide("")
-```
-
-However, let's take a moment to get acquainted with the new file we'll be uploading.
-
-### The `samples.tsv` File
+Let's take a moment to get acquainted with the new file we'll be uploading.
 
 First, download the samples file here. You might have to right-click and "Save as".
 
@@ -128,39 +116,35 @@ TODO: Add link to downloadable file
 
 Next, open the file on your local machine. This is what it might look like in Microsoft Excel:
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "The samples we want to import from SRA are listed in rows in `samples.tsv`", out.width = '100%'}
-ottrpal::include_slide("")
+```{r, fig.align='center', echo = FALSE, fig.alt= "The samples we want to import from SRA are listed in rows in `samples.tsv, Make sure the column header is 'entity:sample_id'.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_24#slide=id.g3ce9c5d5921_0_24")
 ```
 
 ::: {.notice}
 The column header `entity:sample_id` is important. `entity:` is required. `samples` becomes the name of the data table. So for example, if our header was `entity:reference_id`, a data table called "reference" would be created in AnVIL. If you didn't want to overwrite anything in the original "samples" table, you could change the column header. As long as none of the IDs are the same, no data will be overwritten. 
 :::
 
-### Upload the TSV
+Next, navigate to the Data tab in your workspace. Click on IMPORT DATA and select "Upload TSV".
 
-Back on AnVIL, Click to select a TSV file. This file should be the one you just downloaded above called `samples.tsv`. You will see a warning about potentially overwriting the existing entries. We know that none of the IDs in the new samples file overlap, so click START IMPORT JOB.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "The warning is now visible on the popup and the START IMPORT JOB button is highlighted", out.width = '100%'}
-ottrpal::include_slide("")
+```{r, fig.align='center', echo = FALSE, fig.alt= "The IMPORT DATA button and 'Upload TSV' option", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_27#slide=id.g3ce9c5d5921_0_27")
 ```
 
-Now when we look at the TABLE, we can see that our samples have been added!
+This opens a popup that looks like this:
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "", out.width = '100%'}
-ottrpal::include_slide("")
+```{r, fig.align='center', echo = FALSE, fig.alt= "The popup is titled Import Data Table and has the option to click to select a .tsv file", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_30#slide=id.g3ce9c5d5921_0_30")
 ```
 
+Click to select your samples.tsv file. You will see a warning about potentially overwriting the existing entries. We know that none of the IDs in the new samples file overlap, so click START IMPORT JOB.
 
-## Step Four: Set up and launch workflow
+Now when we look at the TABLE in the Data tab, we can see that our samples have been added!
 
-Go to the "WORKFLOWS" tab. We'll use a WDL workflow to make sure the SRA data is in GCP and accessible in AnVIL.
+```{r, fig.align='center', echo = FALSE, fig.alt= "After we have imported the tsv file, the samples table in our workspace will be populated.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_33#slide=id.g3ce9c5d5921_0_33")
+```
 
-Click "Find a Workflow". Click on "Dockstore.org". 
-
-Once on Dockstore, browse for "SRA fetch". Scroll down a bit to find "aofarrel/SRANWRP/pull_FASTQs_from_SRA_by_run". Click on this workflow, or go directly to it [here](https://dockstore.org/workflows/github.com/aofarrel/SRANWRP/pull_FASTQs_from_SRA_by_run:v1.1.18?tab=info). 
-
-On the righthand side, find "Launch with" and select "AnVIL". On the dropdown for "Destination Workspace" select the workspace you made earlier.
-
+## Step Four: Launch workflow
 
 ## Step Five: Check workflow progress
 
@@ -174,7 +158,7 @@ How long did this take? In early March, did 10 samples. started at 1:20. Most co
 - Create a workspace
 - Import a WDL workflow from Dockstore
 - Upload a TSV containing sample IDs
-- Set up and launch the WDL
+- Launch the WDL
 - Check the workflow progress 
 - Locate the transferred data files
 
