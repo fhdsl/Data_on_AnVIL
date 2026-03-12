@@ -146,6 +146,26 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step Four: Launch workflow
 
+We are finally ready to launch the workflow! Navigate to the Workflows tab and choose the WDL we imported previously.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "On the Workflows tab, click on the WDL we imported earlier.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_71#slide=id.g3ce9c5d5921_0_71")
+```
+
+Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pulldown menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pulldown menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
+```
+
+A new screen will open showing the sample IDs from the data table. Make sure the box next to each sample is checked. At the bottom of the screen, you will again have the option to import these samples as a sample set (this box will be checked by default). Uncheck this box, then choose the OK button in the lower right corner.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure the samples you want to import have a checked box next to them, then choose OK.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_74#slide=id.g3ce9c5d5921_0_74")
+```
+
+
+
 ## Step Five: Check workflow progress
 
 ## Step Six: Locate transferred data
