@@ -152,7 +152,7 @@ We are finally ready to launch the workflow! Navigate to the Workflows tab and c
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_71#slide=id.g3ce9c5d5921_0_71")
 ```
 
-Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pulldown menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
+Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pull down menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pulldown menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
@@ -184,7 +184,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step Five: Check workflow progress
 
-Details about all jobs, including workflow progress, can be accessesd via the Submission History tab. You can click on a given job ID to access the specifics for that particular job.
+Details about all jobs, including workflow progress, can be accessed via the Submission History tab. You can click on a given job ID to access the specifics for that particular job.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Details about all submitted jobs can be found on the Submission History page.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_86#slide=id.g3ce9c5d5921_0_86")
@@ -204,11 +204,32 @@ The job manager reports information such as job status (in this case, it succeed
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_106#slide=id.g3ce9c5d5921_0_106")
 ```
 
-
 ## Step Six: Locate transferred data
 
+Once all the jobs have completed successfully, you should check that you can find the transferred data. It's now located within the workspace bucket, which you can find by clicking on the File icon on the right side of the workspace Dashboard tab.
 
-How long did this take? In early March, did 10 samples. started at 1:20. Most completed within 6 minutes, but the last two workflows took 18 minutes (each sample fetch required a separate workflow, so we ran 10 workflows)
+```{r, fig.align='center', echo = FALSE, fig.alt= "To access the transferred data, click on the File icon on the Dashboard tab.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_118#slide=id.g3ce9c5d5921_0_118")
+```
+
+The results of each individual run will be stored within a subfolder of the workflow submission name.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The results of each individual run will be stored within a subfolder of the workflow submission name.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_112#slide=id.g3ce9c5d5921_0_112")
+```
+
+You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled "shard-0".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled "shard-0".", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_115#slide=id.g3ce9c5d5921_0_115")
+```
+
+When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA. Downloading the files from AnVIL (also called "data egress") will cost a small amount. However, you do not have to download them in order to work with the data within an AnVIL computing environment.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA..", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_121#slide=id.g3ce9c5d5921_0_121")
+```
+
 
 ## Summary
 
