@@ -175,7 +175,7 @@ Check out these AnVIL Portal articles for more details!
 
 - You can read more [about the Data Uploader](https://support.terra.bio/hc/en-us/articles/4419428208411-Upload-data-and-populate-the-table-with-linked-file-paths). 
 
-- AnVIL datasets are organized using tables. [This post](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables) explains the advantages of using tables with your data on AnVIL, as well as offers tips for customizing your data tables.
+- AnVIL datasets are organized using tables. [This post](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables) explains the advantages of using tables with your data on AnVIL, as well as offers tips for customizing your data tables. **We especially recommend this resource because it demonstrates how to add Google bucket links to the metadata table after the files have been uploaded, enabling work with workflows down the road.**
 
 - If you have a lot of data, it's a good idea to estimate how much transfer time you need. Transfer a small file first and determine your transfer rate. [Learn more about estimated transfer rates to Google Cloud via AnVIL](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer). 
 
