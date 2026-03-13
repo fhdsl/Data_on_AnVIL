@@ -73,7 +73,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Upload data and metadata
 
-After you have chosen your workspace, the Data Uploader then will then prompt you to create a data collection.  This is essentially a directory that contains all the samples described by a single metadata file. Click on "Create a New Collection".
+After you have chosen your workspace, the Data Uploader then will prompt you to create a data collection.  This is essentially a directory that contains all the samples described by a single metadata file. Click on "Create a New Collection".
 
 ```{r, echo=FALSE, fig.alt="In order to upload data, you will need to create a data collection. This is essentially a directory that contains all the samples described by a single metadata file. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_9#slide=id.g3c63398e684_33_9")
