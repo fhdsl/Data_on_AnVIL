@@ -20,4 +20,11 @@ step-six-transfer-file
 step-seven-verify-that-files-have-been-transferred
 summary-1
 additional-resources-1
+uploading-local-computer
+step-one-create-your-workspace-2
+step-two-open-the-data-uploader
+step-three-upload-data-and-metadata
+step-four-verify-files-were-moved-into-your-workspace
+summary-2
+additional-resources-2
 references
