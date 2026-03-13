@@ -5,6 +5,7 @@ rmd_files: ["index.Rmd",
             "01-intro.Rmd",
             "02-bringing_own_data.Rmd",
             "02-bringing_own_data_HPC.Rmd",
+            "02-bringing_own_data_local_computer.Rmd",
             "Feedback.Rmd",
             "About.Rmd",
             "References.Rmd"]
