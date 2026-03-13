@@ -3,7 +3,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-#From Sequence Read Archive (SRA)
+# From Sequence Read Archive (SRA) {#importing-sra}
 
 In this example, we'll bring some metagenomic data into AnVIL. This data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA904247), which collected soil samples to study bacterial communities in tallgrass prairie. Bacteria play an important role in this ecosystem, but can be changed by disturbance, management, and the presence of herbivores.
 
@@ -229,7 +229,6 @@ When you click on the "pull_results.txt" file, you have the option to download t
 ```{r, fig.align='center', echo = FALSE, fig.alt= "When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA..", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_121#slide=id.g3ce9c5d5921_0_121")
 ```
-
 
 ## Summary
 
