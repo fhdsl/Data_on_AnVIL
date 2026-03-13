@@ -1,0 +1,13 @@
+>delta
+ccatggcaga ttccaacggt actattaccg ttgaagagct taaaaagctc cttgaacaat
+ggaacctagt aataggtttc ctattcctta catggatttg tcttctacaa tttgcctatg
+ccaacaggaa taggtttttg tatataatta agttaatttt cctctggctg ttatggccag
+taactttagc ttgttttgtg cttgctgctg tttacagaat aaattggatc accggtggaa
+ttgctaycgc aatggcttgt cttgtaggct tgatgtggct cagctacttc attgcttctt
+tcagactgtt tgcgcgtacg cgttccatgt ggtcattcaa tccagaaact aacattcttc
+tcaacgtgcc actccatggc actattctga ccagaccgct tctagaaagt gaactcgtaa
+tcggagctgt gatccttcgt ggacatcttc gtattgctgg acaccatcta ggacgctgtg
+acatcaagga cctgcctaaa gaaatcactg ttgctacatc acgaacgctt tcttattaca
+aattgggagc ttcgcagcgt gtagcaggtg actcaggttt tgctgcatac agtcgctaca
+ggattggcaa ctataaatta aacacagacc attccagtag cagtgacaat attgctttgc
+ttgtacagta

@@ -1,0 +1,13 @@
+entity:sample_id	GenBank_id
+omicron2	OX315675.1
+omicron4	OP093374.1
+omicron5	OP093373.1
+delta	OK091006.1
+Wuhan_reference	NC_045512.2
+beta	OX003129.1
+omicron1	OX315743.1
+alpha	OW998592.1
+gamma	MW911054.1
+
+
+
