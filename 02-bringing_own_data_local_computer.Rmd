@@ -99,7 +99,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Once you have verified all the files that you want in your workspace bucket have been uploaded, click the "Next" button so that you can load the sample metadata. 
 
-```{r, echo=FALSE, fig.alt="Before you move on to uploading your metadata file, you should always verify that you have uploaded all the samples. Once you done this, choose Next."}
+```{r, echo=FALSE, fig.alt="Before you move on to uploading your metadata file, you should always verify that you have uploaded all the samples. Once you have done this, choose Next."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3c63398e684_33_15#slide=id.g3c63398e684_33_15")
 ```
 
