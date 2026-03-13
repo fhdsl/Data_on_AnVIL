@@ -86,7 +86,7 @@ In early March 2026, there were more than 400 WDLs deposited in Dockstore that h
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_12#slide=id.g3ce9c5d5921_0_12")
 ```
 
-You should now see the page for the WDL you have chosen. WDLs from Dockstore can be imported into AnVIL with the click of a button. Choose the "AnVIL" box on the righthand side of the page.
+You should now see the page for the WDL you have chosen. WDLs from Dockstore can be imported into AnVIL with the click of a button. Choose the "AnVIL" box on the right side of the page.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the AnVIL box on the righthand side of the page.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_15#slide=id.g3ce9c5d5921_0_15")
@@ -164,9 +164,46 @@ A new screen will open showing the sample IDs from the data table. Make sure the
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_74#slide=id.g3ce9c5d5921_0_74")
 ```
 
+After you have chosen the samples, the sample input field for the workflow will now read "this.sample_id". This just means that this workflow will run for each ID in the data table. The other input fields can be left as "optional". Click Save.
 
+```{r, fig.align='center', echo = FALSE, fig.alt= "The sample input field for the workflow will be automatically populated after the samples have been chosen.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_77#slide=id.g3ce9c5d5921_0_774")
+```
+
+Once the inputs have been saved, you can start the workflow by clicking the Launch button.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to start the workflow.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_80#slide=id.g3ce9c5d5921_0_80")
+```
+
+A pop-up window will be appear to verify that you want to launch the workflow. This window will also include details about any cost thresholds you did or did not set on your workflow. (We did not set any, but some workflows will incur charges. The box for setting a cost threshold is located just underneath the choose sample option on the workflow setup page.) Click Launch.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to confirm that you want to start the workflow.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_83#slide=id.g3ce9c5d5921_0_83")
+```
 
 ## Step Five: Check workflow progress
+
+Details about all jobs, including workflow progress, can be accessesd via the Submission History tab. You can click on a given job ID to access the specifics for that particular job.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Details about all submitted jobs can be found on the Submission History page.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_86#slide=id.g3ce9c5d5921_0_86")
+```
+
+At the bottom of the page, you can see the progress of each individual workflow submission. Because we had 10 sample IDs, we actually launched 10 individual workflows to retrieve the SRA data. These jobs will run in parallel. In early March 2026, we ran this particular workflow twice. The first time, most SRA samples were retrieved within 6 minutes, although the final two took 18 minutes. In our second trial, all samples were retrieved within 5 minutes.
+
+For each individual run, you can click on the Job Manager icon for more details.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can access details about individual runs by clicking on the job manager icon.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_89#slide=id.g3ce9c5d5921_0_89")
+```
+
+The job manager reports information such as job status (in this case, it succeeded), the input data, the output data, and a timing diagram of how long each step of the job took. If a job failed, it will also report the error that caused the failure.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The job manager reports information about job status, inputs, outputs, and errors.", out.width = '100%'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_106#slide=id.g3ce9c5d5921_0_106")
+```
+
 
 ## Step Six: Locate transferred data
 
