@@ -11,6 +11,8 @@ CCDG
 CMG
 colData
 CoV
+covid
+CoVID
 customizations
 dbGaP
 dex
@@ -21,6 +23,7 @@ fasta
 fastq
 gcloud
 GDSCN
+GenBank
 github
 Glimma
 glimmaMDS
@@ -50,10 +53,12 @@ premade
 preprint
 programmatically
 px
+repo
 reproducibility
 Rmd
 Rockfish
 RStudio
+sars
 SDK
 Slurm
 SRA
@@ -61,12 +66,13 @@ Submitters
 tallgrass
 timeframe
 TSA
+tsv
 TSV
 underserved
+uploader
 Uploader
 URI
 VM
-Voilà
 workspaces
 Workspaces
 Workspace's
