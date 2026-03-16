@@ -243,4 +243,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Additional Resources
 
+- Sometimes you may want to import both a workflow and its parameter file into AnVIL. You can read about this option for Terra workspaces [here](https://support.terra.bio/hc/en-us/articles/360038137292-How-to-import-a-workflow-and-its-parameter-file-from-Dockstore-into-Terra)
+
+- Sometimes a workflow is updated after you've imported it to your workspace. You can learn about updating your imported workflows to the newest version on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360026443092-Updating-workflows-to-the-latest-version)
+
+- You may want to add more columns to your metadata file. Learn about how the data tables are organized on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables)
+
+- If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer).
+
+- Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
 
