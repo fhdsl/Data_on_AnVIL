@@ -13,7 +13,7 @@ We will bring this data into AnVIL from the **Sequence Read Archive**, or SRA. Y
 
 The SRA Data corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP409181&o=acc_s%3Aa).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Microbiome diversity has many benefitial properties ranging soil and plant health.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Microbiome diversity has many beneficial properties for soil and plant health.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
 ```
 
@@ -52,7 +52,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
-```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the “Quick Create Workspace” to create your workspace without enabling sharing or additional security options."}
+```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The anvil-outreach billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the Quick Create Workspace to create your workspace without enabling sharing or additional security options."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_0#slide=id.g3ce9c5d5921_0_0")
 ```
 
@@ -126,7 +126,7 @@ The column header `entity:sample_id` is important. `entity:` is required. `sampl
 
 Next, navigate to the Data tab in your workspace. Click on IMPORT DATA and select "Upload TSV".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "The IMPORT DATA button and 'Upload TSV' option", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Click on the IMPORT DATA button and Upload TSV option", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_27#slide=id.g3ce9c5d5921_0_27")
 ```
 
@@ -154,7 +154,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pull down menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pulldown menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select 'Run workflow(s) with inputs defined by data table'. You will be prompted to choose either 'sample' or 'sample_set' from the pulldown menu. Either option will work, but for ease we will choose 'sample'. After making these changes, click the 'Select Data' button under Step 2.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
 ```
 
@@ -220,13 +220,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled "shard-0".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled "shard-0".", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled 'shard-0'.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_115#slide=id.g3ce9c5d5921_0_115")
 ```
 
 When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA. Downloading the files from AnVIL (also called "data egress") will cost a small amount. However, you do not have to download them in order to work with the data within an AnVIL computing environment.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA..", out.width = '100%'}
+```{r, fig.align='center', echo = FALSE, fig.alt= "When you click on the 'pull_results.txt' file, you have the option to download the FASTQ files the workflow retrieved from SRA.", out.width = '100%'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_121#slide=id.g3ce9c5d5921_0_121")
 ```
 
