@@ -167,7 +167,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 After you have chosen the samples, the sample input field for the workflow will now read "this.sample_id". This just means that this workflow will run for each ID in the data table. The other input fields can be left as "optional". Click Save.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The sample input field for the workflow will be automatically populated after the samples have been chosen.", out.width = '100%'}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_77#slide=id.g3ce9c5d5921_0_774")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_77#slide=id.g3ce9c5d5921_0_77")
 ```
 
 Once the inputs have been saved, you can start the workflow by clicking the Launch button.
