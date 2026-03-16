@@ -1,4 +1,4 @@
-# (PART\*) Importing Publicly-Available Data {-}
+# (PART\*) Importing Public Data {-}
 
 
 ```{r, include = FALSE}
