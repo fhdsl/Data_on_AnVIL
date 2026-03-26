@@ -79,17 +79,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 A new browser window will open, showing a search page on Dockstore. Typically, you would search for a workflow for a particular task. In this case, maybe you would type "sra fetch" or "sra import" into the search bar and hit enter. By default the "WDL" option will be chosen as the workflow language. 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "In the new browser window, use the search term 'sra fetch' to find a WDL."}
+```{r, fig.align='center', echo = FALSE, fig.alt= "In the new browser window, you can use the search menu to find a WDL."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_9#slide=id.g3ce9c5d5921_0_9")
 ```
 
 In late March 2026, there were more than 400 WDLs deposited in Dockstore that helped with automating SRA workflows. 
 
 We personally like the SRA_Fetch_PHB workflow written by Theiagen. For ease, paste this link into your browser to be automatically directed to it: [https://dockstore.org/workflows/github.com/theiagen/public_health_bioinformatics/SRA_Fetch_PHB](https://dockstore.org/workflows/github.com/theiagen/public_health_bioinformatics/SRA_Fetch_PHB).
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "You are looking for a WDL written by user aofarrel called 'pull_FASTQs_from_SRA_by_run' in Dockstore."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_12#slide=id.g3ce9c5d5921_0_12")
-```
 
 You should now see the page for the WDL you have chosen. WDLs from Dockstore can be imported into AnVIL with the click of a button. Choose the "AnVIL" box on the right side of the page.
 
@@ -106,7 +102,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 After you have imported the workflow, you will be automatically redirected to the input page for it. However, you will always be able to access it in the future as an option on the Workflow tab!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "After you have imported the workflow, you will see it as an option on the Workflow tab."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_94#slide=id.g3ce9c5d5921_0_94")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d1cf7275f7_0_7#slide=id.g3d1cf7275f7_0_7")
 ```
 
 ## Step Three: Import sample TSV file
@@ -115,9 +111,9 @@ The WDL you have chosen requires a list of the SRA samples you want to import in
 
 Let's take a moment to get acquainted with the new file we'll be uploading.
 
-First, download the samples file here: [sample. You might have to right-click and "Save as".
+First, download the samples file here: [sra_samples.tsv](https://github.com/fhdsl/Data_on_AnVIL/tree/main/data/sra_samples.tsv). You might have to right-click and "Save as".
 
-Next, open the file on your local machine. This is what it might look like in Microsoft Excel:
+Next, open the file on your local machine. This is what it might look like in a text editor:
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "The samples we want to import from SRA are listed in rows in `samples.tsv, Make sure the column header is 'entity:sample_id'."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_24#slide=id.g3ce9c5d5921_0_24")
@@ -152,37 +148,31 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 We are finally ready to launch the workflow! Navigate to the Workflows tab and choose the WDL we imported previously.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "On the Workflows tab, click on the WDL we imported earlier."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_71#slide=id.g3ce9c5d5921_0_71")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d1cf7275f7_0_7#slide=id.g3d1cf7275f7_0_7")
 ```
 
 Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pull down menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select 'Run workflow(s) with inputs defined by data table'. You will be prompted to choose either 'sample' or 'sample_set' from the pulldown menu. Either option will work, but for ease we will choose 'sample'. After making these changes, click the 'Select Data' button under Step 2."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_94#slide=id.g3ce9c5d5921_0_94")
 ```
 
 A new screen will open showing the sample IDs from the data table. Make sure the box next to each sample is checked. At the bottom of the screen, you will again have the option to import these samples as a sample set (this box will be checked by default). Uncheck this box, then choose the OK button in the lower right corner.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure the samples you want to import have a checked box next to them, then choose OK."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_74#slide=id.g3ce9c5d5921_0_74")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
 ```
 
-After you have chosen the samples, the sample input field for the workflow will now read "this.sample_id". This just means that this workflow will run for each ID in the data table. The other input fields can be left as "optional". Click Save.
+After you have chosen the samples, make sure the sample input field for the workflow reads "this.sample_id". You may need to click on the field and choose "this.sample_id" from a menu. This just means that this workflow will run for each ID in the data table. The other input fields can be left as "optional". Click Save.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "The sample input field for the workflow will be automatically populated after the samples have been chosen."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_77#slide=id.g3ce9c5d5921_0_77")
+```{r, fig.align='center', echo = FALSE, fig.alt= "The sample input field for the workflow should be changed to 'this.sample_id' after the samples have been chosen."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_74#slide=id.g3ce9c5d5921_0_74")
 ```
 
 Once the inputs have been saved, you can start the workflow by clicking the Launch button.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to start the workflow."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_80#slide=id.g3ce9c5d5921_0_80")
-```
-
-A pop-up window will be appear to verify that you want to launch the workflow. This window will also include details about any cost thresholds you did or did not set on your workflow. (We did not set any, but some workflows will incur charges. The box for setting a cost threshold is located just underneath the choose sample option on the workflow setup page.) Click Launch.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to confirm that you want to start the workflow."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_83#slide=id.g3ce9c5d5921_0_83")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_77#slide=id.g3ce9c5d5921_0_77")
 ```
 
 ## Step Five: Check workflow progress
@@ -190,47 +180,40 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 Details about all jobs, including workflow progress, can be accessed via the Submission History tab. You can click on a given job ID to access the specifics for that particular job.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Details about all submitted jobs can be found on the Submission History page."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_86#slide=id.g3ce9c5d5921_0_86")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_83#slide=id.g3ce9c5d5921_0_83")
 ```
 
-At the bottom of the page, you can see the progress of each individual workflow submission. Because we had 10 sample IDs, we actually launched 10 individual workflows to retrieve the SRA data. These jobs will run in parallel. In early March 2026, we ran this particular workflow twice. The first time, most SRA samples were retrieved within 6 minutes, although the final two took 18 minutes. In our second trial, all samples were retrieved within 5 minutes.
+At the bottom of the page, you can see the progress of each individual workflow submission. Because we had 10 sample IDs, we actually launched 10 individual workflows to retrieve the SRA data. These jobs will run in parallel. In late March 2026, we ran this particular workflow twice. The first time, most SRA samples were retrieved within 6 minutes, although the final two took 20 minutes. In our second trial, all samples were retrieved within 6 minutes.
 
-For each individual run, you can click on the Job Manager icon for more details.
+For each individual run, you can see the status of the workflow. When they have all completed, the status will say "Succeeded".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "You can access details about individual runs by clicking on the job manager icon."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_89#slide=id.g3ce9c5d5921_0_89")
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can see status updates about each individual run."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d1cf7275f7_0_1#slide=id.g3d1cf7275f7_0_1")
 ```
 
-The job manager reports information such as job status (in this case, it succeeded), the input data, the output data, and a timing diagram of how long each step of the job took. If a job failed, it will also report the error that caused the failure.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "The job manager reports information about job status, inputs, outputs, and errors."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_106#slide=id.g3ce9c5d5921_0_106")
-```
 
 ## Step Six: Locate transferred data
 
-Once all the jobs have completed successfully, you should check that you can find the transferred data. It's now located within the workspace bucket, which you can find by clicking on the File icon on the right side of the workspace Dashboard tab.
+Once all the jobs have completed successfully, you should check that you can find the transferred data. This particular workflow is nice because it automatically populates the sample table we created in Step Three with details about the samples that have been retrieved from SRA.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "To access the transferred data, click on the File icon on the Dashboard tab."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_118#slide=id.g3ce9c5d5921_0_118")
+To get back to that table, click on the Data tab and choose "sample".
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "The workflow has automatically populated the sample table with the appropriate metadata."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_86#slide=id.g3ce9c5d5921_0_86")
 ```
 
-The results of each individual run will be stored within a subfolder of the workflow submission name.
+You can scroll through the table to see all the sample metadata. Links to the data can be found under the "read1" column. Each name is a hyperlink to the file, which includes the workspace Google bucket address. (Remember, data stored in AnVIL workspaces will be saved in the workspace's Google bucket!) You can right-click the file name to copy the web address. 
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "The results of each individual run will be stored within a subfolder of the workflow submission name."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_112#slide=id.g3ce9c5d5921_0_112")
+```{r, fig.align='center', echo = FALSE, fig.alt= "Scroll through the table to see all the metadata, including the name of the FASTQ file. Right-clicking this hyperlink gives you the url of the Google bucket where the sample file is stored."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d22760e651_0_9#slide=id.g3d22760e651_0_9")
 ```
 
-You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled "shard-0".
+You can also left-click the file name to get a pop-up with details about the sample, including the file size. It's a good idea to check that the file size is what you are expecting!
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "You may have to click through several levels of directories to find the actual datafile. In this case, the results are within a folder labeled 'shard-0'."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_115#slide=id.g3ce9c5d5921_0_115")
-```
+This pop-up gives you  the option to download the FASTQ files retrieved from SRA. Downloading the files from AnVIL (also called "data egress") will cost a small amount. However, you do not have to download them in order to work with the data within an AnVIL computing environment.
 
-When you click on the "pull_results.txt" file, you have the option to download the FASTQ files the workflow retrieved from SRA. Downloading the files from AnVIL (also called "data egress") will cost a small amount. However, you do not have to download them in order to work with the data within an AnVIL computing environment.
-
-```{r, fig.align='center', echo = FALSE, fig.alt= "When you click on the 'pull_results.txt' file, you have the option to download the FASTQ files the workflow retrieved from SRA."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_121#slide=id.g3ce9c5d5921_0_121")
+```{r, fig.align='center', echo = FALSE, fig.alt= "Clicking the sample file name opens a pop-up window with details about the file, including the file size."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d1cf7275f7_0_4#slide=id.g3d1cf7275f7_0_4")
 ```
 
 ## Summary
