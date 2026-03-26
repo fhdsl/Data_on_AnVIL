@@ -34,7 +34,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from SRA**, but there is a small cost for storing the data in an AnVIL bucket.
 
-There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow.
+There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow. The workflow used in this vignette cost $0.07 total. We used it to import 10 samples into our workspace.
 :::
 
 ## Step One: Create your workspace
@@ -155,7 +155,7 @@ We are finally ready to launch the workflow! Navigate to the Workflows tab and c
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d1cf7275f7_0_7#slide=id.g3d1cf7275f7_0_7")
 ```
 
-Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table". You will be prompted to choose either "sample" or "sample_set" from the pull down menu. Either option will work, but for ease we will choose "sample". After making these changes, click the "Select Data" button under Step 2.
+Most of the default options are fine for now, but we do want to tell the workflow to pull the sample names from the table we created earlier. Choose the radio button to select "Run workflow(s) with inputs defined by data table", then click the "Select Data" button under Step 2.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the radio button to select 'Run workflow(s) with inputs defined by data table'. You will be prompted to choose either 'sample' or 'sample_set' from the pulldown menu. Either option will work, but for ease we will choose 'sample'. After making these changes, click the 'Select Data' button under Step 2."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_94#slide=id.g3ce9c5d5921_0_94")
