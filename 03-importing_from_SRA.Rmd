@@ -160,7 +160,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 A new screen will open showing the sample IDs from the data table. Make sure the box next to each sample is checked. At the bottom of the screen, you will again have the option to import these samples as a sample set (this box will be checked by default). Uncheck this box, then choose the OK button in the lower right corner.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Make sure the samples you want to import have a checked box next to them, then choose OK."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_68#slide=id.g3ce9c5d5921_0_68")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_71#slide=id.g3ce9c5d5921_0_71")
 ```
 
 After you have chosen the samples, make sure the sample input field for the workflow reads "this.sample_id". You may need to click on the field and choose "this.sample_id" from a menu. This just means that this workflow will run for each ID in the data table. The other input fields can be left as "optional". Click Save.
