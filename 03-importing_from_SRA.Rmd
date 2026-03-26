@@ -63,7 +63,9 @@ Once you have created a workspace, AnVIL will take you to the workspace dashboar
 
 ## Step Two: Import WDL workflow
 
-In your new workspace, navigate to the Workflows tab. Any workflows that have been imported to the workspace will be displayed here. Since this is a new workspace, there are no workflows displayed. Click on "Find a Workflow" to get started.
+In your new workspace, navigate to the Workflows tab. Any workflows that have been imported to the workspace will be displayed here. Since this is a new workspace, there are no workflows displayed. 
+
+Click on "Find a Workflow" to get started.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "After you navigate to the Workflows tab, click on the Find a Workflow box to get started."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_3#slide=id.g3ce9c5d5921_0_3")
@@ -75,13 +77,15 @@ A pop-up window will appear, asking if you'd like to import a workflow from eith
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_6#slide=id.g3ce9c5d5921_0_6")
 ```
 
-A new browser window will open, showing a search page on Dockstore. Type "sra fetch" into the search bar and hit enter. By default the "WDL" option will be chosen as the workflow language. 
+A new browser window will open, showing a search page on Dockstore. Typically, you would search for a workflow for a particular task. In this case, maybe you would type "sra fetch" or "sra import" into the search bar and hit enter. By default the "WDL" option will be chosen as the workflow language. 
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "In the new browser window, use the search term 'sra fetch' to find a WDL."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_9#slide=id.g3ce9c5d5921_0_9")
 ```
 
-In early March 2026, there were more than 400 WDLs deposited in Dockstore that helped with automating SRA workflows. For this vignette, we're looking for one called "pull_FASTQs_from_SRA_by_run" by user aofarrel. We have verified that this workflow still works as expected as of March 2026. Click on the WDL title.
+In late March 2026, there were more than 400 WDLs deposited in Dockstore that helped with automating SRA workflows. 
+
+We personally like the SRA_Fetch_PHB workflow written by Theiagen. For ease, paste this link into your browser to be automatically directed to it: [https://dockstore.org/workflows/github.com/theiagen/public_health_bioinformatics/SRA_Fetch_PHB](https://dockstore.org/workflows/github.com/theiagen/public_health_bioinformatics/SRA_Fetch_PHB).
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "You are looking for a WDL written by user aofarrel called 'pull_FASTQs_from_SRA_by_run' in Dockstore."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_12#slide=id.g3ce9c5d5921_0_12")
@@ -99,7 +103,7 @@ A new browser window for AnVIL will open and prompt you to choose the workspace 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_18#slide=id.g3ce9c5d5921_0_18")
 ```
 
-After you have imported the workflow, you will see it as an option on the Workflow tab.
+After you have imported the workflow, you will be automatically redirected to the input page for it. However, you will always be able to access it in the future as an option on the Workflow tab!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "After you have imported the workflow, you will see it as an option on the Workflow tab."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_94#slide=id.g3ce9c5d5921_0_94")
@@ -111,9 +115,7 @@ The WDL you have chosen requires a list of the SRA samples you want to import in
 
 Let's take a moment to get acquainted with the new file we'll be uploading.
 
-First, download the samples file here. You might have to right-click and "Save as".
-
-TODO: Add link to downloadable file
+First, download the samples file here: [sample. You might have to right-click and "Save as".
 
 Next, open the file on your local machine. This is what it might look like in Microsoft Excel:
 
