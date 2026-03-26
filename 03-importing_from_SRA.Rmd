@@ -171,6 +171,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Once the inputs have been saved, you can start the workflow by clicking the Launch button.
 
+::: {.notice}
+It's important to remember that workflows will incur charges. It's always a good idea to test how much a workflow will cost to run with a small test run before trying your full sample set.
+
+You can also set a cost limit for a particular workflow. The option for setting a cost threshold is located just underneath the choose sample option on the workflow setup page.
+:::
+
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to start the workflow."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_80#slide=id.g3ce9c5d5921_0_80")
 ```
