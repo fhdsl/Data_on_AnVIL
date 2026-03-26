@@ -34,7 +34,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from SRA**, but there is a small cost for storing the data in an AnVIL bucket.
 
-There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow..
+There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow.
 :::
 
 ## Step One: Create your workspace
@@ -135,7 +135,7 @@ This opens a popup that looks like this:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_30#slide=id.g3ce9c5d5921_0_30")
 ```
 
-Click to select your samples.tsv file. You will see a warning about potentially overwriting the existing entries. We know that none of the IDs in the new samples file overlap, so click START IMPORT JOB.
+Click to select your samples.tsv file, then click START IMPORT JOB.
 
 Now when we look at the TABLE in the Data tab, we can see that our samples have been added!
 
@@ -228,11 +228,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Additional Resources
 
-- Sometimes you may want to import both a workflow and its parameter file into AnVIL. You can read about this option for Terra workspaces [here](https://support.terra.bio/hc/en-us/articles/360038137292-How-to-import-a-workflow-and-its-parameter-file-from-Dockstore-into-Terra)
+- Sometimes you may want to import both a workflow and its parameter file into AnVIL. You can read about this option for Terra workspaces [here](https://support.terra.bio/hc/en-us/articles/360038137292-How-to-import-a-workflow-and-its-parameter-file-from-Dockstore-into-Terra).
 
-- Sometimes a workflow is updated after you've imported it to your workspace. You can learn about updating your imported workflows to the newest version on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360026443092-Updating-workflows-to-the-latest-version)
+- Sometimes a workflow is updated after you've imported it to your workspace. You can learn about updating your imported workflows to the newest version on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360026443092-Updating-workflows-to-the-latest-version).
 
-- You may want to add more columns to your metadata file. Learn about how the data tables are organized on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables)
+- You may want to add more columns to your metadata file. Learn about how the data tables are organized on AnVIL [here](https://support.terra.bio/hc/en-us/articles/360025758392-Managing-data-with-tables).
 
 - If you have a lot of data, it's a good idea to estimate how much transfer time your need. Transfer a small file first and determine your transfer rate. Learn more about estimated transfer rates to Google Cloud via AnVIL [here](https://docs.cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#online_versus_offline_transfer).
 
