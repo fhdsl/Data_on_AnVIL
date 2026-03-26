@@ -109,6 +109,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 The WDL you have chosen requires a list of the SRA samples you want to import into your workspace. You can do this sample by sample, but a more efficient way is to save the sample IDs to a TSV file and let AnVIL run parallel workflows for each sample. 
 
+::: {.notice}
+You can customize which samples you want for your workflow later.
+:::
+
 Let's take a moment to get acquainted with the new file we'll be uploading.
 
 First, download the samples file here: [sra_samples.tsv](https://github.com/fhdsl/Data_on_AnVIL/tree/main/data/sra_samples.tsv). You might have to right-click and "Save as".
@@ -120,7 +124,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 ```
 
 ::: {.notice}
-The column header `entity:sample_id` is important. `entity:` is required. `samples` becomes the name of the data table. So for example, if our header was `entity:reference_id`, a data table called "reference" would be created in AnVIL. If you didn't want to overwrite anything in the original "samples" table, you could change the column header. As long as none of the IDs are the same, no data will be overwritten. 
+The column header `entity:sample_id` is important. `entity:` is required. `sample` becomes the name of the data table. So for example, if our header was `entity:reference_id`, a data table called "reference" would be created in AnVIL. If you didn't want to overwrite anything in the original "samples" table, you could change the column header. As long as none of the IDs are the same, no data will be overwritten. 
 :::
 
 Next, navigate to the Data tab in your workspace. Click on IMPORT DATA and select "Upload TSV".
