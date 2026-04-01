@@ -141,7 +141,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Click to select your samples.tsv file, then click START IMPORT JOB.
 
-Now when we look at the TABLE in the Data tab, we can see that our samples have been added!
+Now when we look at the "samples" table in the Data tab, we can see that our samples have been added!
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "After we have imported the tsv file, the samples table in our workspace will be populated."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_33#slide=id.g3ce9c5d5921_0_33")
@@ -178,7 +178,7 @@ Once the inputs have been saved, you can start the workflow by clicking the Laun
 ::: {.notice}
 It's important to remember that workflows will incur charges. It's always a good idea to test how much a workflow will cost to run with a small test run before trying your full sample set.
 
-You can also set a cost limit for a particular workflow. The option for setting a cost threshold is located just underneath the choose sample option on the workflow setup page.
+You can also set a cost limit for a particular workflow. The option for setting a cost threshold is located just underneath the "Select Data" button on the workflow setup page.
 :::
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Click the Launch button to start the workflow."}
@@ -212,7 +212,11 @@ To get back to that table, click on the Data tab and choose "sample".
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_86#slide=id.g3ce9c5d5921_0_86")
 ```
 
-You can scroll through the table to see all the sample metadata. Links to the data can be found under the "read1" column. Each name is a hyperlink to the file, which includes the workspace Google bucket address. (Remember, data stored in AnVIL workspaces will be saved in the workspace's Google bucket!) You can right-click the file name to copy the web address. 
+You can scroll through the table to see all the sample metadata. Links to the data can be found under the "read1" column. Each name is a hyperlink to the file, which includes the workspace Google bucket address. 
+
+::: {.notice}
+Remember, data stored in AnVIL workspaces will be saved in the workspace's Google bucket! You can right-click the file name to copy the Google bucket address. This address can be used to bring files into AnVIL's computing environments, such as Jupyter / Terminal or RStudio.
+:::
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Scroll through the table to see all the metadata, including the name of the FASTQ file. Right-clicking this hyperlink gives you the url of the Google bucket where the sample file is stored."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3d22760e651_0_9#slide=id.g3d22760e651_0_9")
