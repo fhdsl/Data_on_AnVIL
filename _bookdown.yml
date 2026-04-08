@@ -6,6 +6,7 @@ rmd_files: ["index.Rmd",
             "02-bringing_own_data.Rmd",
             "02-bringing_own_data_HPC.Rmd",
             "02-bringing_own_data_local_computer.Rmd",
+            "02-bringing_own_data_buckets.Rmd",
             "03-importing_from_data_repos.Rmd",
             "03-importing_from_SRA.Rmd",
             "Feedback.Rmd",
@@ -17,4 +18,7 @@ delete_merged_file: true
 output_dir: "docs"
 output:
     bookdown::html_book
+
+
+
     

@@ -30,18 +30,20 @@ These vignettes cover the following topics:
 **Bringing your own data to AnVIL** 
 Do you have data stored elsewhere that you need to add to an AnVIL workspace? These vignettes can help you get started.
 
-* Uploading data from your local computer 
-* Uploading data from the cloud
 * Uploading data from a high performance computing cluster
+* Uploading data from your local computer
+* Uploading data from the cloud
+
 
 **Getting data from external data repositories** 
 Are you working with data that you need to retrieve from a non-AnVIL data repository? These vignettes provide details on how to bring that data into an AnVIL workspace.
 
 * Importing data from SRA
-* Importing data from dbGaP
+* Importing data from GenBank (Coming Soon!)
+* Importing data from GEO (Coming Soon!)
 
 **Finding data stored on AnVIL** 
 Do you want to access a dataset that's been stored on AnVIL? These vignettes cover how to find and retrieve both open and controlled access datasets in the AnVIL data repository.
 
-* Accessing open access data stored on AnVIL
-* Accessing controlled access data stored on AnVIL using DUOS 
+* Accessing open access data stored on AnVIL Explorer (Coming Soon!)
+* Accessing controlled access data from dbGAP (Coming Soon!)
