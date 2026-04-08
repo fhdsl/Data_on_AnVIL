@@ -27,4 +27,13 @@ step-three-upload-data-and-metadata
 step-four-verify-files-were-moved-into-your-workspace
 summary-2
 additional-resources-2
+importing-sra
+step-one-create-your-workspace-3
+step-two-import-wdl-workflow
+step-three-import-sample-tsv-file
+step-four-launch-workflow
+step-five-check-workflow-progress
+step-six-locate-transferred-data
+summary-3
+additional-resources-3
 references
