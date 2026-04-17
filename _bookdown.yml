@@ -1,5 +1,5 @@
 book_filename: "Data on AnVIL"
-chapter_name: "Chapter"
+chapter_name: ""
 repo: https://github.com/fhdsl/Data_on_AnVIL/
 rmd_files: ["index.Rmd",
             "01-intro.Rmd",
@@ -15,6 +15,9 @@ rmd_files: ["index.Rmd",
 new_session: yes
 bibliography: [book.bib]
 delete_merged_file: true
+language:
+  ui:
+    chapter_name: ""
 output_dir: "docs"
 output:
     bookdown::html_book
