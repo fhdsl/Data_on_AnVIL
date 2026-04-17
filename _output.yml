@@ -7,6 +7,7 @@ bookdown::gitbook:
     after_body: assets/AnVIL_style/footer.html
   highlight: tango
   config:
+    edit: https://github.com/fhdsl/Data_on_AnVIL/blob/main/%s
     toc:
       collapse: section
       before: |
