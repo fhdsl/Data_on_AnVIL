@@ -8,6 +8,6 @@ ottrpal::set_knitr_image_path()
 ::: {.notice}
 New datasets are being added to AnVIL on a regular basis. To stay up-to-date on data availability, we recommend the following:
 
-* Checking https://anvilproject.org/releases and https://anvilproject.org/news on a regular basis  
+* Checking https://anvilproject.org/releases and https://anvilproject.org/news  
 * [Clicking here](https://lists.anvilproject.org/lists/anvil-mailing-list.lists.anvilproject.org/) to subscribe to the AnVIL Mailing List (get announcements right to your inbox!)
 :::
