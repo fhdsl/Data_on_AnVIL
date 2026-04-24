@@ -2,6 +2,7 @@ introduction
 motivation
 target-audience
 curriculum
+data-announcements
 uploading-hpc
 step-one-create-your-workspace
 step-two-connect-to-your-hpc
