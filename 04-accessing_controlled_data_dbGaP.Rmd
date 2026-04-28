@@ -6,3 +6,29 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # With dbGaP {#accessing-dbgap}
 
+This vignette is currently under construction!
+
+There are two main steps for accessing controlled data in dbGap:
+
+1. Link your NIH account to your AnVIL (Terra) account. 
+
+1. Bring data into your workspace.
+
+
+## Link NIH Account to your AnVIL profile
+
+To do this, open your Terra account and go to your Profile (click the three horizontal lines in the top left corner, then click on your username to go to the Profile page). Next, look for the tab labeled "External Identities". Finally, click "log in to RAS" under the NIH Researcher Auth Service (RAS) section.
+
+::: {.notice}
+You are required to renew this link every 30 days to ensure continued access to controlled data.
+:::
+
+## Additional Resources
+
+Information on how to request access to dbGaP can be found [here](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/dbgap).
+
+Read more about the NIH's Office of Data Science Strategy [Researcher Auth Service Initiative](https://datascience.nih.gov/researcher-auth-service-initiative). 
+
+You can follow this step-by-step tutorial by the National Library of Medicine on how to apply for access to controlled access data through dbGaP [here](https://www.youtube.com/watch?v=-3tUBeKbP5c).
+
+The National Library of Medicine has created a video on how to [assign downloaders for dbGaP data](https://www.youtube.com/watch?v=Yem3OH26kX4). This is especially helpful if you have a student working with dbGaP data.
