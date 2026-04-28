@@ -12,8 +12,8 @@ These credits are based on our [course contributors table guidelines](https://gi
 |-------|-----|
 |**Pedagogy**||
 |Lead Content Instructor|[Elizabeth Humphries]|
-|Content Author | Ava Hoffman (Ch 3) | 
-|Content Contributor | [Ava Hoffman (Ch 6)]|
+|Content Author | [Ava Hoffman] | 
+|Content Contributor | [Ava Hoffman]|
 |Content Editor(s)/Reviewer(s) | [Katherine Cox], [Kate Isaac], Valeriya Gaysinskaya |
 |Content Director(s) | [Ava Hoffman], Frederick Tan|
 |**Technical**||
