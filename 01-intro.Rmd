@@ -44,6 +44,6 @@ Are you working with data that you need to retrieve from a non-AnVIL data reposi
 **Accessing controlled access data** <br>
 These vignettes cover how to find and retrieve controlled access datasets.
 
-* Accessing controlled access data from dbGAP (_Coming Soon!_)
+* Accessing controlled access data from dbGaP (_Coming Soon!_)
 * Accessing controlled access data using DUOS (_Coming Soon!_)
 

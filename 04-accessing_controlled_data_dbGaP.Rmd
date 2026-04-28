@@ -8,7 +8,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 This vignette is currently under construction!
 
-There are two main steps for accessing controlled data in dbGap:
+There are two main steps for accessing controlled data in dbGaP:
 
 1. Link your NIH account to your AnVIL (Terra) account. 
 
