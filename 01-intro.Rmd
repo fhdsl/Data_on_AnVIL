@@ -39,7 +39,6 @@ Do you have data stored elsewhere that you need to add to an AnVIL workspace? Th
 Are you working with data that you need to retrieve from a non-AnVIL data repository? These vignettes provide details on how to bring that data into an AnVIL workspace.
 
 * Importing data from SRA
-* Importing data from GenBank (_Coming Soon!_)
 * Importing data from GEO (_Coming Soon!_)
 
 **Finding data stored on AnVIL** <br>
