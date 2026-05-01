@@ -28,20 +28,20 @@ These vignettes cover the following topics:
 **Bringing your own data to AnVIL** <br>
 Do you have data stored elsewhere that you need to add to an AnVIL workspace? These vignettes can help you get started.
 
-* Uploading data from a high performance computing cluster
-* Uploading data from your local computer
-* Uploading data from the cloud
+* [Uploading data from a high performance computing cluster](https://hutchdatascience.org/Data_on_AnVIL/uploading-hpc.html#uploading-hpc)
+* [Uploading data from your local computer](https://hutchdatascience.org/Data_on_AnVIL/uploading-local-computer.html#uploading-local-computer)
+* [Uploading data from the cloud](https://hutchdatascience.org/Data_on_AnVIL/uploading-cloud.html#uploading-cloud)
 
 
 **Getting data from external data repositories** <br>
 Are you working with data that you need to retrieve from a non-AnVIL data repository? These vignettes provide details on how to bring that data into an AnVIL workspace.
 
-* Importing data from SRA
+* [Importing data from SRA](https://hutchdatascience.org/Data_on_AnVIL/importing-sra.html#importing-sra)
 * Importing data from GEO (_Coming Soon!_)
 
 **Accessing controlled access data** <br>
 Do you have dataset permissions you want to leverage in AnVIL? These vignettes cover how to find and retrieve controlled access datasets.
 
-* Accessing controlled access data from dbGaP (_Coming Soon!_)
+* [Accessing controlled access data through dbGaP](https://hutchdatascience.org/Data_on_AnVIL/accessing-dbgap.html#accessing-dbgap)
 * Accessing controlled access data using DUOS (_Coming Soon!_)
 
