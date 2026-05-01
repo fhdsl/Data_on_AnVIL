@@ -10,6 +10,8 @@ rmd_files: ["index.Rmd",
             "02-bringing_own_data_buckets.Rmd",
             "03-importing_from_data_repos.Rmd",
             "03-importing_from_SRA.Rmd",
+            "04-accessing_controlled_data.Rmd",
+            "04-accessing_controlled_data_dbGaP.Rmd",
             "Feedback.Rmd",
             "About.Rmd",
             "References.Rmd"]
