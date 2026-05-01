@@ -4,7 +4,7 @@ ottrpal::set_knitr_image_path()
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
-# With dbGaP {#accessing-dbgap}
+# Through dbGaP {#accessing-dbgap}
 
 This vignette is currently under construction!
 
@@ -28,7 +28,7 @@ To link your NIH account to your AnVIL profile, go to [anvil.terra.bio/#profile]
 > Linking with RAS will allow Terra to automatically determine if you can access controlled datasets hosted in Terra based on your valid passport visas or your valid dbGaP applications via eRA Commons. Terra currently supports RAS authentication for AnVIL. 
 
 ::: {.notice}
-You are required to renew this link every 30 days to ensure continued access to controlled data.
+You are required to renew the link between your RAS account and your AnVIL profile every 30 days to ensure continued access to controlled data.
 :::
 
 ## Additional Resources
