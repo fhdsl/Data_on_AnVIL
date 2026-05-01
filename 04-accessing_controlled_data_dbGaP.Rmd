@@ -6,13 +6,33 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # Through dbGaP {#accessing-dbgap}
 
+::: {.warning}
 This vignette is currently under construction!
+:::
 
 There are two main steps for accessing controlled data in dbGaP:
 
 1. Link your NIH account to your AnVIL (Terra) account. 
 
 1. Bring data into your workspace.
+
+::: {.notice}
+_Genetics_
+
+**Novice**: no genetics skills needed
+
+_Programming skills_
+
+**Beginner**: some comfort with workflows and WDLs may be needed
+:::
+
+::: {.notice}
+**What will this cost?**
+Linking your AnVIL ID to your NIH credentials does not cost anything. 
+
+You may incur a cost if you use a WDL to bring data from dbGaP into your AnVIL workspace.
+
+:::
 
 
 ## Link NIH Account to your AnVIL profile
@@ -23,7 +43,23 @@ We suggest using your institutional email to log in to AnVIL in most cases, **bu
 
 > As part of new federal government security policies, Terra is required to integrate with the NIH Researcher Authentication Service (RAS) for identity proofing and enhanced security.  In order to link your NIH authorization to Terra, users of eRA Commons must transition to the use of Login.gov or ID.me credentials to access AnVIL controlled-access data in Terra. See [here](https://support.terra.bio/hc/en-us/articles/32634034451099-RAS-Integration-for-AnVIL-Data) for more details and instructions.
 
-To link your NIH account to your AnVIL profile, go to [anvil.terra.bio/#profile](https://anvil.terra.bio/#profile). Next, look for the tab labeled "External Identities". Finally, click "log in to RAS" under the NIH Researcher Auth Service (RAS) section.
+To link your NIH account to your AnVIL profile, go to [anvil.terra.bio/#profile](https://anvil.terra.bio/#profile). 
+
+```{r, echo=FALSE, fig.alt="Open your AnVIL profile settings by clicking on the three line icon in the upper lefthand corner and then choosing Profile."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3e6e33dc82b_0_0#slide=id.g3e6e33dc82b_0_0")
+```
+
+Next, look for the tab labeled "External Identities". Click "log in to RAS" under the NIH Researcher Auth Service (RAS) section.
+
+```{r, echo=FALSE, fig.alt="Under the External Identities tab, choose the box that says 'Log in to RAS' under the NIH Researcher Auth Service (RAS) section."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3e6e33dc82b_0_5#slide=id.g3e6e33dc82b_0_5")
+```
+
+This will take you to the NIH webpage in a new tab. Log in, and then navigate back to your AnVIL account. It may some time for your AnVIL credentials to be updated.
+
+```{r, echo=FALSE, fig.alt="An NIH login page will open in a new tab."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3e6e33dc82b_0_9#slide=id.g3e6e33dc82b_0_9")
+```
 
 > Linking with RAS will allow Terra to automatically determine if you can access controlled datasets hosted in Terra based on your valid passport visas or your valid dbGaP applications via eRA Commons. Terra currently supports RAS authentication for AnVIL. 
 
@@ -31,12 +67,16 @@ To link your NIH account to your AnVIL profile, go to [anvil.terra.bio/#profile]
 You are required to renew the link between your RAS account and your AnVIL profile every 30 days to ensure continued access to controlled data.
 :::
 
+## Access data through an AnVIL workspace
+
+You may need to use a workflow to bring the data into your AnVIL workspace. This can be done with dockstore.org.
+
 ## Additional Resources
 
 Information on how to request access to dbGaP can be found [here](https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/dbgap).
 
-Read more about the NIH's Office of Data Science Strategy [Researcher Auth Service Initiative](https://datascience.nih.gov/researcher-auth-service-initiative). 
-
 You can follow this step-by-step tutorial by the National Library of Medicine on how to apply for access to controlled access data through dbGaP [here](https://www.youtube.com/watch?v=-3tUBeKbP5c).
 
 The National Library of Medicine has created a video on how to [assign downloaders for dbGaP data](https://www.youtube.com/watch?v=Yem3OH26kX4). This is especially helpful if you have a student working with dbGaP data.
+
+Read more about the NIH's Office of Data Science Strategy [Researcher Auth Service Initiative](https://datascience.nih.gov/researcher-auth-service-initiative). 
