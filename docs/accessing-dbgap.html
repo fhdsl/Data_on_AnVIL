@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Give us Feedback | Data on AnVIL</title>
+  <title>7 Through dbGaP | Data on AnVIL</title>
   <meta name="description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Give us Feedback | Data on AnVIL" />
+  <meta property="og:title" content="7 Through dbGaP | Data on AnVIL" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Give us Feedback | Data on AnVIL" />
+  <meta name="twitter:title" content="7 Through dbGaP | Data on AnVIL" />
   
   <meta name="twitter:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="accessing-dbgap.html"/>
-<link rel="next" href="about-the-authors.html"/>
+<link rel="prev" href="importing-sra.html"/>
+<link rel="next" href="give-us-feedback.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -188,18 +188,63 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/AnVIL_style/dasl_thin_main_image.png">
 </div>
-<div id="give-us-feedback" class="section level1 unnumbered hasAnchor">
-<h1>Give us Feedback<a href="give-us-feedback.html#give-us-feedback" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Thank you for your interest in this book! There are a few ways you can suggest improvements:</p>
-<p><br>
-<!-- The capital letter above alters the formatting for the numbered points below --></p>
+<div id="accessing-dbgap" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Through dbGaP<a href="accessing-dbgap.html#accessing-dbgap" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="warning">
+<p>This vignette is currently under construction!</p>
+</div>
+<p>There are two main steps for accessing controlled data through dbGaP:</p>
 <ol style="list-style-type: decimal">
-<li>Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScrDVb_utm55pmb_SHx-RgELTEbCCWdLea0T3IzS0Oj00GE4w/viewform?usp=pp_url&amp;entry.1565230805=Data+on+AnVIL" target="_blank">Google form</a>.</li>
-<li>If you have a GitHub account, you can <a href="https://github.com/fhdsl/Data_on_AnVIL/issues" target="_blank">raise an issue</a> in our repository.</li>
-<li>Submit a pull request! Click the pencil icon on any page (top left) to view the source <code>.Rmd</code> for the page and suggest changes.</li>
+<li><p>Link your NIH account to your AnVIL (Terra) account.</p></li>
+<li><p>Bring data into your workspace.</p></li>
 </ol>
+<div class="notice">
+<p><em>Genetics</em></p>
+<p><strong>Novice</strong>: no genetics skills needed</p>
+<p><em>Programming skills</em></p>
+<p><strong>Beginner</strong>: some comfort with workflows and WDLs may be needed</p>
+</div>
+<div class="notice">
+<p><strong>What will this cost?</strong>
+Linking your AnVIL ID to your NIH credentials does not cost anything.</p>
+<p>You may incur a cost if you use a WDL to bring data from dbGaP into your AnVIL workspace.</p>
+</div>
+<div id="link-nih-account-to-your-anvil-profile" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Link NIH Account to your AnVIL profile<a href="accessing-dbgap.html#link-nih-account-to-your-anvil-profile" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When working with controlled-access data, it’s very important that online platforms can verify your identity as a researcher.</p>
+<p>We suggest using your institutional email to log in to AnVIL in most cases, <strong>but it is required when working with controlled access data</strong>.</p>
+<blockquote>
+<p>As part of new federal government security policies, Terra is required to integrate with the NIH Researcher Authentication Service (RAS) for identity proofing and enhanced security. In order to link your NIH authorization to Terra, users of eRA Commons must transition to the use of Login.gov or ID.me credentials to access AnVIL controlled-access data in Terra. See <a href="https://support.terra.bio/hc/en-us/articles/32634034451099-RAS-Integration-for-AnVIL-Data">here</a> for more details and instructions.</p>
+</blockquote>
+<p>To link your NIH account to your AnVIL profile, go to <a href="https://anvil.terra.bio/#profile">anvil.terra.bio/#profile</a>.</p>
+<p><img src="04-accessing_controlled_data_dbGaP_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3e6e33dc82b_0_0.png" alt="Open your AnVIL profile settings by clicking on the three line icon in the upper lefthand corner and then choosing Profile." width="100%" /></p>
+<p>Next, look for the tab labeled “External Identities”. Click “log in to RAS” under the NIH Researcher Auth Service (RAS) section.</p>
+<p><img src="04-accessing_controlled_data_dbGaP_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3e6e33dc82b_0_5.png" alt="Under the External Identities tab, choose the box that says 'Log in to RAS' under the NIH Researcher Auth Service (RAS) section." width="100%" /></p>
+<p>This will take you to the NIH webpage in a new tab. Log in, and then navigate back to your AnVIL account. It may some time for your AnVIL credentials to be updated.</p>
+<p><img src="04-accessing_controlled_data_dbGaP_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3e6e33dc82b_0_9.png" alt="An NIH login page will open in a new tab." width="100%" /></p>
+<blockquote>
+<p>Linking with RAS will allow Terra to automatically determine if you can access controlled datasets hosted in Terra based on your valid passport visas or your valid dbGaP applications via eRA Commons. Terra currently supports RAS authentication for AnVIL.</p>
+</blockquote>
+<div class="notice">
+<p>You are required to renew the link between your RAS account and your AnVIL profile every 30 days to ensure continued access to controlled data.</p>
+</div>
+</div>
+<div id="access-data-through-an-anvil-workspace" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Access data through an AnVIL workspace<a href="accessing-dbgap.html#access-data-through-an-anvil-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You may need to use a workflow to bring the data into your AnVIL workspace. This can be done with dockstore.org.</p>
+</div>
+<div id="additional-resources-4" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Additional Resources<a href="accessing-dbgap.html#additional-resources-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Information on how to request access to dbGaP can be found <a href="https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/accessing-data/dbgap">here</a>.</p>
+<p>You can follow this step-by-step tutorial by the National Library of Medicine on how to apply for access to controlled access data through dbGaP <a href="https://www.youtube.com/watch?v=-3tUBeKbP5c">here</a>.</p>
+<p>The National Library of Medicine has created a video on how to <a href="https://www.youtube.com/watch?v=Yem3OH26kX4">assign downloaders for dbGaP data</a>. This is especially helpful if you have a student working with dbGaP data.</p>
+<p>Read more about the NIH’s Office of Data Science Strategy <a href="https://datascience.nih.gov/researcher-auth-service-initiative">Researcher Auth Service Initiative</a>.</p>
 
 </div>
+</div>
+
+
+
 <hr>
 <center> 
   <div class="footer">
@@ -213,8 +258,8 @@
           </div>
         </div>
       </div>
-<a href="accessing-dbgap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="importing-sra.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="give-us-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -245,7 +290,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/fhdsl/Data_on_AnVIL/blob/main/Feedback.Rmd",
+    "link": "https://github.com/fhdsl/Data_on_AnVIL/blob/main/04-accessing_controlled_data_dbGaP.Rmd",
     "text": "Edit"
   },
   "history": {

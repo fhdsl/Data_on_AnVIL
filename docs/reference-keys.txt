@@ -37,4 +37,8 @@ step-five-check-workflow-progress
 step-six-locate-transferred-data
 summary-3
 additional-resources-3
+accessing-dbgap
+link-nih-account-to-your-anvil-profile
+access-data-through-an-anvil-workspace
+additional-resources-4
 references
