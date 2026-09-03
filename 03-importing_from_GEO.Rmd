@@ -6,13 +6,13 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # From Gene Expression Omnibus (GEO) {#importing-geo}
 
-DESCRIBE THE TASK HAPPENING
+In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998).
 
 We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO. You can check out the [GEO Datasets  website](https://www.ncbi.nlm.nih.gov/ds) to learn more:
 
 > GEO is an international public repository that archives and freely distributes microarray, next-generation sequencing, and other forms of high-throughput functional genomics data submitted by the research community.
 
-WHERE IS THE GEO DATASET LOCATED? LINK TO THE ACTUAL GEO PAGE
+The GEO DataSet corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Microbiome diversity has many beneficial properties, ranging from microbial properties to soil and plant health."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
@@ -26,7 +26,7 @@ _Genetics_
 
 _Programming skills_
 
-**Intermediate**: no programming skills needed
+**Novice**: no programming skills needed
 :::
 
 ::: {.notice}
@@ -34,6 +34,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from GEO**, but there is a small cost for storing the data in an AnVIL bucket.
 
+There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow. ADD ESTIMATE FOR HOW MUCH THESE WORKFLOWS COST TO IMPORT 16 SAMPLES INTO A WORKSPACE.
 :::
 
 ## Step One: Create your workspace
