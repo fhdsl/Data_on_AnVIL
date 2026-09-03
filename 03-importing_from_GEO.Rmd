@@ -4,15 +4,15 @@ ottrpal::set_knitr_image_path()
 knitr::opts_chunk$set(out.width = "100%")
 ```
 
-# From Sequence Read Archive (SRA) {#importing-sra}
+# From Gene Expression Omnibus (GEO) {#importing-geo}
 
-In this example, we'll bring some metagenomic data into AnVIL. This data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA904247), which collected soil samples to study bacterial communities in tallgrass prairie. Bacteria play an important role in this ecosystem, but can be changed by disturbance, management, and the presence of herbivores.
+In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998).
 
-We will bring this data into AnVIL from the **Sequence Read Archive**, or SRA. You can check out the [SRA website](https://www.ncbi.nlm.nih.gov/sra) to learn more:
+We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO. You can check out the [GEO Datasets  website](https://www.ncbi.nlm.nih.gov/ds) to learn more:
 
-> Sequence Read Archive (SRA) data, available through multiple cloud providers and NCBI servers, is the largest publicly available repository of high throughput sequencing data. The archive accepts data from all branches of life as well as metagenomic and environmental surveys. SRA stores raw sequencing data and alignment information to enhance reproducibility and facilitate new discoveries through data analysis. 
+> GEO is an international public repository that archives and freely distributes microarray, next-generation sequencing, and other forms of high-throughput functional genomics data submitted by the research community.
 
-The SRA Data corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP409181&o=acc_s%3Aa).
+The GEO DataSet corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Microbiome diversity has many beneficial properties, ranging from microbial properties to soil and plant health."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
@@ -32,9 +32,9 @@ _Programming skills_
 ::: {.notice}
 **What will this cost?**
 
-You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from SRA**, but there is a small cost for storing the data in an AnVIL bucket.
+You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from GEO**, but there is a small cost for storing the data in an AnVIL bucket.
 
-There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow. The workflow used in this vignette cost $0.07 total. We used it to import 10 samples into our workspace.
+There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow. ADD ESTIMATE FOR HOW MUCH THESE WORKFLOWS COST TO IMPORT 16 SAMPLES INTO A WORKSPACE.
 :::
 
 ## Step One: Create your workspace
