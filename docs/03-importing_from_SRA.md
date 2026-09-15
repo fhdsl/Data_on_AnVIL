@@ -21,7 +21,7 @@ _Genetics_
 
 _Programming skills_
 
-**Intermediate**: no programming skills needed
+**Novice**: no programming skills needed
 :::
 
 ::: {.notice}
