@@ -86,30 +86,48 @@ TODO: Add image
 
 ## Step Three: Retrieve GEO project using GEOquery package
 
-Retrieving data from GEO is greatly simplified by the `GEOquery` Bioconductor package.  
+Retrieving data from GEO is greatly simplified by the `GEOquery` Bioconductor package. This package contains a lot of useful functions and you can read more about all the options on the [package website](https://seandavi.github.io/GEOquery/index.html).
+
+But before we do anything, we need to install the package and load the library. Because `GEOquery` is a Bioconductor package, we use the `BiocManager` command to install it. Type these commands into the console window to install the package and then open it:
 
 ```{r, eval=F}
 BiocManager::install("GEOquery")
 library(GEOquery)
 ```
 
+We have a couple of options for retrieving files from GEO. The `getGEO` function allows us to retrieve several different kinds of data about the GEO project. In this example, we will the details of the experiment as a SummarizedExperiment object, with each row corresponding to a feature and each column corresponding to a sample. The metadata will be stored as a header. Type the following code in to the console:
 
 ```{r, eval=F}
 gse <- getGEO("GSE52778", GSEMatrix = TRUE)
 ```
 
+You can find details on other types of data formats and how to pull them into your R environment in the [`GEOquery` user manual.](https://seandavi.github.io/GEOquery/articles/geo-data-formats.html)
+
+After running the `getGEO` command, you should now see the data stored as an object named `gse` in your environment.
+
+TODO: Add image
 
 ## Step Four: Push data into a Google bucket using AnVILGCP package
 
-```{r, eval=F}
-BiocManager::install("AnVILGCP")
-```
+At this point you can start working with the GEO data. However, the data has only been pulled into your R environment. In order to save it in the AnVIL workspace, we need to use a package called `AnVILGCP`. Install this package and open the `AnVILGCP` library using the following commands:
 
 ```{r, eval=F}
+BiocManager::install("AnVILGCP")
 library(AnVILGCP)
+```
+
+The `AnVILGCP` package allows us to save the dataset locally (that is, on the persistent disk) as well as to the Google bucket that is associated with the workspace. To save the dataset locally, you just need to know the name of the object and the name you want to save the dataset as. Here, we're saving the SummarizedExperiment we pulled into the environment earlier as "my_dataset.rds".
+
+```{r, eval=F}
 # Save dataset locally
 saveRDS(gse, file = "my_dataset.rds")
 ``` 
+
+You can see that the dataset has now been saved to the persistent disk by looking at the Files tab.
+
+TODO: Add image
+
+The `saveRDS` command only saves the data to the persistent disk associated with the R environment. You will be able to access the data again when you create a new R environment (as long as you kept your persistent disk), but others who clone the workspace will not have access to it. In order to save the data to the workspace itself, we need to copy the RDS file to the Google bucket associated with the workspace. You can do this using the following commands:
 
 ```{r, eval=F}
 # Copy to the workspace bucket 
@@ -117,7 +135,9 @@ saveRDS(gse, file = "my_dataset.rds")
 AnVILGCP::avcopy("my_dataset.rds", avstorage())
 ```
 
-```
+Once the dataset has been successfully saved to the Google bucket, you can click on the wrokspace Files icon to see its location.
+
+TODO: Add image
 
 ## Summary
 
