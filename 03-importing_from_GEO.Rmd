@@ -14,7 +14,7 @@ We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO.
 
 The GEO DataSet corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "This vignette uses data from a BioProject stored on the Gene Expression Omnibus. The ID is GSE52778."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_20#slide=id.h71c8fe85eb0c7f04_0_20")
 ```
 
@@ -22,7 +22,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 You can see the associated SRA references at the bottom of the GEO page.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Many GEO entries will have an associated SRA number. You can also import these data using our vignette on Getting Data From SRA."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_39#slide=id.h71c8fe85eb0c7f04_0_39")
 ```
 
@@ -72,15 +72,21 @@ Once you have created a workspace, AnVIL will take you to the workspace dashboar
 
 We're going to use the Bioconductor package `GEOquery` to pull the GEO records into the computer environment. You can use either RStudio or Jupyter Notebook. For the purposes of this vignette, we are demonstrating with RStudio.
 
-First, provision an RStudio environment. Click on the "Settings" button under the RStudio/Bioconductor card. 
+First, click on the cloud icon on the left hand meny to access the Cloud Environment options.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the cloud icon to begin setting up your Cloud Environment."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_48#slide=id.h489817a4fc4ce231_0_48")
+```
+
+Next, provision an RStudio environment. Click on the "Settings" button under the RStudio/Bioconductor card. 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the Settings button in the RStudio/Bioconductor card."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h4a944bae22f23b4f_0_0#slide=id.h4a944bae22f23b4f_0_0")
 ```
 
 You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters. (Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!) If you know that you might be called away from your computing environment and don't want to incur costs while this is happening, you can choose to enable autopause as well. Once you are happy with your setting choices, click "Create".
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "You can now choose the settings for your computing environment, including whether you want to enable an autopause function. The estimated cost of your environment will be displayed on a banner at the top. Click Create once you are ready."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_56#slide=id.h489817a4fc4ce231_0_56")
 ```
 
@@ -88,7 +94,7 @@ It may take some time for your environment to be created. As of September 2026, 
 
 Once your environment has been created, click on the R symbol in the left hand menu to open it. You will know that the environment is ready when there is a green dot next to the R symbol. (A popup window will also show up, informing you the environment is ready.)
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "When your Cloud Environment is ready, the circle next to the R icon will turn green. You will also see a popup."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_1#slide=id.h71c8fe85eb0c7f04_0_1")
 ```
 
@@ -111,9 +117,9 @@ gse <- getGEO("GSE52778", GSEMatrix = TRUE)
 
 You can find details on other types of data formats and how to pull them into your R environment in the [`GEOquery` user manual.](https://seandavi.github.io/GEOquery/articles/geo-data-formats.html)
 
-After running the `getGEO` command, you should now see the data stored as an object named `gse` in your environment.
+After running the `getGEO` command, you should now see the data stored as an object named `gse` in your environment panel.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "After installing the GEOquery package and running the `geoGEO` command, you will see the data as an object in your environment panel."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_63#slide=id.h489817a4fc4ce231_0_63")
 ```
 
@@ -135,7 +141,7 @@ saveRDS(gse, file = "my_dataset.rds")
 
 You can see that the dataset has now been saved to the persistent disk by looking at the Files tab.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Save the GEO data object to your persistent dist using the `saveRDS` function from the AnVILGCP package."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_69#slide=id.h489817a4fc4ce231_0_69")
 ```
 
@@ -149,7 +155,7 @@ AnVILGCP::avcopy("my_dataset.rds", avstorage())
 
 Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location. You will see your object in a directory labeled with the name of your workspace. You can also click on the button in the upper right hand corner to open the Google bucket itself.
 
-```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+```{r, fig.align='center', echo = FALSE, fig.alt= "After you push the saved RDS file to your Google bucket using `avcopy` from the AnVILGCP package, you will be able to see it in your workspace files by clicking the file icon."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h4f7dde8c6345680a_0_1#slide=id.h4f7dde8c6345680a_0_1")
 ```
 
