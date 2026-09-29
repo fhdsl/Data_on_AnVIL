@@ -15,7 +15,7 @@ We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO.
 The GEO DataSet corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= ""}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_20#slide=id.h71c8fe85eb0c7f04_0_20")
 ```
 
 **Many GEO datasets will also have an associated SRA BioProject number.** NCBI will automatically add the files to SRA if the GEO dataset contains raw next-generation sequencing data (like FASTQ or BAM files). In this case, we recommend importing the data from SRA following [this example](https://hutchdatascience.org/Data_on_AnVIL/importing-sra.html#importing-sra)
@@ -23,7 +23,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blq
 You can see the associated SRA references at the bottom of the GEO page.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= ""}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_39#slide=id.h71c8fe85eb0c7f04_0_39")
 ```
 
 ::: {.notice}
@@ -49,7 +49,7 @@ There is a cost associated with provisioning and running an RStudio or Jupyter N
 The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on "Workspaces" in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.
 
 ```{r, echo=FALSE, fig.alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_36#slide=id.g3ce9c5d5921_0_36")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_12#slide=id.h489817a4fc4ce231_0_12")
 ```
 
 Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.
@@ -86,10 +86,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 It may take some time for your environment to be created. As of September 2026, it took 2 minutes for this workspace to be provisioned as we clicked "Create".
 
-Once your environment has been created, click on the R symbol in the left hand menu to open it.
+Once your environment has been created, click on the R symbol in the left hand menu to open it. You will know that the environment is ready when there is a green dot next to the R symbol. (A popup window will also show up, informing you the environment is ready.)
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= ""}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_1#slide=id.h71c8fe85eb0c7f04_0_1")
 ```
 
 ## Step Three: Retrieve GEO project using GEOquery package
@@ -147,10 +147,10 @@ The `saveRDS` command only saves the data to the persistent disk associated with
 AnVILGCP::avcopy("my_dataset.rds", avstorage())
 ```
 
-Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location.
+Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location. You will see your object in a directory labeled with the name of your workspace. You can also click on the button in the upper right hand corner to open the Google bucket itself.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= ""}
-ottrpal::include_slide("")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h4f7dde8c6345680a_0_1#slide=id.h4f7dde8c6345680a_0_1")
 ```
 
 ## Summary
