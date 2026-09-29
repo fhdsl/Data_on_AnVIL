@@ -8,7 +8,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998).
 
-We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO. You can check out the [GEO Datasets  website](https://www.ncbi.nlm.nih.gov/ds) to learn more:
+We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO. You can check out the [GEO Datasets  website](https://www.ncbi.nlm.nih.gov/gds) to learn more:
 
 > GEO is an international public repository that archives and freely distributes microarray, next-generation sequencing, and other forms of high-throughput functional genomics data submitted by the research community.
 
