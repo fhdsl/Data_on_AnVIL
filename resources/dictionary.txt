@@ -1,8 +1,12 @@
+albuterol
 AnVIL
+AnVILGCP
 AnVIL's
 aofarrel
 Auth
+autopause
 Autopause
+BAM
 BiocManager
 bioinformatics
 BioProject
@@ -17,6 +21,7 @@ CoV
 covid
 CoVID
 customizations
+DataSet
 dbGaP
 dex
 dexamethasone
@@ -25,12 +30,14 @@ Dockstore
 downloaders
 dropdown
 eMERGE
+eRA
 fasta
 fastq
 FASTQs
 gcloud
 GDSCN
 GenBank
+GEOquery
 github
 Glimma
 glimmaMDS
@@ -64,6 +71,7 @@ preprint
 programmatically
 px
 RAS
+rds
 repo
 reproducibility
 Rmd
@@ -76,9 +84,11 @@ sra
 SRA
 subfolder
 Submitters
+SummarizedExperiment
 tallgrass
 theiagen
 Theiagen
+terra
 timeframe
 TSA
 tsv

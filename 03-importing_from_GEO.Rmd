@@ -86,7 +86,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 It may take some time for your environment to be created. As of September 2026, it took 2 minutes for this workspace to be provisioned as we clicked "Create".
 
-Once your environment has been created, click on the R symbol in the lefthand menu to open it.
+Once your environment has been created, click on the R symbol in the left hand menu to open it.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= ""}
 ottrpal::include_slide("")
