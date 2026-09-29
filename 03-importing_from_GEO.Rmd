@@ -162,4 +162,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Additional Resources
 
+- Want to learn more about the AnVIL Bioconductor package? You can see a talk about it [here](https://anvilproject.org/learn/run-interactive-analyses/the-r-bioconductor-anvil-package)
 
+- Additional information about the AnVIL Bioconductor package can be found on the [Bioconductor website](https://anvil.bioconductor.org/)
+
+- Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
