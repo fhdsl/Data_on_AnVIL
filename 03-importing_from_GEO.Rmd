@@ -14,7 +14,7 @@ We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO.
 
 The GEO DataSet corresponding to this project is located [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Microbiome diversity has many beneficial properties, ranging from microbial properties to soil and plant health."}
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
 ```
 
@@ -22,7 +22,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blq
 
 You can see the associated SRA references at the bottom of the GEO page.
 
-TODO: ADD IMAGE
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1l0P0gFpsPkYG7blqJ_5JyYYlztJFZDD39CnIB4svrY8/edit#slide=id.g208b8f790dc_23_217")
+```
 
 ::: {.notice}
 _Genetics_
@@ -39,7 +41,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from GEO**, but there is a small cost for storing the data in an AnVIL bucket.
 
-There is also no cost for importing a workflow into your workspace, but there may be a cost for running a workflow. ADD ESTIMATE FOR HOW MUCH THESE WORKFLOWS COST TO IMPORT 16 SAMPLES INTO A WORKSPACE.
+There is a cost associated with provisioning and running an RStudio or Jupyter Notebook environment. ADD COST
 :::
 
 ## Step One: Create your workspace
@@ -59,7 +61,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The "anvil-outreach" billing project is used here as an example, but you will not be able to assign it. You'll have to use one of your own billing projects. After filling out these two fields, click the "Quick Create Workspace" button to create a workspace without enabling sharing or additional security options.
 
 ```{r, echo=FALSE, fig.alt="You will need to give your new workspace a unique name and assign it to a billing project. The anvil-outreach billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the Quick Create Workspace to create your workspace without enabling sharing or additional security options."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.g3ce9c5d5921_0_0#slide=id.g3ce9c5d5921_0_0")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_31#slide=id.h489817a4fc4ce231_0_31")
 ```
 
 You can read about Authorization Domains for workspace security in [this article](https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain) in the Terra documentation.
@@ -72,17 +74,23 @@ We're going to use the Bioconductor package `GEOquery` to pull the GEO records i
 
 First, provision an RStudio environment. Click on the "Settings" button under the RStudio/Bioconductor card. 
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_48#slide=id.h489817a4fc4ce231_0_48")
+```
 
-You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters. (Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!) Once you are happy with your setting choices, click "Create".
+You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters. (Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!) If you know that you might be called away from your computing environment and don't want to incur costs while this is happening, you can choose to enable autopause as well. Once you are happy with your setting choices, click "Create".
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_56#slide=id.h489817a4fc4ce231_0_56")
+```
 
 It may take some time for your environment to be created. As of September 2026, it took 2 minutes for this workspace to be provisioned as we clicked "Create".
 
 Once your environment has been created, click on the R symbol in the lefthand menu to open it.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("")
+```
 
 ## Step Three: Retrieve GEO project using GEOquery package
 
@@ -105,7 +113,9 @@ You can find details on other types of data formats and how to pull them into yo
 
 After running the `getGEO` command, you should now see the data stored as an object named `gse` in your environment.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_63#slide=id.h489817a4fc4ce231_0_63")
+```
 
 ## Step Four: Push data into a Google bucket using AnVILGCP package
 
@@ -125,7 +135,9 @@ saveRDS(gse, file = "my_dataset.rds")
 
 You can see that the dataset has now been saved to the persistent disk by looking at the Files tab.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_69#slide=id.h489817a4fc4ce231_0_69")
+```
 
 The `saveRDS` command only saves the data to the persistent disk associated with the R environment. You will be able to access the data again when you create a new R environment (as long as you kept your persistent disk), but others who clone the workspace will not have access to it. In order to save the data to the workspace itself, we need to copy the RDS file to the Google bucket associated with the workspace. You can do this using the following commands:
 
@@ -135,9 +147,11 @@ The `saveRDS` command only saves the data to the persistent disk associated with
 AnVILGCP::avcopy("my_dataset.rds", avstorage())
 ```
 
-Once the dataset has been successfully saved to the Google bucket, you can click on the wrokspace Files icon to see its location.
+Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location.
 
-TODO: Add image
+```{r, fig.align='center', echo = FALSE, fig.alt= ""}
+ottrpal::include_slide("")
+```
 
 ## Summary
 
