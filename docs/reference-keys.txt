@@ -37,8 +37,15 @@ step-five-check-workflow-progress
 step-six-locate-transferred-data
 summary-3
 additional-resources-3
+importing-geo
+step-one-create-your-workspace-4
+step-two-open-an-rstudio-or-jupyter-notebook-environment.
+step-three-retrieve-geo-project-using-geoquery-package
+step-four-push-data-into-a-google-bucket-using-anvilgcp-package
+summary-4
+additional-resources-4
 accessing-dbgap
 link-nih-account-to-your-anvil-profile
 access-data-through-an-anvil-workspace
-additional-resources-4
+additional-resources-5
 references

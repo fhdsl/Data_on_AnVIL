@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 From Gene Expression Omnibus (GEO) | Data on AnVIL</title>
+  <meta name="description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 From Gene Expression Omnibus (GEO) | Data on AnVIL" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 From Gene Expression Omnibus (GEO) | Data on AnVIL" />
+  
+  <meta name="twitter:description" content="This book contains vignettes on how to upload, import, or access data within an AnVIL workspace." />
+  
+
+
+
+<meta name="date" content="2026-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="importing-sra.html"/>
+<link rel="next" href="accessing-dbgap.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4V9Q48MHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N4V9Q48MHQ');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+<link rel="stylesheet" href="assets/AnVIL_style/anvil.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://anvilproject.org/" target="_blank"><img src="assets/AnVIL_style/logo-anvil.png" style="width: 80%; padding-left: 15px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Book</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#skills-level"><i class="fa fa-check"></i>Skills Level</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#anvil-collection"><i class="fa fa-check"></i>AnVIL Collection</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-announcements.html"><a href="data-announcements.html"><i class="fa fa-check"></i><b>2</b> Data Announcements</a></li>
+<li class="part"><span><b>Bringing Your Own Data</b></span></li>
+<li class="chapter" data-level="3" data-path="uploading-hpc.html"><a href="uploading-hpc.html"><i class="fa fa-check"></i><b>3</b> From Institutional Server</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-one-create-your-workspace"><i class="fa fa-check"></i><b>3.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="3.2" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-two-connect-to-your-hpc"><i class="fa fa-check"></i><b>3.2</b> Step Two: Connect to your HPC</a></li>
+<li class="chapter" data-level="3.3" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-three-check-for-google-cloud-sdk"><i class="fa fa-check"></i><b>3.3</b> Step Three: Check for Google Cloud SDK</a></li>
+<li class="chapter" data-level="3.4" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-four-initialize-gcloud"><i class="fa fa-check"></i><b>3.4</b> Step Four: Initialize <code>gcloud</code></a></li>
+<li class="chapter" data-level="3.5" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-five-connect-to-your-workspace"><i class="fa fa-check"></i><b>3.5</b> Step Five: Connect to your workspace</a></li>
+<li class="chapter" data-level="3.6" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-six-transfer-file"><i class="fa fa-check"></i><b>3.6</b> Step Six: Transfer file</a></li>
+<li class="chapter" data-level="3.7" data-path="uploading-hpc.html"><a href="uploading-hpc.html#step-seven-verify-that-files-have-been-transferred"><i class="fa fa-check"></i><b>3.7</b> Step Seven: Verify that files have been transferred</a></li>
+<li class="chapter" data-level="3.8" data-path="uploading-hpc.html"><a href="uploading-hpc.html#summary"><i class="fa fa-check"></i><b>3.8</b> Summary</a></li>
+<li class="chapter" data-level="3.9" data-path="uploading-hpc.html"><a href="uploading-hpc.html#additional-resources"><i class="fa fa-check"></i><b>3.9</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html"><i class="fa fa-check"></i><b>4</b> From Your Local Computer</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#step-one-create-your-workspace-1"><i class="fa fa-check"></i><b>4.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="4.2" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#step-two-open-the-data-uploader"><i class="fa fa-check"></i><b>4.2</b> Step Two: Open the Data Uploader</a></li>
+<li class="chapter" data-level="4.3" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#step-three-upload-data-and-metadata"><i class="fa fa-check"></i><b>4.3</b> Step Three: Upload data and metadata</a></li>
+<li class="chapter" data-level="4.4" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#step-four-verify-files-were-moved-into-your-workspace"><i class="fa fa-check"></i><b>4.4</b> Step Four: Verify files were moved into your workspace</a></li>
+<li class="chapter" data-level="4.5" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#summary-1"><i class="fa fa-check"></i><b>4.5</b> Summary</a></li>
+<li class="chapter" data-level="4.6" data-path="uploading-local-computer.html"><a href="uploading-local-computer.html#additional-resources-1"><i class="fa fa-check"></i><b>4.6</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="uploading-cloud.html"><a href="uploading-cloud.html"><i class="fa fa-check"></i><b>5</b> From the Cloud</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-one-create-your-workspace-2"><i class="fa fa-check"></i><b>5.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="5.2" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-two-provision-a-jupyter-environment"><i class="fa fa-check"></i><b>5.2</b> Step Two: Provision a Jupyter environment</a></li>
+<li class="chapter" data-level="5.3" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-three-run-gcloud-storage-to-copymove-files"><i class="fa fa-check"></i><b>5.3</b> Step Three: Run gcloud storage to copy/move files</a></li>
+<li class="chapter" data-level="5.4" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-four-verify-that-files-have-been-transferred"><i class="fa fa-check"></i><b>5.4</b> Step Four: Verify that files have been transferred</a></li>
+<li class="chapter" data-level="5.5" data-path="uploading-cloud.html"><a href="uploading-cloud.html#step-five-delete-your-environment-when-you-are-done-with-your-session"><i class="fa fa-check"></i><b>5.5</b> Step Five: Delete your environment when you are done with your session</a></li>
+<li class="chapter" data-level="5.6" data-path="uploading-cloud.html"><a href="uploading-cloud.html#summary-2"><i class="fa fa-check"></i><b>5.6</b> Summary</a></li>
+<li class="chapter" data-level="5.7" data-path="uploading-cloud.html"><a href="uploading-cloud.html#additional-resources-2"><i class="fa fa-check"></i><b>5.7</b> Additional Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Importing Public Data</b></span></li>
+<li class="chapter" data-level="6" data-path="importing-sra.html"><a href="importing-sra.html"><i class="fa fa-check"></i><b>6</b> From Sequence Read Archive (SRA)</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="importing-sra.html"><a href="importing-sra.html#step-one-create-your-workspace-3"><i class="fa fa-check"></i><b>6.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="6.2" data-path="importing-sra.html"><a href="importing-sra.html#step-two-import-wdl-workflow"><i class="fa fa-check"></i><b>6.2</b> Step Two: Import WDL workflow</a></li>
+<li class="chapter" data-level="6.3" data-path="importing-sra.html"><a href="importing-sra.html#step-three-import-sample-tsv-file"><i class="fa fa-check"></i><b>6.3</b> Step Three: Import sample TSV file</a></li>
+<li class="chapter" data-level="6.4" data-path="importing-sra.html"><a href="importing-sra.html#step-four-launch-workflow"><i class="fa fa-check"></i><b>6.4</b> Step Four: Launch workflow</a></li>
+<li class="chapter" data-level="6.5" data-path="importing-sra.html"><a href="importing-sra.html#step-five-check-workflow-progress"><i class="fa fa-check"></i><b>6.5</b> Step Five: Check workflow progress</a></li>
+<li class="chapter" data-level="6.6" data-path="importing-sra.html"><a href="importing-sra.html#step-six-locate-transferred-data"><i class="fa fa-check"></i><b>6.6</b> Step Six: Locate transferred data</a></li>
+<li class="chapter" data-level="6.7" data-path="importing-sra.html"><a href="importing-sra.html#summary-3"><i class="fa fa-check"></i><b>6.7</b> Summary</a></li>
+<li class="chapter" data-level="6.8" data-path="importing-sra.html"><a href="importing-sra.html#additional-resources-3"><i class="fa fa-check"></i><b>6.8</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="importing-geo.html"><a href="importing-geo.html"><i class="fa fa-check"></i><b>7</b> From Gene Expression Omnibus (GEO)</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="importing-geo.html"><a href="importing-geo.html#step-one-create-your-workspace-4"><i class="fa fa-check"></i><b>7.1</b> Step One: Create your workspace</a></li>
+<li class="chapter" data-level="7.2" data-path="importing-geo.html"><a href="importing-geo.html#step-two-open-an-rstudio-or-jupyter-notebook-environment."><i class="fa fa-check"></i><b>7.2</b> Step Two: Open an RStudio or Jupyter Notebook environment.</a></li>
+<li class="chapter" data-level="7.3" data-path="importing-geo.html"><a href="importing-geo.html#step-three-retrieve-geo-project-using-geoquery-package"><i class="fa fa-check"></i><b>7.3</b> Step Three: Retrieve GEO project using GEOquery package</a></li>
+<li class="chapter" data-level="7.4" data-path="importing-geo.html"><a href="importing-geo.html#step-four-push-data-into-a-google-bucket-using-anvilgcp-package"><i class="fa fa-check"></i><b>7.4</b> Step Four: Push data into a Google bucket using AnVILGCP package</a></li>
+<li class="chapter" data-level="7.5" data-path="importing-geo.html"><a href="importing-geo.html#summary-4"><i class="fa fa-check"></i><b>7.5</b> Summary</a></li>
+<li class="chapter" data-level="7.6" data-path="importing-geo.html"><a href="importing-geo.html#additional-resources-4"><i class="fa fa-check"></i><b>7.6</b> Additional Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Accessing Controlled Data</b></span></li>
+<li class="chapter" data-level="8" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html"><i class="fa fa-check"></i><b>8</b> Through dbGaP</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html#link-nih-account-to-your-anvil-profile"><i class="fa fa-check"></i><b>8.1</b> Link NIH Account to your AnVIL profile</a></li>
+<li class="chapter" data-level="8.2" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html#access-data-through-an-anvil-workspace"><i class="fa fa-check"></i><b>8.2</b> Access data through an AnVIL workspace</a></li>
+<li class="chapter" data-level="8.3" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html#additional-resources-5"><i class="fa fa-check"></i><b>8.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="part"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="" data-path="give-us-feedback.html"><a href="give-us-feedback.html"><i class="fa fa-check"></i>Give us Feedback</a></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<a href="https://hutchdatascience.org/" target="_blank"><img src="https://raw.githubusercontent.com/jhudsl/OTTR_Template/main/style-sets/fhdasl/copy_to_assets/big-dasl-stacked.png" style="width: 80%; padding-left: 34px; padding-top: 8px;"</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span><a href="https://docs.google.com/forms/d/e/1FAIpQLScrDVb_utm55pmb_SHx-RgELTEbCCWdLea0T3IzS0Oj00GE4w/viewform?usp=pp_url&entry.1565230805=Data+on+AnVIL"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data on AnVIL</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/AnVIL_style/dasl_thin_main_image.png">
+</div>
+<div id="importing-geo" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> From Gene Expression Omnibus (GEO)<a href="importing-geo.html#importing-geo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998">this BioProject</a>.</p>
+<p>We will bring this data into AnVIL from the <strong>Gene Expression Omnibus</strong>, or GEO. You can check out the <a href="https://www.ncbi.nlm.nih.gov/gds">GEO Datasets website</a> to learn more:</p>
+<blockquote>
+<p>GEO is an international public repository that archives and freely distributes microarray, next-generation sequencing, and other forms of high-throughput functional genomics data submitted by the research community.</p>
+</blockquote>
+<p>The GEO DataSet corresponding to this project is located <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778">here</a>.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h71c8fe85eb0c7f04_0_20.png" alt="This vignette uses data from a BioProject stored on the Gene Expression Omnibus. The ID is GSE52778." width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Many GEO datasets will also have an associated SRA BioProject number.</strong> NCBI will automatically add the files to SRA if the GEO dataset contains raw next-generation sequencing data (like FASTQ or BAM files). In this case, we recommend importing the data from SRA following <a href="https://hutchdatascience.org/Data_on_AnVIL/importing-sra.html#importing-sra">this example</a></p>
+<p>You can see the associated SRA references at the bottom of the GEO page.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h71c8fe85eb0c7f04_0_39.png" alt="Many GEO entries will have an associated SRA number. You can also import these data using our vignette on Getting Data From SRA." width="100%" style="display: block; margin: auto;" /></p>
+<div class="notice">
+<p><em>Genetics</em></p>
+<p><strong>Novice</strong>: no genetics skills needed</p>
+<p><em>Programming skills</em></p>
+<p><strong>Novice</strong>: no programming skills needed</p>
+</div>
+<div class="notice">
+<p><strong>What will this cost?</strong></p>
+<p>You might hear new terms for moving data around in the cloud. <strong>Ingress</strong> is when data comes to you, similar to downloading a file or receiving an email with an attachment. <strong>Egress</strong> is sending the data to another resource, similar to uploading or sending an attached file via email. <strong>There is no fee for ingressing data to AnVIL from GEO</strong>, but there is a small cost for storing the data in an AnVIL bucket.</p>
+<p>There is a cost associated with provisioning and running an RStudio or Jupyter Notebook environment. ADD COST</p>
+</div>
+<div id="step-one-create-your-workspace-4" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Step One: Create your workspace<a href="importing-geo.html#step-one-create-your-workspace-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The starting point for bringing your own data to AnVIL is the workspace. Before you can do anything, you will need to create a workspace. Once you have logged into your AnVIL account, click on “Workspaces” in the left-side menu. You can open this menu by clicking the three line icon in the upper left hand corner.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_12.png" alt="Once you have logged into your AnVIL account, click on Workspaces in the left-side menu. You can open this menu by clicking on the three line icon in the upper lefthand corner." width="100%" /></p>
+<p>Once you have opened the workspace page, create a new workspace by clicking on the plus sign at the top.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_g3ce9c5d5921_0_46.png" alt="Create a new workspace by clicking on the plus sign at the top." width="100%" /></p>
+<p>You should now see a pop-up window that lets you customize your new workspace. You will need to give your new workspace a unique name and assign it to a billing project. The “anvil-outreach” billing project is used here as an example, but you will not be able to assign it. You’ll have to use one of your own billing projects. After filling out these two fields, click the “Quick Create Workspace” button to create a workspace without enabling sharing or additional security options.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_31.png" alt="You will need to give your new workspace a unique name and assign it to a billing project. The anvil-outreach billing project is used here as an example, but you don't have permission to use it. You’ll have to use one of your own. After filling out these two fields, click the Quick Create Workspace to create your workspace without enabling sharing or additional security options." width="100%" /></p>
+<p>You can read about Authorization Domains for workspace security in <a href="https://support.terra.bio/hc/en-us/articles/8527464803739-How-to-set-up-and-use-an-Authorization-Domain">this article</a> in the Terra documentation.</p>
+<p>Once you have created a workspace, AnVIL will take you to the workspace dashboard.</p>
+</div>
+<div id="step-two-open-an-rstudio-or-jupyter-notebook-environment." class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Step Two: Open an RStudio or Jupyter Notebook environment.<a href="importing-geo.html#step-two-open-an-rstudio-or-jupyter-notebook-environment." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’re going to use the Bioconductor package <code>GEOquery</code> to pull the GEO records into the computer environment. You can use either RStudio or Jupyter Notebook. For the purposes of this vignette, we are demonstrating with RStudio.</p>
+<p>First, click on the cloud icon on the left hand meny to access the Cloud Environment options.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_48.png" alt="Choose the cloud icon to begin setting up your Cloud Environment." width="100%" style="display: block; margin: auto;" /></p>
+<p>Next, provision an RStudio environment. Click on the “Settings” button under the RStudio/Bioconductor card.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h4a944bae22f23b4f_0_0.png" alt="Choose the Settings button in the RStudio/Bioconductor card." width="100%" style="display: block; margin: auto;" /></p>
+<p>You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters. (Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!) If you know that you might be called away from your computing environment and don’t want to incur costs while this is happening, you can choose to enable autopause as well. Once you are happy with your setting choices, click “Create”.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_56.png" alt="You can now choose the settings for your computing environment, including whether you want to enable an autopause function. The estimated cost of your environment will be displayed on a banner at the top. Click Create once you are ready." width="100%" style="display: block; margin: auto;" /></p>
+<p>It may take some time for your environment to be created. As of September 2026, it took 2 minutes for this workspace to be provisioned as we clicked “Create”.</p>
+<p>Once your environment has been created, click on the R symbol in the left hand menu to open it. You will know that the environment is ready when there is a green dot next to the R symbol. (A popup window will also show up, informing you the environment is ready.)</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h71c8fe85eb0c7f04_0_1.png" alt="When your Cloud Environment is ready, the circle next to the R icon will turn green. You will also see a popup." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-three-retrieve-geo-project-using-geoquery-package" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Step Three: Retrieve GEO project using GEOquery package<a href="importing-geo.html#step-three-retrieve-geo-project-using-geoquery-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Retrieving data from GEO is greatly simplified by the <code>GEOquery</code> Bioconductor package. This package contains a lot of useful functions and you can read more about all the options on the <a href="https://seandavi.github.io/GEOquery/index.html">package website</a>.</p>
+<p>But before we do anything, we need to install the package and load the library. Because <code>GEOquery</code> is a Bioconductor package, we use the <code>BiocManager</code> command to install it. Type these commands into the console window to install the package and then open it:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="importing-geo.html#cb9-1" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;GEOquery&quot;</span>)</span>
+<span id="cb9-2"><a href="importing-geo.html#cb9-2" tabindex="-1"></a><span class="fu">library</span>(GEOquery)</span></code></pre></div>
+<p>We have a couple of options for retrieving files from GEO. The <code>getGEO</code> function allows us to retrieve several different kinds of data about the GEO project. In this example, we will the details of the experiment as a SummarizedExperiment object, with each row corresponding to a feature and each column corresponding to a sample. The metadata will be stored as a header. Type the following code in to the console:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="importing-geo.html#cb10-1" tabindex="-1"></a>gse <span class="ot">&lt;-</span> <span class="fu">getGEO</span>(<span class="st">&quot;GSE52778&quot;</span>, <span class="at">GSEMatrix =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>You can find details on other types of data formats and how to pull them into your R environment in the <a href="https://seandavi.github.io/GEOquery/articles/geo-data-formats.html"><code>GEOquery</code> user manual.</a></p>
+<p>After running the <code>getGEO</code> command, you should now see the data stored as an object named <code>gse</code> in your environment panel.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_63.png" alt="After installing the GEOquery package and running the `geoGEO` command, you will see the data as an object in your environment panel." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-four-push-data-into-a-google-bucket-using-anvilgcp-package" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Step Four: Push data into a Google bucket using AnVILGCP package<a href="importing-geo.html#step-four-push-data-into-a-google-bucket-using-anvilgcp-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this point you can start working with the GEO data. However, the data has only been pulled into your R environment. In order to save it in the AnVIL workspace, we need to use a package called <code>AnVILGCP</code>. Install this package and open the <code>AnVILGCP</code> library using the following commands:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="importing-geo.html#cb11-1" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;AnVILGCP&quot;</span>)</span>
+<span id="cb11-2"><a href="importing-geo.html#cb11-2" tabindex="-1"></a><span class="fu">library</span>(AnVILGCP)</span></code></pre></div>
+<p>The <code>AnVILGCP</code> package allows us to save the dataset locally (that is, on the persistent disk) as well as to the Google bucket that is associated with the workspace. To save the dataset locally, you just need to know the name of the object and the name you want to save the dataset as. Here, we’re saving the SummarizedExperiment we pulled into the environment earlier as “my_dataset.rds”.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="importing-geo.html#cb12-1" tabindex="-1"></a><span class="co"># Save dataset locally</span></span>
+<span id="cb12-2"><a href="importing-geo.html#cb12-2" tabindex="-1"></a><span class="fu">saveRDS</span>(gse, <span class="at">file =</span> <span class="st">&quot;my_dataset.rds&quot;</span>)</span></code></pre></div>
+<p>You can see that the dataset has now been saved to the persistent disk by looking at the Files tab.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h489817a4fc4ce231_0_69.png" alt="Save the GEO data object to your persistent dist using the `saveRDS` function from the AnVILGCP package." width="100%" style="display: block; margin: auto;" /></p>
+<p>The <code>saveRDS</code> command only saves the data to the persistent disk associated with the R environment. You will be able to access the data again when you create a new R environment (as long as you kept your persistent disk), but others who clone the workspace will not have access to it. In order to save the data to the workspace itself, we need to copy the RDS file to the Google bucket associated with the workspace. You can do this using the following commands:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="importing-geo.html#cb13-1" tabindex="-1"></a><span class="co"># Copy to the workspace bucket </span></span>
+<span id="cb13-2"><a href="importing-geo.html#cb13-2" tabindex="-1"></a><span class="co"># avstorage() automatically maps to your workspace&#39;s bucket path</span></span>
+<span id="cb13-3"><a href="importing-geo.html#cb13-3" tabindex="-1"></a>AnVILGCP<span class="sc">::</span><span class="fu">avcopy</span>(<span class="st">&quot;my_dataset.rds&quot;</span>, <span class="fu">avstorage</span>())</span></code></pre></div>
+<p>Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location. You will see your object in a directory labeled with the name of your workspace. You can also click on the button in the upper right hand corner to open the Google bucket itself.</p>
+<p><img src="03-importing_from_GEO_files/figure-html/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg_h4f7dde8c6345680a_0_1.png" alt="After you push the saved RDS file to your Google bucket using `avcopy` from the AnVILGCP package, you will be able to see it in your workspace files by clicking the file icon." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="summary-4" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Summary<a href="importing-geo.html#summary-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Create a workspace</li>
+<li>Provision RStudio or Jupyter Notebook environment</li>
+<li>Retrieve GEO data using <code>GEOquery</code></li>
+<li>Push data into a Google bucket with <code>AnVILGCP</code></li>
+</ul>
+</div>
+<div id="additional-resources-4" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Additional Resources<a href="importing-geo.html#additional-resources-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Want to learn more about the AnVIL Bioconductor package? You can see a talk about it <a href="https://anvilproject.org/learn/run-interactive-analyses/the-r-bioconductor-anvil-package">here</a></p></li>
+<li><p>Additional information about the AnVIL Bioconductor package can be found on the <a href="https://anvil.bioconductor.org/">Bioconductor website</a></p></li>
+<li><p>Learn more about moving data to and from Google buckets <a href="https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket">here</a>.</p></li>
+</ul>
+
+</div>
+</div>
+
+
+
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="importing-sra.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="accessing-dbgap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/fhdsl/Data_on_AnVIL/blob/main/03-importing_from_GEO.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
