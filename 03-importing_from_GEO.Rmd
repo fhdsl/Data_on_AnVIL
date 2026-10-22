@@ -72,7 +72,7 @@ Once you have created a workspace, AnVIL will take you to the workspace dashboar
 
 We're going to use the Bioconductor package `GEOquery` to pull the GEO records into the computer environment. You can use either RStudio or Jupyter Notebook. For the purposes of this vignette, we are demonstrating with RStudio.
 
-First, click on the cloud icon on the left hand meny to access the Cloud Environment options.
+First, click on the cloud icon on the left hand menu to access the Cloud Environment options.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Choose the cloud icon to begin setting up your Cloud Environment."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_48#slide=id.h489817a4fc4ce231_0_48")
