@@ -125,7 +125,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 ## Step Four: Push data into a Google bucket using AnVILGCP package
 
-At this point you can start working with the GEO data. However, the data has only been pulled into your R environment. In order to save it in the AnVIL workspace, we need to use a package called `AnVILGCP`. Install this package and open the `AnVILGCP` library using the following commands:
+At this point the data is available for you to work with in your R environment, but has not been saved anywhere more permanent. There are a couple of places you may want to save your data and any results that you generate:
+
+- The **persistent disk** associated with your R environment. Save files here if you will want to come back and work with them in RStudio in the near future. They will be available to you next time you start up RStudio (as long as you don’t delete the persistent disk). Note that the persistent disk is not backed up, so for long-term storage you will want to copy files elsewhere.
+- The **storage bucket** associated with your AnVIL workspace. Save files here if you want to share them with other collaborators (your persistent disk is private to you and cannot be shared) or store them long-term (workspace buckets are automatically backed up, and are considerably cheaper than a persistent disk).
+
+The `AnVILGCP` package allows us to save files to the Google storage bucket that is associated with the workspace. Install this package and open the `AnVILGCP` library using the following commands:
+
 
 ```{r, eval=F}
 BiocManager::install("AnVILGCP")
