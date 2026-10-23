@@ -18,7 +18,7 @@ The GEO DataSet corresponding to this project is located [here](https://www.ncbi
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h71c8fe85eb0c7f04_0_20#slide=id.h71c8fe85eb0c7f04_0_20")
 ```
 
-**Many GEO datasets will also have an associated SRA BioProject number.** NCBI will automatically add the files to SRA if the GEO dataset contains raw next-generation sequencing data (like FASTQ or BAM files). In this case, we recommend importing the data from SRA following [this example](https://hutchdatascience.org/Data_on_AnVIL/importing-sra.html#importing-sra)
+**Many GEO datasets will also have an associated SRA BioProject number.** NCBI will automatically add the files to SRA if the GEO dataset contains raw next-generation sequencing data (like FASTQ or BAM files). In this case, we recommend importing the data from SRA following [this example](https://hutchdatascience.org/Data_on_AnVIL/importing-sra.html#importing-sra).
 
 You can see the associated SRA references at the bottom of the GEO page.
 
