@@ -109,13 +109,19 @@ BiocManager::install("GEOquery")
 library(GEOquery)
 ```
 
-We have a couple of options for retrieving files from GEO. The `getGEO` function allows us to retrieve several different kinds of data about the GEO project. In this example, we will the details of the experiment as a SummarizedExperiment object, with each row corresponding to a feature and each column corresponding to a sample. The metadata will be stored as a header. Type the following code in to the console:
+For those who are less familiar with the RStudio interface, this is where the console window is located:
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Type the commands into the console window."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h68a6d04ab24bc0cf_0_0#slide=id.h68a6d04ab24bc0cf_0_0")
+```
+
+We have a couple of options for retrieving files from GEO. The `getGEO` function allows us to retrieve several different kinds of data about the GEO project. In this example, we will import the details, or metadata, of the experiment as a SummarizedExperiment object, with each row corresponding to a feature and each column corresponding to a sample. The metadata will be stored as a header. Type the following code in to the console:
 
 ```{r, eval=F}
 gse <- getGEO("GSE52778", GSEMatrix = TRUE)
 ```
 
-You can find details on other types of data formats and how to pull them into your R environment in the [`GEOquery` user manual.](https://seandavi.github.io/GEOquery/articles/geo-data-formats.html)
+You can find details on other types of data formats (including the raw and processed data) and how to pull them into your R environment in the [`GEOquery` user manual.](https://seandavi.github.io/GEOquery/articles/geo-data-formats.html)
 
 After running the `getGEO` command, you should now see the data stored as an object named `gse` in your environment panel.
 
