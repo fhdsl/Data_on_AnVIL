@@ -33,7 +33,7 @@ _Genetics_
 
 _Programming skills_
 
-**Novice**: no programming skills needed
+**Beginner**: minimal programming skills needed
 :::
 
 ::: {.notice}
