@@ -13,6 +13,7 @@ rmd_files: ["index.Rmd",
             "04-accessing_controlled_data.Rmd",
             "04-accessing_controlled_data_dbGaP.Rmd",
             "05-downloading_data.Rmd",
+            "05-downloading_data_data_explorer.Rmd",
             "Feedback.Rmd",
             "About.Rmd",
             "References.Rmd"]
