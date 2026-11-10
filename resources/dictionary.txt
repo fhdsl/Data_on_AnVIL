@@ -25,6 +25,7 @@ Dockstore
 downloaders
 dropdown
 eMERGE
+eRA
 fasta
 fastq
 FASTQs
@@ -77,6 +78,8 @@ SRA
 subfolder
 Submitters
 tallgrass
+terra
+Terra
 theiagen
 Theiagen
 timeframe
