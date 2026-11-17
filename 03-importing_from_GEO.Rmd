@@ -171,7 +171,7 @@ The `saveRDS` command only saves the data to the persistent disk associated with
 AnVILGCP::avcopy("my_dataset.rds", avstorage())
 ```
 
-Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location. You will see your object in a directory labeled with the name of your workspace. You can also click on the button in the upper right hand corner to open the Google bucket itself.
+Once the dataset has been successfully saved to the Google bucket, you can click on the workspace Files icon to see its location. You will see your object in a directory labeled with the name of your workspace. You can also click on the button in the upper left hand corner to open the Google bucket itself.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "After you push the saved RDS file to your Google bucket using `avcopy` from the AnVILGCP package, you will be able to see it in your workspace files by clicking the file icon."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h4f7dde8c6345680a_0_1#slide=id.h4f7dde8c6345680a_0_1")
