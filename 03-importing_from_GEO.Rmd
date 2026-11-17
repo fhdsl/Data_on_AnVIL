@@ -150,7 +150,7 @@ BiocManager::install("AnVILGCP")
 library(AnVILGCP)
 ```
 
-To save the dataset locally (that is, on the persistent disk), you just need to know the name of the object and the name you want to save the dataset as. Here, we're saving the SummarizedExperiment we pulled into the environment earlier as "my_dataset.rds".
+To save the dataset locally (that is, on the persistent disk), you just need to know the name of the object and the name you want to save the dataset as. Here, we're saving the `SummarizedExperiment` object we pulled into the environment earlier as `my_dataset.rds`.
 
 ```{r, eval=F}
 # Save dataset locally
