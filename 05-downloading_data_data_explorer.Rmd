@@ -35,4 +35,4 @@ You can download complete datasets via the `curl` command with the command line.
 
 ## Downloading individual data files
 
-You can download individual files directly from the Data Explorer, **as long as they are open access files**. Follow [this tutoria](https://explore.anvilproject.org/guides/individual-file-download) to see how.
+You can download individual files directly from the Data Explorer, **as long as they are open access files**. Follow [this tutorial](https://explore.anvilproject.org/guides/individual-file-download) to see how.
