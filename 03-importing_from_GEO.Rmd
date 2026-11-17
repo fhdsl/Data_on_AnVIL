@@ -108,7 +108,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 
 Retrieving data from GEO is greatly simplified by the `GEOquery` Bioconductor package. This package contains a lot of useful code. You can read more about all the options on the [package website](https://seandavi.github.io/GEOquery/index.html).
 
-But before we do anything, we need to install the package and load the library. Because `GEOquery` is a Bioconductor package, we use the `BiocManager` command to install it. Type these commands into the console window to install the package and then open it:
+But before we do anything, we need to install the package and load the library. Because `GEOquery` is a Bioconductor package, we use the `BiocManager` command to install it. Type these commands into the console window and press return to install and load the package:
 
 ```{r, eval=F}
 BiocManager::install("GEOquery")
