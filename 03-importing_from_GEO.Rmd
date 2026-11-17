@@ -84,7 +84,13 @@ Next, provision an RStudio environment. Click on the "Settings" button under the
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h4a944bae22f23b4f_0_0#slide=id.h4a944bae22f23b4f_0_0")
 ```
 
-You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters. (Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!) If you know that you might be called away from your computing environment and don't want to incur costs while this is happening, you can choose to enable autopause as well. Once you are happy with your setting choices, click "Create".
+You will now be prompted to make decisions about what computational settings you need for your RStudio environment. We have used the default parameters.
+
+::: {.notice}
+Notice that the estimated cost for creating and running your environment is written at the top of the screen - these estimates may change if you change your parameter settings!
+:::
+
+If you know that you might be called away from your computing environment and don't want to incur costs while this is happening, you can choose to enable autopause as well. Once you are happy with your setting choices, click "Create".
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "You can now choose the settings for your computing environment, including whether you want to enable an autopause function. The estimated cost of your environment will be displayed on a banner at the top. Click Create once you are ready."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5pTFD1VOuR32GLUq2l-sCBYNO3OTg/edit?slide=id.h489817a4fc4ce231_0_56#slide=id.h489817a4fc4ce231_0_56")
