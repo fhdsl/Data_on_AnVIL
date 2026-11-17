@@ -7,7 +7,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # From the Data Explorer {#downloading-data-explorer}
 
-The AnVIL Data Explorer allows users to more easily find datasets (both controlled access and open access) that are hosted on AnVIL. The Data Explorer also allows for easy download of datasets onto desktops or buckets not associated with the AnVIL Platform. 
+The [AnVIL Data Explorer](https://explore.anvilproject.org/) allows users to more easily find datasets (both controlled access and open access) that are hosted on AnVIL. The Data Explorer also allows for easy download of datasets into locations not associated with the AnVIL Platform. 
 
 ::: {.notice}
 _Genetics_
