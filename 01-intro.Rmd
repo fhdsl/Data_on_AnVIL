@@ -50,5 +50,5 @@ Do you have dataset permissions you want to leverage in AnVIL? These vignettes c
 **Moving data off AnVIL** <br>
 Are you trying to move data that has been stored on AnVIL to another location? These vignettes show ways to download data from the platform.
 
-* Downloading via Data Explorer
+* [Downloading via Data Explorer](#downloading-data-explorer)
 * Moving data to an external bucket
