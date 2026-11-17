@@ -6,7 +6,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # From Gene Expression Omnibus (GEO) {#importing-geo}
 
-In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998).
+In this example, we will be importing some RNA-seq data generated using four primary human airway smooth muscle cell lines. Researchers explored how three common asthma treatments (dexamethasone, albuterol, or dexamethasone+albuterol) affect gene expression in smooth muscle cells. The data comes from [this BioProject](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA229998). You can read more about these data and the researchers' results in [Pangamiban et al 2023](https://www.nature.com/articles/s41467-022-35739-8) and [Himes et al 2014](https://pubmed.ncbi.nlm.nih.gov/24926665/). 
 
 We will bring this data into AnVIL from the **Gene Expression Omnibus**, or GEO. You can check out the [GEO Datasets  website](https://www.ncbi.nlm.nih.gov/gds) to learn more:
 
@@ -41,7 +41,7 @@ _Programming skills_
 
 You might hear new terms for moving data around in the cloud. **Ingress** is when data comes to you, similar to downloading a file or receiving an email with an attachment. **Egress** is sending the data to another resource, similar to uploading or sending an attached file via email. **There is no fee for ingressing data to AnVIL from GEO**, but there is a small cost for storing the data in an AnVIL bucket.
 
-There is a cost associated with provisioning and running an RStudio or Jupyter Notebook environment. ADD COST
+There is a cost associated with provisioning and running an RStudio or Jupyter Notebook environment. In Fall 2026, running this vignette to transfer cost $0.12.
 :::
 
 ## Step One: Create your workspace
@@ -111,7 +111,7 @@ Retrieving data from GEO is greatly simplified by the `GEOquery` Bioconductor pa
 But before we do anything, we need to install the package and load the library. Because `GEOquery` is a Bioconductor package, we use the `BiocManager` command to install it. Type these commands into the console window and press return to install and load the package:
 
 ```{r, eval=F}
-BiocManager::install("GEOquery")
+BiocManager::install("GEOquery", update = FALSE)
 library(GEOquery)
 ```
 
@@ -187,7 +187,5 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1lSUfsg_oja-Iqq5p
 ## Additional Resources
 
 - Want to learn more about the AnVIL Bioconductor package? You can see a talk about it [here](https://anvilproject.org/learn/run-interactive-analyses/the-r-bioconductor-anvil-package).
-
-- Additional information about the AnVIL Bioconductor package can be found on the [Bioconductor website](https://anvil.bioconductor.org/)
 
 - Learn more about moving data to and from Google buckets [here](https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket).
