@@ -31,7 +31,7 @@ You can download information about both controlled and open access datasets as .
 
 ## Downloading multiple data files using `curl`
 
-You can download complete datasets via the `curl` command with the command line. **This method can only be used for open access dataset.** Follow [this tutorial](https://explore.anvilproject.org/guides/data-download-via-curl).
+You can download complete datasets via the `curl` command with the command line. **This method can only be used for open access datasets.** Follow [this tutorial](https://explore.anvilproject.org/guides/data-download-via-curl).
 
 ## Downloading individual data files
 
