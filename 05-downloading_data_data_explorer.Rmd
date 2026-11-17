@@ -21,7 +21,7 @@ _Programming skills_
 
 ::: {.notice}
 **What will this cost?**
-Data egress (that is, moving data outside of a storage bucket) has costs associated with it. AnVIL Buckets are all set as "Requester Pays", so you will incur the cost of moving the data.
+Data egress (that is, moving data outside of a storage bucket) has costs associated with it. Most AnVIL Buckets are all set as "Requester Pays", so you will incur the cost of moving the data.
 
 :::
 
