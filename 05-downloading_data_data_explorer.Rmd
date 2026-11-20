@@ -16,7 +16,7 @@ _Genetics_
 
 _Programming skills_
 
-**Beginner**: some comfort with workflows and WDLs may be needed
+**Beginner**: some comfort with [workflows and WDLs](https://jhudatascience.org/AnVIL_Book_Getting_Started/workflows.html) may be needed
 :::
 
 ::: {.notice}
