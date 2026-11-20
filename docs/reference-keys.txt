@@ -52,4 +52,5 @@ downloading-data-explorer
 downloading-dataset-metadata
 downloading-multiple-data-files-using-curl
 downloading-individual-data-files
+downloading-workspace
 references
