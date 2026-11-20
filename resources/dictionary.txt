@@ -93,6 +93,7 @@ tallgrass
 theiagen
 Theiagen
 terra
+Terra
 timeframe
 TSA
 tsv
