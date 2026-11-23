@@ -7,7 +7,7 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # From a Workspace {#downloading-workspace}
 
-The [AnVIL Data Explorer](https://explore.anvilproject.org/) allows users to more easily find datasets (both controlled access and open access) that are hosted on AnVIL. The Data Explorer also allows for easy download of datasets into locations not associated with the AnVIL Platform. 
+AnVIL Workspaces have multiple ways for downloading data. 
 
 ::: {.notice}
 _Genetics_
@@ -25,3 +25,4 @@ Data egress (that is, moving data outside of a storage bucket) has costs associa
 
 :::
 
+AnVIL Workspaces
