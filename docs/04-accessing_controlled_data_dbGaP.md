@@ -61,7 +61,7 @@ You are required to renew the link between your RAS account and your AnVIL profi
 
 ## Access data through an AnVIL workspace
 
-You may need to use a workflow to bring the data into your AnVIL workspace. This can be done with dockstore.org.
+You may need to use a workflow to bring the data into your AnVIL workspace through Dockstore. You can find more information about this [here](https://anvilproject.org/learn/run-analyses-workflows/intro-to-dockstore).
 
 ## Additional Resources
 

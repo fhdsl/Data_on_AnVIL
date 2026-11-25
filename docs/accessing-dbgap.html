@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2026-11-17" />
+<meta name="date" content="2026-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="importing-geo.html"/>
-<link rel="next" href="give-us-feedback.html"/>
+<link rel="next" href="downloading-workspace.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -221,10 +221,23 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html#access-data-through-an-anvil-workspace"><i class="fa fa-check"></i><b>8.2</b> Access data through an AnVIL workspace</a></li>
 <li class="chapter" data-level="8.3" data-path="accessing-dbgap.html"><a href="accessing-dbgap.html#additional-resources-5"><i class="fa fa-check"></i><b>8.3</b> Additional Resources</a></li>
 </ul></li>
+<li class="part"><span><b>Moving Data Off AnVIL</b></span></li>
+<li class="chapter" data-level="9" data-path="downloading-workspace.html"><a href="downloading-workspace.html"><i class="fa fa-check"></i><b>9</b> From a Workspace</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="downloading-workspace.html"><a href="downloading-workspace.html#downloading-from-the-files-tab"><i class="fa fa-check"></i><b>9.1</b> Downloading from the Files tab</a></li>
+<li class="chapter" data-level="9.2" data-path="downloading-workspace.html"><a href="downloading-workspace.html#downloading-from-the-google-bucket"><i class="fa fa-check"></i><b>9.2</b> Downloading from the Google bucket</a></li>
+<li class="chapter" data-level="9.3" data-path="downloading-workspace.html"><a href="downloading-workspace.html#downloading-using-the-command-line"><i class="fa fa-check"></i><b>9.3</b> Downloading using the command line</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="downloading-data-explorer.html"><a href="downloading-data-explorer.html"><i class="fa fa-check"></i><b>10</b> From the Data Explorer</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="downloading-data-explorer.html"><a href="downloading-data-explorer.html#downloading-dataset-metadata"><i class="fa fa-check"></i><b>10.1</b> Downloading dataset metadata</a></li>
+<li class="chapter" data-level="10.2" data-path="downloading-data-explorer.html"><a href="downloading-data-explorer.html#downloading-multiple-data-files-using-curl"><i class="fa fa-check"></i><b>10.2</b> Downloading multiple data files using <code>curl</code></a></li>
+<li class="chapter" data-level="10.3" data-path="downloading-data-explorer.html"><a href="downloading-data-explorer.html#downloading-individual-data-files"><i class="fa fa-check"></i><b>10.3</b> Downloading individual data files</a></li>
+</ul></li>
 <li class="part"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="give-us-feedback.html"><a href="give-us-feedback.html"><i class="fa fa-check"></i>Give us Feedback</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
 <p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
@@ -303,7 +316,7 @@ Linking your AnVIL ID to your NIH credentials does not cost anything.</p>
 </div>
 <div id="access-data-through-an-anvil-workspace" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Access data through an AnVIL workspace<a href="accessing-dbgap.html#access-data-through-an-anvil-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You may need to use a workflow to bring the data into your AnVIL workspace. This can be done with dockstore.org.</p>
+<p>You may need to use a workflow to bring the data into your AnVIL workspace through Dockstore. You can find more information about this <a href="https://anvilproject.org/learn/run-analyses-workflows/intro-to-dockstore">here</a>.</p>
 </div>
 <div id="additional-resources-5" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Additional Resources<a href="accessing-dbgap.html#additional-resources-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -317,6 +330,7 @@ Linking your AnVIL ID to your NIH credentials does not cost anything.</p>
 
 
 
+</div>
 <hr>
 <center> 
   <div class="footer">
@@ -331,7 +345,7 @@ Linking your AnVIL ID to your NIH credentials does not cost anything.</p>
         </div>
       </div>
 <a href="importing-geo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="give-us-feedback.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="downloading-workspace.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

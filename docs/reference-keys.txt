@@ -48,4 +48,12 @@ accessing-dbgap
 link-nih-account-to-your-anvil-profile
 access-data-through-an-anvil-workspace
 additional-resources-5
+downloading-workspace
+downloading-from-the-files-tab
+downloading-from-the-google-bucket
+downloading-using-the-command-line
+downloading-data-explorer
+downloading-dataset-metadata
+downloading-multiple-data-files-using-curl
+downloading-individual-data-files
 references
