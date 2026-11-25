@@ -7,7 +7,9 @@ knitr::opts_chunk$set(out.width = "100%")
 
 # From a Workspace {#downloading-workspace}
 
-AnVIL Workspaces have multiple ways for downloading data. 
+AnVIL Workspaces have multiple ways for you to download your data. 
+
+For this example, we are using a workspace that has fasta files saved in the workspace bucket.
 
 ::: {.notice}
 _Genetics_
@@ -25,4 +27,20 @@ Data egress (that is, moving data outside of a storage bucket) has costs associa
 
 :::
 
-AnVIL Workspaces
+## Downloading from the Files tab
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Datasets Library landing page.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5fa6f264a_0_15")
+```
+
+## Downloading from the Google bucket
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Datasets Library landing page.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5fa6f264a_0_15")
+```
+
+## Downloading using the command line
+
+```{r, echo=FALSE, fig.alt='Image shows a screenshot of the Datasets Library landing page.'}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1H5onDH7cBLK2m7fCcJ6ZodAAQ3wtJO8tNc2rwptrTPM/edit#slide=id.gf5fa6f264a_0_15")
+```
